@@ -1,38 +1,46 @@
-/* Stats: totals, scorers, assists, clean sheets, history. Plain tables. */
+/* Stats: four totals, tournament leaders (goals · assists · clean sheets), past winners
+   and the all-time scorers list (topped up live for active players). */
 import { state } from '../store.js';
-import { t, teamName, flag, esc } from '../i18n.js';
-import { isSameDay } from '../time.js';
-import { topScorers, topAssists, cleanSheets, goalTotals, totalAssists, allTimeScorers } from '../logic/stats.js';
+import { t, teamName, flag, flagImg, esc } from '../i18n.js';
+import { IN_PLAY, FINISHED } from '../logic/status.js';
+import { topScorers, topAssists, cleanSheets, goalTotals, allTimeScorers } from '../logic/stats.js';
+import { setPill } from './shell.js';
 
 const $ = id => document.getElementById(id);
+let leadTab = 0;
 
-function board(id, title, rows, valueKey, valueLabel, empty){
-  if(!rows.length) return `<section id="${id}"><h3>${title}</h3><p>${empty}</p></section>`;
-  return `<section id="${id}"><h3>${title}</h3><table><thead><tr><th scope="col">#</th><th scope="col">${t('player')}</th><th scope="col">${t('team')}</th><th scope="col">${valueLabel}</th></tr></thead><tbody>
-    ${rows.map((r, i) => `<tr data-team="${r.team}"><td>${i + 1}</td><th scope="row">${esc(r.name)}</th><td>${flag(r.team)} ${teamName(r.team)}</td><td>${r[valueKey]}${r.pens ? ` (${r.pens} ${t('pen')})` : ''}</td></tr>`).join('')}
-  </tbody></table></section>`;
+function leadersHTML(){
+  const { model } = state;
+  const [rows, key, empty] = [[topScorers(model), 'goals', 'noGoals'], [topAssists(model), 'assists', 'noAssists'], [cleanSheets(model), 'sheets', 'noSheets']][leadTab];
+  if(!rows.length) return `<li class="none">${t(empty)}</li>`;
+  return rows.map((r, i) => `<li><span class="rank">${i + 1}</span>${flag(r.team)}<span class="who"><b>${esc(r.name)}</b><span>${teamName(r.team)}</span></span><span class="val">${r[key]}</span></li>`).join('');
 }
 
 export function renderStats(){
-  if(state.page !== 'stats') return;
+  if(state.page !== 'stats' || !state.model) return;
   const { model, data } = state;
-  const { total, today, pens } = goalTotals(model, ko => isSameDay(ko, Date.now()));
-  const totals = `<dl id="totals">
-    <dt>${t('totalGoals')}</dt><dd>${total}</dd>
-    <dt>${t('todayGoals')}</dt><dd>${today}</dd>
-    <dt>${t('penaltyGoals')}</dt><dd>${pens}</dd>
-    <dt>${t('totalAssists')}</dt><dd>${totalAssists(model)}</dd></dl>`;
-
+  const played = model.matches.filter(m => m.result && (IN_PLAY.has(m.state) || FINISHED.has(m.state)));
+  const { total, pens } = goalTotals(model, () => false);
+  const clean = played.filter(m => FINISHED.has(m.state)).reduce((n, m) => n + !(m.result.awayScore > 0) + !(m.result.homeScore > 0), 0);
+  const tiles = [total, played.length ? (total / played.length).toFixed(2) : '0', pens, clean];
   const h = data.history;
-  const winners = h.winners?.length ? `<section id="past-winners"><h3>${t('winnersTitle')}</h3><table><thead><tr><th scope="col">${t('team')}</th><th scope="col">${t('titles')}</th><th scope="col">${t('years')}</th></tr></thead><tbody>
-    ${h.winners.map(w => `<tr><th scope="row">${w.flag ? `<img class="flag" src="https://flagcdn.com/h24/${w.flag}.png" alt="" height="16">` : ''} ${esc(w[state.lang] || w.en)}</th><td>${w.titles}</td><td>${(w.years || []).join(', ')}</td></tr>`).join('')}
-  </tbody></table></section>` : '';
-  const legends = h.scorers?.length ? `<section id="all-time-scorers"><h3>${t('scorersTitle')}</h3><ol>
-    ${allTimeScorers(h, topScorers(model, Infinity), data.teams).map(p => `<li>${esc(p.name)} — ${p.goals}</li>`).join('')}</ol></section>` : '';
+  $('stats-page').innerHTML = `<dl class="tiles">${t('totals').map((x, i) => `<div class="tile"><dt>${x}</dt><dd>${tiles[i]}</dd></div>`).join('')}</dl>
+    <section class="sec"><h3>${t('leadersTitle')}</h3>
+      <div class="seg three" id="lead-seg" role="tablist" style="--n:3"><span class="seg-pill" aria-hidden="true"></span>
+        ${['goals', 'assists', 'cleanSheets'].map((k, i) => `<button type="button" role="tab" data-i="${i}">${t(k)}</button>`).join('')}</div>
+      <ol class="panel leaders" id="leaders">${leadersHTML()}</ol></section>
+    ${h.winners?.length ? `<section class="sec"><h3>${t('winnersTitle')}</h3><ol class="panel winners">${h.winners.map(w =>
+      `<li>${flagImg(w.flag)}<span class="who"><b>${esc(w[state.lang] || w.en)}</b></span><span class="val">${w.titles}<small>${(w.years || []).join(' · ')}</small></span></li>`).join('')}</ol></section>` : ''}
+    ${h.scorers?.length ? `<section class="sec"><h3>${t('scorersTitle')}</h3><ol class="panel alltime">${allTimeScorers(h, topScorers(model, Infinity), data.teams).map((p, i) =>
+      `<li><span class="rank">${i + 1}</span>${flagImg(p.flag)}<span class="who"><b>${esc(p.name)}</b></span><span class="val">${p.goals}</span></li>`).join('')}</ol>
+      <p class="note">${t('scorersNote')}</p></section>` : ''}`;
+  setPill($('lead-seg'), leadTab);
+}
 
-  $('stats').innerHTML = totals
-    + board('top-scorers', t('goals'), topScorers(model), 'goals', t('goals'), t('noGoals'))
-    + board('top-assists', t('assists'), topAssists(model), 'assists', t('assists'), t('noAssists'))
-    + board('clean-sheets', t('cleanSheets'), cleanSheets(model), 'sheets', t('cleanSheets'), t('noSheets'))
-    + winners + legends;
+export function initStats(){
+  $('stats-page').addEventListener('click', e => {
+    const b = e.target.closest('#lead-seg button'); if(!b) return;
+    leadTab = +b.dataset.i; const seg = $('lead-seg'); seg.classList.add('animate'); setPill(seg, leadTab);
+    $('leaders').innerHTML = leadersHTML();
+  });
 }

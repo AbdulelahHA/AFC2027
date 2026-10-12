@@ -46,6 +46,8 @@ export function buildResults(scores, extra, teams, aliases){
       homeScore: m.homeScore ?? null, awayScore: m.awayScore ?? null,
       penHome: m.penHome ?? null, penAway: m.penAway ?? null,
       kicks: (m.pens || []).map(p => ({ side: p.t, name: fix(p.name, p.t === 'h' ? home : away), scored: !!p.scored })),
+      /* optional match stats from the provider: {possession:[h,a], shots:[h,a], …} */
+      stats: m.stats && typeof m.stats === 'object' ? m.stats : null,
       /* side = the column the goal belongs to; an own goal sits on the side it counted for */
       goals: ['h', 'a'].flatMap(side => goals(side).map(g => {
         const { name, minute } = cleanGoal(g.name, g.minute);
@@ -81,6 +83,7 @@ export function orient(r, homeCode){
     homeScore: r.awayScore, awayScore: r.homeScore,
     penHome: r.penAway, penAway: r.penHome,
     kicks: r.kicks.map(k => ({ ...k, side: sw(k.side) })),
-    goals: r.goals.map(g => ({ ...g, side: sw(g.side) }))
+    goals: r.goals.map(g => ({ ...g, side: sw(g.side) })),
+    stats: r.stats ? Object.fromEntries(Object.entries(r.stats).map(([k, v]) => [k, Array.isArray(v) ? [v[1], v[0]] : v])) : null
   };
 }

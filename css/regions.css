@@ -1,5 +1,6 @@
 /* The four Saudi regional styles (one per visit, html[data-variant]): colour tokens for light/dark,
-   header bands, wall patterns, emblem plaques and small regional touches. Research: vault AFC2027/Saudi Design Research. */
+   header bands, wall patterns, emblem plaques and small regional touches.
+   Research: vault AFC2027/Saudi Design Research. */
 /* ───────── NAJDI — Diriyah mud plaster, Sadu weaving, triangular wall vents ───────── */
 :root{
   --font-display:"Reem Kufi","Readex Pro",system-ui,sans-serif;

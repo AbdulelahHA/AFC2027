@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildResults } from '../js/logic/feed.js';
+import { buildResults, orient } from '../js/logic/feed.js';
 import { buildModel } from '../js/logic/model.js';
 
 const load = f => JSON.parse(readFileSync(new URL('../tournaments/afc2027/' + f + '.json', import.meta.url)));
@@ -91,4 +91,13 @@ test('a simulated tournament resolves to a champion', () => {
   assert.ok(r16.every(m => m.home && m.away), 'every Round of 16 tie has two teams');
   assert.equal(new Set(r16.flatMap(m => [m.home, m.away])).size, 16, 'sixteen different teams');
   assert.ok(model.champion, 'a champion');
+});
+
+test('match stats follow the fixture home side when the feed lists the teams the other way round', () => {
+  const name = c => teams[c].en;
+  const { results } = buildResults({ matches: [{ home: name('PLE'), away: name('KSA'), homeScore: 0, awayScore: 2, state: 'FT', type: 'group',
+    stats: { possession: [36, 64], shots: [6, 15] } }] }, null, teams, data.aliases);
+  const r = orient([...results.values()][0], 'KSA');
+  assert.deepEqual(r.stats, { possession: [64, 36], shots: [15, 6] });
+  assert.equal(r.homeScore, 2);
 });

@@ -2,55 +2,98 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>AFC Asian Cup 2027 — Live scores</title>
-<meta name="description" content="AFC Asian Cup Saudi Arabia 2027: schedule, live scores, group tables and knockout bracket in Mecca time, in English and Arabic.">
+<meta name="description" content="AFC Asian Cup Saudi Arabia 2027: scores, group tables, knockout bracket and stats in Mecca time, in English and Arabic.">
+<script>
+/* before anything paints: one Saudi regional style per visit (never the same twice in a row), and the saved theme */
+(function(){
+  var r = document.documentElement, v = ['najdi', 'hejazi', 'asiri', 'hasawi'], last = null, theme = null;
+  try { last = localStorage.getItem('afc27_style'); theme = localStorage.getItem('afc27_theme'); } catch(e) {}
+  var pool = v.filter(function(x){ return x !== last; });
+  r.dataset.variant = pool[Math.floor(Math.random() * pool.length)];
+  try { localStorage.setItem('afc27_style', r.dataset.variant); } catch(e) {}
+  if(theme === 'light' || theme === 'dark') r.dataset.theme = theme;
+  try { if(localStorage.getItem('afc27_lang') === 'ar'){ r.lang = 'ar'; r.dir = 'rtl'; } } catch(e) {}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=Amiri:wght@700&family=El+Messiri:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Kufam:wght@600;800&family=Readex+Pro:wght@400;500;600&family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="css/regions.css">
+<link rel="stylesheet" href="css/app.css">
 <script type="module" src="js/main.js"></script>
 </head>
 <body>
-<!-- Plain, unstyled markup on purpose: see DESIGN.md for the hooks a design layer can use. -->
-<header id="site-header">
-  <h1 id="t-title">AFC Asian Cup 2027</h1>
-  <p id="t-subtitle"></p>
-  <p id="lang-switch">
-    <span id="lbl-lang">Language</span>:
-    <button type="button" data-lang="en">English</button>
-    <button type="button" data-lang="ar">العربية</button>
-  </p>
-  <nav id="pages" aria-label="Pages">
-    <a href="#schedule" data-page="schedule">Schedule</a> ·
-    <a href="#groups" data-page="groups">Groups</a> ·
-    <a href="#knockout" data-page="knockout">Knockout</a> ·
-    <a href="#stats" data-page="stats">Stats</a> ·
-    <a href="#my-teams" data-page="my-teams">My teams</a>
-  </nav>
-</header>
+<div id="app">
+  <header id="site-header">
+    <span class="emblem"><img src="assets/emblem/trophy.png" alt="" id="emblem-mark"></span>
+    <h1 id="t-title">AFC Asian Cup 2027</h1>
+    <button type="button" id="menu-btn" popovertarget="menu" aria-haspopup="menu" aria-expanded="false" aria-label="Menu">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </header>
 
-<p id="feed-status" role="status" hidden></p>
+  <div class="view" id="view-scores">
+    <div class="daybar">
+      <div class="seg" id="days" role="tablist">
+        <span class="seg-pill" aria-hidden="true"></span>
+        <button type="button" role="tab" id="tab-0" aria-controls="pane-0" data-i="0"></button>
+        <button type="button" role="tab" id="tab-1" aria-controls="pane-1" data-i="1"></button>
+        <button type="button" role="tab" id="tab-2" aria-controls="pane-2" data-i="2"></button>
+      </div>
+    </div>
+    <main class="panes" id="panes">
+      <section class="pane" id="pane-0" role="tabpanel" aria-labelledby="tab-0"></section>
+      <section class="pane" id="pane-1" role="tabpanel" aria-labelledby="tab-1"></section>
+      <section class="pane" id="pane-2" role="tabpanel" aria-labelledby="tab-2"></section>
+    </main>
+  </div>
 
-<main>
-  <section id="page-schedule" data-page="schedule" aria-labelledby="h-schedule">
-    <h2 id="h-schedule">Schedule</h2>
-    <div id="schedule"></div>
+  <section class="view" id="view-groups" hidden>
+    <div class="pagebar"><div class="pagebar-in"><h2 data-t="groups"></h2></div></div>
+    <div class="page" id="groups-page"></div>
   </section>
-  <section id="page-groups" data-page="groups" aria-labelledby="h-groups" hidden>
-    <h2 id="h-groups">Groups</h2>
-    <div id="groups"></div>
+  <section class="view" id="view-knockout" hidden>
+    <div class="pagebar"><div class="pagebar-in"><h2 data-t="knockout"></h2></div></div>
+    <div class="page" id="knockout-page"></div>
   </section>
-  <section id="page-knockout" data-page="knockout" aria-labelledby="h-knockout" hidden>
-    <h2 id="h-knockout">Knockout</h2>
-    <div id="knockout"></div>
+  <section class="view" id="view-stats" hidden>
+    <div class="pagebar"><div class="pagebar-in"><h2 data-t="stats"></h2></div></div>
+    <div class="page" id="stats-page"></div>
   </section>
-  <section id="page-stats" data-page="stats" aria-labelledby="h-stats" hidden>
-    <h2 id="h-stats">Stats</h2>
-    <div id="stats"></div>
-  </section>
-  <section id="page-my-teams" data-page="my-teams" aria-labelledby="h-my-teams" hidden>
-    <h2 id="h-my-teams">My teams</h2>
-    <div id="my-teams"></div>
-  </section>
-</main>
 
-<footer id="t-footer"></footer>
+  <footer id="t-footer">
+    <span class="emblem lg"><img src="assets/emblem/emblem.png" alt="" id="emblem-full"></span>
+    <p class="style-credit" id="style-credit"></p>
+  </footer>
+</div>
+
+<div id="menu" popover>
+  <ul>
+    <li><a href="#scores" data-go="scores"><span class="ico"><svg viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></span><span data-t="scores"></span></a></li>
+    <li><a href="#groups" data-go="groups"><span class="ico"><svg viewBox="0 0 16 16"><path d="M2 3h12M2 8h12M2 13h12M5 1v14" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></span><span data-t="groups"></span></a></li>
+    <li><a href="#knockout" data-go="knockout"><span class="ico"><svg viewBox="0 0 16 16"><path d="M1 3h4v4h4M1 13h4V9M9 8h6" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></span><span data-t="knockout"></span></a></li>
+    <li><a href="#stats" data-go="stats"><span class="ico"><svg viewBox="0 0 16 16"><path d="M3 14V8M8 14V3M13 14v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span><span data-t="stats"></span></a></li>
+  </ul>
+  <hr>
+  <div class="opt">
+    <p class="opt-label" data-t="language"></p>
+    <div class="seg" id="lang-seg" role="radiogroup" style="--n:2"><span class="seg-pill" aria-hidden="true"></span>
+      <button type="button" role="radio" data-v="en">English</button><button type="button" role="radio" data-v="ar">العربية</button></div>
+  </div>
+  <div class="opt">
+    <p class="opt-label" data-t="appearance"></p>
+    <div class="seg three" id="theme-seg" role="radiogroup" style="--n:3"><span class="seg-pill" aria-hidden="true"></span>
+      <button type="button" role="radio" data-v="light" data-t="light"></button><button type="button" role="radio" data-v="dark" data-t="dark"></button><button type="button" role="radio" data-v="auto" data-t="auto"></button></div>
+  </div>
+</div>
+
+<dialog id="sheet">
+  <div class="deck-wrap" id="deck-wrap">
+    <p class="deck-title" id="deck-title"></p>
+    <div class="deck" id="deck"></div>
+  </div>
+</dialog>
 </body>
 </html>

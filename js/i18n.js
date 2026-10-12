@@ -14,10 +14,8 @@ export const teamName = code => state.data.teams[code]?.[state.lang] || state.da
 export const dayName = weekday => strings[state.lang].weekdays[weekday] || weekday;
 export const monthName = mo => t('months')[mo];
 export const roundLabel = r => state.data.tournament.roundLabel[r][state.lang];
-export const roundShort = r => state.data.tournament.roundShort[r][state.lang];
-export const plural = (n, one, many) => n === 1 ? t(one) : t(many);
 
-/* "King Fahd Sports City, Riyadh" in the current language */
+/* "King Fahd Sports City Stadium, Riyadh" in the current language */
 export function venueText(code){
   const v = state.data.tournament.venues[code];
   if(!v) return '';
@@ -31,13 +29,16 @@ export function slotText(code){
     case '1': return a ? `متصدر المجموعة ${rest}` : `Winner Group ${rest}`;
     case '2': return a ? `وصيف المجموعة ${rest}` : `Runner-up Group ${rest}`;
     case '3': return a ? `ثالث المجموعات ${rest.slice(1).split('').join('/')}` : `3rd Group ${rest.slice(1).split('').join('/')}`;
-    case 'W': return a ? `الفائز من المباراة ${rest}` : `Winner match ${rest}`;
-    case 'L': return a ? `الخاسر من المباراة ${rest}` : `Loser match ${rest}`;
+    case 'W': return a ? `الفائز في المباراة ${rest}` : `Winner match ${rest}`;
+    case 'L': return a ? `الخاسر في المباراة ${rest}` : `Loser match ${rest}`;
     default: return code;
   }
 }
+/* the same slot as a short code for the compact bracket chips: "3:BEF" → "3BEF" */
+export const slotShort = code => code.replace(':', '');
 
 export const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-export const flagCode = code => state.data.teams[code]?.flag || '';
-export const flag = (code, size = 'h24', alt = '') =>
-  code && flagCode(code) ? `<img class="flag" src="https://flagcdn.com/${size}/${flagCode(code)}.png" alt="${esc(alt)}" height="16" loading="lazy" onerror="this.remove()">` : '';
+
+/* every flag is a 4:3 vector drawing (assets/flags, from flag-icons), so flags at one height match in size */
+export const flagImg = (iso, alt = '') => iso ? `<img class="flag" src="assets/flags/${iso}.svg" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">` : '';
+export const flag = (code, alt = '') => flagImg(state.data.teams[code]?.flag, alt);
