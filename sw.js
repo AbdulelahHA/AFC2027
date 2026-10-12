@@ -4,8 +4,8 @@ self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
 
 self.addEventListener('push', e => {
   let d = {};
-  try { d = e.data ? e.data.json() : {}; } catch { d = { title: e.data?.text() || 'AFC Asian Cup 2027' }; }
-  e.waitUntil(self.registration.showNotification(d.title || 'AFC Asian Cup 2027', {
+  try { d = e.data ? e.data.json() : {}; } catch { d = { title: e.data?.text() || 'AFC 2027 Saudi' }; }
+  e.waitUntil(self.registration.showNotification(d.title || 'AFC 2027 Saudi', {
     body: d.body || '', tag: d.tag, renotify: !!d.tag,
     icon: 'assets/icons/icon-192.png', badge: 'assets/icons/icon-192.png',
     data: { url: new URL(d.url || './', self.registration.scope).href }
