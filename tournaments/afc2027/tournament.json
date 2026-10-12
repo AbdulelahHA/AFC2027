@@ -154,6 +154,7 @@
   "en": {
    "title": "AFC Asian Cup 2027 — Live scores",
    "h1": "AFC Asian Cup Saudi Arabia 2027",
+   "brand": "AFC Asian Cup 2027",
    "subtitle": "7 January – 5 February 2027 · Riyadh · Jeddah · Al Khobar · all times Mecca time",
    "footer": "Final: King Fahd Sports City Stadium, Riyadh · 5 February 2027",
    "timeTBC": "Time TBC"
@@ -161,6 +162,7 @@
   "ar": {
    "title": "كأس آسيا 2027 — النتائج المباشرة",
    "h1": "كأس آسيا السعودية 2027",
+   "brand": "كأس آسيا 2027",
    "subtitle": "7 يناير – 5 فبراير 2027 · الرياض · جدة · الخبر · جميع الأوقات بتوقيت مكة",
    "footer": "النهائي: استاد مدينة الملك فهد الرياضية، الرياض · 5 فبراير 2027",
    "timeTBC": "الوقت لم يُحدد"

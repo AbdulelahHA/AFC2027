@@ -26,8 +26,11 @@ const fresh = url => url + (url.includes('?') ? '&' : '?') + '_=' + Date.now();
 
 export async function loadTournament(id){
   base = `tournaments/${id}/`;
-  const [tournament, teams, fixtures, history, aliases] = await Promise.all(
-    ['tournament', 'teams', 'fixtures', 'history', 'aliases'].map(f => getJSON(base + f + '.json')));
+  const tournament = await getJSON(base + 'tournament.json');
+  /* a test tournament can borrow another one's data files ("dataFrom": "afc2027") */
+  const data = tournament.dataFrom ? `tournaments/${tournament.dataFrom}/` : base;
+  const [teams, fixtures, history, aliases] = await Promise.all(
+    ['teams', 'fixtures', 'history', 'aliases'].map(f => getJSON(data + f + '.json')));
   return { tournament, teams, fixtures, history, aliases };
 }
 

@@ -3,43 +3,47 @@
 import { state, subscribe } from './store.js';
 import { setTimezone } from './time.js';
 import { loadTournament, startFeeds } from './live.js';
-import { initShell, applyChrome, showPage, feedStatus } from './views/shell.js';
-import { initSchedule, renderSchedule, tick } from './views/schedule.js';
+import { initShell, applyChrome, applyTheme, showPage } from './views/shell.js';
+import { initScores, renderScores, tick, realignScores } from './views/scores.js';
+import { initCard, refreshCard, tickCard } from './views/card.js';
 import { renderGroups } from './views/groups.js';
-import { renderKnockout } from './views/knockout.js';
-import { renderStats } from './views/stats.js';
-import { initMyTeams, renderMyTeams } from './views/my-teams.js';
+import { initKnockout, renderKnockout } from './views/knockout.js';
+import { initStats, renderStats } from './views/stats.js';
 
-const id = new URLSearchParams(location.search).get('t') || 'afc2027';
-state.data = await loadTournament(id);
+const params = new URLSearchParams(location.search);
+state.data = await loadTournament(params.get('t') || 'afc2027');
 setTimezone(state.data.tournament.timezone);
+
+/* testing: ?now=2027-01-08T12:40:00+03:00 (or a test tournament's "demoNow") runs the clock from that moment */
+const testNow = params.get('now') || state.data.tournament.demoNow;
+if(testNow && !isNaN(Date.parse(testNow))){
+  const off = Date.parse(testNow) - Date.now(), real = Date.now.bind(Date);
+  Date.now = () => real() + off;
+}
 
 function render(){
   if(!state.model) return;
-  renderSchedule();
+  renderScores();
   renderGroups();
   renderKnockout();
   renderStats();
-  renderMyTeams();
+  refreshCard();
 }
 
-let scrolled = false;
 subscribe(patch => {
   if('lang' in patch) applyChrome();
-  if('page' in patch) showPage();
-  if('feed' in patch || 'lang' in patch) feedStatus();
-  render();
-  /* first render: bring today's matches into view during the tournament */
-  if(!scrolled && state.model && state.page === 'schedule'){
-    scrolled = true;
-    document.getElementById('today')?.scrollIntoView({ block: 'start' });
-  }
+  if('theme' in patch){ applyTheme(); applyChrome(); }
+  if('page' in patch){ showPage(); if(state.page === 'scores') realignScores(); }
+  if('model' in patch || 'lang' in patch || 'page' in patch) render();
 });
 
 initShell();
+applyTheme();
 applyChrome();
 showPage();
-initSchedule();
-initMyTeams();
+initScores();
+initCard();
+initKnockout();
+initStats();
 startFeeds();
-setInterval(tick, 1000);
+setInterval(() => { tick(); tickCard(); }, 1000);

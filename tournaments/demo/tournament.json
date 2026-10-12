@@ -1,0 +1,174 @@
+{
+ "id": "demo",
+ "dataFrom": "afc2027",
+ "demoNow": "2027-01-08T12:40:00+03:00",
+ "note": "TEST ONLY. Fake scores and players for trying the design; open the site with ?t=demo. The real site ignores this folder.",
+ "timezone": "Asia/Riyadh",
+ "dates": {
+  "start": "2027-01-07",
+  "end": "2027-02-05"
+ },
+ "feeds": {
+  "scores": "tournaments/demo/scores.json",
+  "extra": "tournaments/demo/extra.json",
+  "archive": null
+ },
+ "spotlight": "KSA",
+ "rounds": [
+  "r16",
+  "qf",
+  "sf",
+  "final"
+ ],
+ "roundLabel": {
+  "r16": {
+   "en": "Round of 16",
+   "ar": "دور الـ 16"
+  },
+  "qf": {
+   "en": "Quarter-finals",
+   "ar": "ربع النهائي"
+  },
+  "sf": {
+   "en": "Semi-finals",
+   "ar": "نصف النهائي"
+  },
+  "final": {
+   "en": "Final",
+   "ar": "النهائي"
+  }
+ },
+ "bracket": {
+  "final": 51
+ },
+ "thirdPlace": {
+  "qualify": 4,
+  "slotMatches": [
+   40,
+   38,
+   44,
+   39
+  ],
+  "table": {
+   "ABCD": "CDAB",
+   "ABCE": "CABE",
+   "ABCF": "CABF",
+   "ABDE": "DABE",
+   "ABDF": "DABF",
+   "ABEF": "EABF",
+   "ACDE": "CDAE",
+   "ACDF": "CDAF",
+   "ACEF": "CAFE",
+   "ADEF": "DAFE",
+   "BCDE": "CDBE",
+   "BCDF": "CDBF",
+   "BCEF": "ECBF",
+   "BDEF": "EDBF",
+   "CDEF": "CDFE"
+  },
+  "source": "AFC Asian Cup 2023 Competition Regulations, Art. 9.10 (2027 regulations not found publicly; the 2027 R16 bracket in the official AFC schedule is identical to 2023 Art. 9.9)"
+ },
+ "tiebreakers": {
+  "source": "AFC Asian Cup 2023 Competition Regulations Art. 7.3 + AFC Competition Operations Manual (Edition 2023) Appendix 2 — 2027 edition not found",
+  "group": [
+   "Points in all group matches",
+   "Head-to-head points among tied teams",
+   "Head-to-head goal difference among tied teams",
+   "Head-to-head goals scored among tied teams",
+   "If still tied, reapply head-to-head criteria exclusively to the remaining tied teams",
+   "Goal difference in all group matches",
+   "Goals scored in all group matches",
+   "Kicks from the penalty mark if exactly two teams are tied and they met in their last group match",
+   "Lower disciplinary score (yellow/red cards, Manual Appendix 1)",
+   "Drawing of lots"
+  ],
+  "thirdPlaced": [
+   "Points in all group matches",
+   "Goal difference in all group matches",
+   "Goals scored in all group matches",
+   "Lower disciplinary score (yellow/red cards, Manual Appendix 1)",
+   "Drawing of lots"
+  ],
+  "knockout": "Extra time (2 x 15 min), then kicks from the penalty mark (2023 Regs Art. 10)"
+ },
+ "broadcast": {
+  "default": null,
+  "note": "Saudi/MENA rights holder for 2027 not officially confirmed (beIN MENA deal to 2032 vs SSC held KSA rights for 2023)."
+ },
+ "venues": {
+  "KFS": {
+   "name": "King Fahd Sports City Stadium",
+   "nameAr": "استاد مدينة الملك فهد الرياضية",
+   "city": "Riyadh",
+   "capacity": 72000,
+   "cityAr": "الرياض"
+  },
+  "KSU": {
+   "name": "King Saud University Stadium",
+   "nameAr": "ملعب جامعة الملك سعود",
+   "city": "Riyadh",
+   "capacity": 26000,
+   "cityAr": "الرياض"
+  },
+  "KAR": {
+   "name": "Kingdom Arena",
+   "nameAr": "ملعب المملكة أرينا",
+   "city": "Riyadh",
+   "capacity": 26000,
+   "cityAr": "الرياض"
+  },
+  "IMU": {
+   "name": "Imam Mohammed Bin Saud University Stadium",
+   "nameAr": "ملعب جامعة الإمام محمد بن سعود",
+   "city": "Riyadh",
+   "capacity": 25000,
+   "cityAr": "الرياض"
+  },
+  "SHB": {
+   "name": "Al Shabab Stadium",
+   "nameAr": "ملعب نادي الشباب",
+   "city": "Riyadh",
+   "capacity": 13000,
+   "cityAr": "الرياض"
+  },
+  "KAS": {
+   "name": "King Abdullah Sports City Stadium",
+   "nameAr": "استاد مدينة الملك عبدالله الرياضية",
+   "city": "Jeddah",
+   "capacity": 60000,
+   "cityAr": "جدة"
+  },
+  "PAF": {
+   "name": "Prince Abdullah Al Faisal Sports City Stadium",
+   "nameAr": "استاد مدينة الأمير عبدالله الفيصل الرياضية",
+   "city": "Jeddah",
+   "capacity": 26000,
+   "cityAr": "جدة"
+  },
+  "ARM": {
+   "name": "Aramco Stadium",
+   "nameAr": "استاد أرامكو",
+   "city": "Al Khobar",
+   "capacity": 45000,
+   "cityAr": "الخبر"
+  }
+ },
+ "text": {
+  "en": {
+   "title": "AFC Asian Cup 2027 — Live scores",
+   "h1": "AFC Asian Cup Saudi Arabia 2027",
+   "brand": "AFC Asian Cup 2027",
+   "subtitle": "7 January – 5 February 2027 · Riyadh · Jeddah · Al Khobar · all times Mecca time",
+   "footer": "Final: King Fahd Sports City Stadium, Riyadh · 5 February 2027",
+   "timeTBC": "Time TBC"
+  },
+  "ar": {
+   "title": "كأس آسيا 2027 — النتائج المباشرة",
+   "h1": "كأس آسيا السعودية 2027",
+   "brand": "كأس آسيا 2027",
+   "subtitle": "7 يناير – 5 فبراير 2027 · الرياض · جدة · الخبر · جميع الأوقات بتوقيت مكة",
+   "footer": "النهائي: استاد مدينة الملك فهد الرياضية، الرياض · 5 فبراير 2027",
+   "timeTBC": "الوقت لم يُحدد"
+  }
+ }
+}

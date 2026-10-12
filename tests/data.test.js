@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildResults } from '../js/logic/feed.js';
+import { buildResults, orient } from '../js/logic/feed.js';
 import { buildModel } from '../js/logic/model.js';
 
 const load = f => JSON.parse(readFileSync(new URL('../tournaments/afc2027/' + f + '.json', import.meta.url)));
@@ -91,4 +91,29 @@ test('a simulated tournament resolves to a champion', () => {
   assert.ok(r16.every(m => m.home && m.away), 'every Round of 16 tie has two teams');
   assert.equal(new Set(r16.flatMap(m => [m.home, m.away])).size, 16, 'sixteen different teams');
   assert.ok(model.champion, 'a champion');
+});
+
+test('the demo tournament (?t=demo) resolves every feed team and scorer', () => {
+  const demo = f => JSON.parse(readFileSync(new URL('../tournaments/demo/' + f + '.json', import.meta.url)));
+  const T2 = demo('tournament');
+  assert.equal(T2.dataFrom, 'afc2027');
+  assert.ok(!isNaN(Date.parse(T2.demoNow)), 'demoNow is a date');
+  const feed = buildResults(demo('scores'), demo('extra'), teams, data.aliases);
+  assert.deepEqual(feed.unmatched, [], 'every demo team name matches a real team');
+  assert.equal(feed.results.size, 3);
+  const model = buildModel({ ...data, tournament: T2 }, feed, Date.parse(T2.demoNow));
+  const live = model.matches.find(m => m.home === 'BHR' && m.away === 'PRK');
+  assert.equal(live.state, 'LIVE');
+  const ksa = model.matches.find(m => m.home === 'KSA' && m.away === 'PLE');
+  assert.deepEqual(ksa.result.goals.map(g => g.name), ['Saudi Nine', 'Saudi Ten'], 'scorers keep their own names');
+  assert.equal(ksa.extra.lineups.KSA.xi.length, 11);
+});
+
+test('match stats follow the fixture home side when the feed lists the teams the other way round', () => {
+  const name = c => teams[c].en;
+  const { results } = buildResults({ matches: [{ home: name('PLE'), away: name('KSA'), homeScore: 0, awayScore: 2, state: 'FT', type: 'group',
+    stats: { possession: [36, 64], shots: [6, 15] } }] }, null, teams, data.aliases);
+  const r = orient([...results.values()][0], 'KSA');
+  assert.deepEqual(r.stats, { possession: [64, 36], shots: [15, 6] });
+  assert.equal(r.homeScore, 2);
 });
