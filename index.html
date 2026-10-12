@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFC Asian Cup 2027 — Live scores</title>
+<meta name="description" content="AFC Asian Cup Saudi Arabia 2027: schedule, live scores, group tables and knockout bracket in Mecca time, in English and Arabic.">
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<!-- Plain, unstyled markup on purpose: see DESIGN.md for the hooks a design layer can use. -->
+<header id="site-header">
+  <h1 id="t-title">AFC Asian Cup 2027</h1>
+  <p id="t-subtitle"></p>
+  <p id="lang-switch">
+    <span id="lbl-lang">Language</span>:
+    <button type="button" data-lang="en">English</button>
+    <button type="button" data-lang="ar">العربية</button>
+  </p>
+  <nav id="pages" aria-label="Pages">
+    <a href="#schedule" data-page="schedule">Schedule</a> ·
+    <a href="#groups" data-page="groups">Groups</a> ·
+    <a href="#knockout" data-page="knockout">Knockout</a> ·
+    <a href="#stats" data-page="stats">Stats</a> ·
+    <a href="#my-teams" data-page="my-teams">My teams</a>
+  </nav>
+</header>
+
+<p id="feed-status" role="status" hidden></p>
+
+<main>
+  <section id="page-schedule" data-page="schedule" aria-labelledby="h-schedule">
+    <h2 id="h-schedule">Schedule</h2>
+    <div id="schedule"></div>
+  </section>
+  <section id="page-groups" data-page="groups" aria-labelledby="h-groups" hidden>
+    <h2 id="h-groups">Groups</h2>
+    <div id="groups"></div>
+  </section>
+  <section id="page-knockout" data-page="knockout" aria-labelledby="h-knockout" hidden>
+    <h2 id="h-knockout">Knockout</h2>
+    <div id="knockout"></div>
+  </section>
+  <section id="page-stats" data-page="stats" aria-labelledby="h-stats" hidden>
+    <h2 id="h-stats">Stats</h2>
+    <div id="stats"></div>
+  </section>
+  <section id="page-my-teams" data-page="my-teams" aria-labelledby="h-my-teams" hidden>
+    <h2 id="h-my-teams">My teams</h2>
+    <div id="my-teams"></div>
+  </section>
+</main>
+
+<footer id="t-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+{
+ "KSA": {
+  "en": "Saudi Arabia",
+  "ar": "السعودية",
+  "flag": "sa",
+  "group": "A",
+  "position": "A1",
+  "region": "West"
+ },
+ "KUW": {
+  "en": "Kuwait",
+  "ar": "الكويت",
+  "flag": "kw",
+  "group": "A",
+  "position": "A2",
+  "region": "West"
+ },
+ "OMA": {
+  "en": "Oman",
+  "ar": "عمان",
+  "flag": "om",
+  "group": "A",
+  "position": "A3",
+  "region": "West"
+ },
+ "PLE": {
+  "en": "Palestine",
+  "ar": "فلسطين",
+  "flag": "ps",
+  "group": "A",
+  "position": "A4",
+  "region": "West"
+ },
+ "UZB": {
+  "en": "Uzbekistan",
+  "ar": "أوزبكستان",
+  "flag": "uz",
+  "group": "B",
+  "position": "B1",
+  "region": "Central"
+ },
+ "BHR": {
+  "en": "Bahrain",
+  "ar": "البحرين",
+  "flag": "bh",
+  "group": "B",
+  "position": "B2",
+  "region": "West"
+ },
+ "PRK": {
+  "en": "North Korea",
+  "ar": "كوريا الشمالية",
+  "flag": "kp",
+  "group": "B",
+  "position": "B3",
+  "region": "East"
+ },
+ "JOR": {
+  "en": "Jordan",
+  "ar": "الأردن",
+  "flag": "jo",
+  "group": "B",
+  "position": "B4",
+  "region": "West"
+ },
+ "IRN": {
+  "en": "Iran",
+  "ar": "إيران",
+  "flag": "ir",
+  "group": "C",
+  "position": "C1",
+  "region": "Central"
+ },
+ "SYR": {
+  "en": "Syria",
+  "ar": "سوريا",
+  "flag": "sy",
+  "group": "C",
+  "position": "C2",
+  "region": "West"
+ },
+ "KGZ": {
+  "en": "Kyrgyzstan",
+  "ar": "قيرغيزستان",
+  "flag": "kg",
+  "group": "C",
+  "position": "C3",
+  "region": "Central"
+ },
+ "CHN": {
+  "en": "China",
+  "ar": "الصين",
+  "flag": "cn",
+  "group": "C",
+  "position": "C4",
+  "region": "East"
+ },
+ "AUS": {
+  "en": "Australia",
+  "ar": "أستراليا",
+  "flag": "au",
+  "group": "D",
+  "position": "D1",
+  "region": "ASEAN"
+ },
+ "TJK": {
+  "en": "Tajikistan",
+  "ar": "طاجيكستان",
+  "flag": "tj",
+  "group": "D",
+  "position": "D2",
+  "region": "Central"
+ },
+ "IRQ": {
+  "en": "Iraq",
+  "ar": "العراق",
+  "flag": "iq",
+  "group": "D",
+  "position": "D3",
+  "region": "West"
+ },
+ "SGP": {
+  "en": "Singapore",
+  "ar": "سنغافورة",
+  "flag": "sg",
+  "group": "D",
+  "position": "D4",
+  "region": "ASEAN"
+ },
+ "KOR": {
+  "en": "South Korea",
+  "ar": "كوريا الجنوبية",
+  "flag": "kr",
+  "group": "E",
+  "position": "E1",
+  "region": "East"
+ },
+ "UAE": {
+  "en": "United Arab Emirates",
+  "ar": "الإمارات",
+  "flag": "ae",
+  "group": "E",
+  "position": "E2",
+  "region": "West"
+ },
+ "VIE": {
+  "en": "Vietnam",
+  "ar": "فيتنام",
+  "flag": "vn",
+  "group": "E",
+  "position": "E3",
+  "region": "ASEAN"
+ },
+ "YEM": {
+  "en": "Yemen",
+  "ar": "اليمن",
+  "flag": "ye",
+  "group": "E",
+  "position": "E4",
+  "region": "West"
+ },
+ "JPN": {
+  "en": "Japan",
+  "ar": "اليابان",
+  "flag": "jp",
+  "group": "F",
+  "position": "F1",
+  "region": "East"
+ },
+ "QAT": {
+  "en": "Qatar",
+  "ar": "قطر",
+  "flag": "qa",
+  "group": "F",
+  "position": "F2",
+  "region": "West"
+ },
+ "THA": {
+  "en": "Thailand",
+  "ar": "تايلاند",
+  "flag": "th",
+  "group": "F",
+  "position": "F3",
+  "region": "ASEAN"
+ },
+ "IDN": {
+  "en": "Indonesia",
+  "ar": "إندونيسيا",
+  "flag": "id",
+  "group": "F",
+  "position": "F4",
+  "region": "ASEAN"
+ }
+}

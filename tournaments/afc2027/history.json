@@ -1,0 +1,148 @@
+{
+ "winners": [
+  {
+   "en": "Japan",
+   "ar": "اليابان",
+   "flag": "jp",
+   "titles": 4,
+   "years": [
+    1992,
+    2000,
+    2004,
+    2011
+   ]
+  },
+  {
+   "en": "Saudi Arabia",
+   "ar": "السعودية",
+   "flag": "sa",
+   "titles": 3,
+   "years": [
+    1984,
+    1988,
+    1996
+   ]
+  },
+  {
+   "en": "Iran",
+   "ar": "إيران",
+   "flag": "ir",
+   "titles": 3,
+   "years": [
+    1968,
+    1972,
+    1976
+   ]
+  },
+  {
+   "en": "South Korea",
+   "ar": "كوريا الجنوبية",
+   "flag": "kr",
+   "titles": 2,
+   "years": [
+    1956,
+    1960
+   ]
+  },
+  {
+   "en": "Qatar",
+   "ar": "قطر",
+   "flag": "qa",
+   "titles": 2,
+   "years": [
+    2019,
+    2023
+   ]
+  },
+  {
+   "en": "Israel",
+   "ar": "إسرائيل",
+   "flag": "il",
+   "titles": 1,
+   "years": [
+    1964
+   ]
+  },
+  {
+   "en": "Kuwait",
+   "ar": "الكويت",
+   "flag": "kw",
+   "titles": 1,
+   "years": [
+    1980
+   ]
+  },
+  {
+   "en": "Iraq",
+   "ar": "العراق",
+   "flag": "iq",
+   "titles": 1,
+   "years": [
+    2007
+   ]
+  },
+  {
+   "en": "Australia",
+   "ar": "أستراليا",
+   "flag": "au",
+   "titles": 1,
+   "years": [
+    2015
+   ]
+  }
+ ],
+ "scorers": [
+  {
+   "name": "Ali Daei",
+   "flag": "ir",
+   "goals": 14
+  },
+  {
+   "name": "Almoez Ali",
+   "flag": "qa",
+   "goals": 11
+  },
+  {
+   "name": "Lee Dong-gook",
+   "flag": "kr",
+   "goals": 10
+  },
+  {
+   "name": "Naohiro Takahara",
+   "flag": "jp",
+   "goals": 9
+  },
+  {
+   "name": "Ali Mabkhout",
+   "flag": "ae",
+   "goals": 9
+  },
+  {
+   "name": "Akram Afif",
+   "flag": "qa",
+   "goals": 9
+  },
+  {
+   "name": "Jasem Al-Huwaidi",
+   "flag": "kw",
+   "goals": 8
+  },
+  {
+   "name": "Younis Mahmoud",
+   "flag": "iq",
+   "goals": 8
+  },
+  {
+   "name": "Sardar Azmoun",
+   "flag": "ir",
+   "goals": 8
+  }
+ ],
+ "scorersNote": "Through the 2023 edition (played Jan–Feb 2024). Pre-2023 totals from Goal.com (12 Jan 2024); 2023 additions from the 2023 goalscorer list (Afif 8, Almoez Ali 2, Azmoun 2, Mabkhout 0). No official AFC all-time list found.",
+ "activeScorers": {
+  "ali": "Almoez Ali",
+  "afif": "Akram Afif",
+  "azmoun": "Sardar Azmoun"
+ },
+ "activeScorersNote": "Wikipedia marks these three as still active internationally. Ali Mabkhout's status is UNKNOWN, so he is excluded. 2027 squads not yet announced."
+}

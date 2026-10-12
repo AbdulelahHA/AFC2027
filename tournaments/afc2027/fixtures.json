@@ -1,0 +1,497 @@
+[
+ {
+  "id": 1,
+  "stage": "group",
+  "group": "A",
+  "date": "2027-01-07",
+  "kickoff": null,
+  "venue": "KFS",
+  "home": "KSA",
+  "away": "PLE"
+ },
+ {
+  "id": 2,
+  "stage": "group",
+  "group": "A",
+  "date": "2027-01-08",
+  "kickoff": null,
+  "venue": "KSU",
+  "home": "KUW",
+  "away": "OMA"
+ },
+ {
+  "id": 3,
+  "stage": "group",
+  "group": "B",
+  "date": "2027-01-08",
+  "kickoff": null,
+  "venue": "IMU",
+  "home": "BHR",
+  "away": "PRK"
+ },
+ {
+  "id": 4,
+  "stage": "group",
+  "group": "B",
+  "date": "2027-01-08",
+  "kickoff": null,
+  "venue": "KAS",
+  "home": "UZB",
+  "away": "JOR"
+ },
+ {
+  "id": 5,
+  "stage": "group",
+  "group": "C",
+  "date": "2027-01-09",
+  "kickoff": null,
+  "venue": "KFS",
+  "home": "SYR",
+  "away": "KGZ"
+ },
+ {
+  "id": 6,
+  "stage": "group",
+  "group": "C",
+  "date": "2027-01-09",
+  "kickoff": null,
+  "venue": "KAR",
+  "home": "IRN",
+  "away": "CHN"
+ },
+ {
+  "id": 7,
+  "stage": "group",
+  "group": "D",
+  "date": "2027-01-09",
+  "kickoff": null,
+  "venue": "ARM",
+  "home": "AUS",
+  "away": "SGP"
+ },
+ {
+  "id": 8,
+  "stage": "group",
+  "group": "D",
+  "date": "2027-01-10",
+  "kickoff": null,
+  "venue": "SHB",
+  "home": "TJK",
+  "away": "IRQ"
+ },
+ {
+  "id": 9,
+  "stage": "group",
+  "group": "E",
+  "date": "2027-01-10",
+  "kickoff": null,
+  "venue": "KAS",
+  "home": "KOR",
+  "away": "YEM"
+ },
+ {
+  "id": 10,
+  "stage": "group",
+  "group": "E",
+  "date": "2027-01-11",
+  "kickoff": null,
+  "venue": "KSU",
+  "home": "UAE",
+  "away": "VIE"
+ },
+ {
+  "id": 11,
+  "stage": "group",
+  "group": "F",
+  "date": "2027-01-11",
+  "kickoff": null,
+  "venue": "IMU",
+  "home": "QAT",
+  "away": "THA"
+ },
+ {
+  "id": 12,
+  "stage": "group",
+  "group": "F",
+  "date": "2027-01-11",
+  "kickoff": null,
+  "venue": "PAF",
+  "home": "JPN",
+  "away": "IDN"
+ },
+ {
+  "id": 13,
+  "stage": "group",
+  "group": "A",
+  "date": "2027-01-12",
+  "kickoff": null,
+  "venue": "KFS",
+  "home": "OMA",
+  "away": "KSA"
+ },
+ {
+  "id": 14,
+  "stage": "group",
+  "group": "B",
+  "date": "2027-01-12",
+  "kickoff": null,
+  "venue": "KAR",
+  "home": "PRK",
+  "away": "UZB"
+ },
+ {
+  "id": 15,
+  "stage": "group",
+  "group": "A",
+  "date": "2027-01-12",
+  "kickoff": null,
+  "venue": "ARM",
+  "home": "PLE",
+  "away": "KUW"
+ },
+ {
+  "id": 16,
+  "stage": "group",
+  "group": "C",
+  "date": "2027-01-13",
+  "kickoff": null,
+  "venue": "SHB",
+  "home": "KGZ",
+  "away": "IRN"
+ },
+ {
+  "id": 17,
+  "stage": "group",
+  "group": "B",
+  "date": "2027-01-13",
+  "kickoff": null,
+  "venue": "KAS",
+  "home": "JOR",
+  "away": "BHR"
+ },
+ {
+  "id": 18,
+  "stage": "group",
+  "group": "D",
+  "date": "2027-01-14",
+  "kickoff": null,
+  "venue": "KSU",
+  "home": "IRQ",
+  "away": "AUS"
+ },
+ {
+  "id": 19,
+  "stage": "group",
+  "group": "D",
+  "date": "2027-01-14",
+  "kickoff": null,
+  "venue": "IMU",
+  "home": "SGP",
+  "away": "TJK"
+ },
+ {
+  "id": 20,
+  "stage": "group",
+  "group": "C",
+  "date": "2027-01-14",
+  "kickoff": null,
+  "venue": "PAF",
+  "home": "CHN",
+  "away": "SYR"
+ },
+ {
+  "id": 21,
+  "stage": "group",
+  "group": "E",
+  "date": "2027-01-15",
+  "kickoff": null,
+  "venue": "KFS",
+  "home": "YEM",
+  "away": "UAE"
+ },
+ {
+  "id": 22,
+  "stage": "group",
+  "group": "E",
+  "date": "2027-01-15",
+  "kickoff": null,
+  "venue": "KAR",
+  "home": "VIE",
+  "away": "KOR"
+ },
+ {
+  "id": 23,
+  "stage": "group",
+  "group": "F",
+  "date": "2027-01-16",
+  "kickoff": null,
+  "venue": "SHB",
+  "home": "THA",
+  "away": "JPN"
+ },
+ {
+  "id": 24,
+  "stage": "group",
+  "group": "F",
+  "date": "2027-01-16",
+  "kickoff": null,
+  "venue": "ARM",
+  "home": "IDN",
+  "away": "QAT"
+ },
+ {
+  "id": 25,
+  "stage": "group",
+  "group": "A",
+  "date": "2027-01-17",
+  "kickoff": null,
+  "venue": "KSU",
+  "home": "OMA",
+  "away": "PLE"
+ },
+ {
+  "id": 26,
+  "stage": "group",
+  "group": "B",
+  "date": "2027-01-17",
+  "kickoff": null,
+  "venue": "IMU",
+  "home": "PRK",
+  "away": "JOR"
+ },
+ {
+  "id": 27,
+  "stage": "group",
+  "group": "A",
+  "date": "2027-01-17",
+  "kickoff": null,
+  "venue": "KAS",
+  "home": "KSA",
+  "away": "KUW"
+ },
+ {
+  "id": 28,
+  "stage": "group",
+  "group": "B",
+  "date": "2027-01-17",
+  "kickoff": null,
+  "venue": "PAF",
+  "home": "UZB",
+  "away": "BHR"
+ },
+ {
+  "id": 29,
+  "stage": "group",
+  "group": "C",
+  "date": "2027-01-18",
+  "kickoff": null,
+  "venue": "KFS",
+  "home": "IRN",
+  "away": "SYR"
+ },
+ {
+  "id": 30,
+  "stage": "group",
+  "group": "C",
+  "date": "2027-01-18",
+  "kickoff": null,
+  "venue": "KAR",
+  "home": "KGZ",
+  "away": "CHN"
+ },
+ {
+  "id": 31,
+  "stage": "group",
+  "group": "D",
+  "date": "2027-01-19",
+  "kickoff": null,
+  "venue": "SHB",
+  "home": "AUS",
+  "away": "TJK"
+ },
+ {
+  "id": 32,
+  "stage": "group",
+  "group": "D",
+  "date": "2027-01-19",
+  "kickoff": null,
+  "venue": "ARM",
+  "home": "IRQ",
+  "away": "SGP"
+ },
+ {
+  "id": 33,
+  "stage": "group",
+  "group": "E",
+  "date": "2027-01-20",
+  "kickoff": null,
+  "venue": "KSU",
+  "home": "KOR",
+  "away": "UAE"
+ },
+ {
+  "id": 34,
+  "stage": "group",
+  "group": "F",
+  "date": "2027-01-20",
+  "kickoff": null,
+  "venue": "IMU",
+  "home": "JPN",
+  "away": "QAT"
+ },
+ {
+  "id": 35,
+  "stage": "group",
+  "group": "F",
+  "date": "2027-01-20",
+  "kickoff": null,
+  "venue": "KAS",
+  "home": "THA",
+  "away": "IDN"
+ },
+ {
+  "id": 36,
+  "stage": "group",
+  "group": "E",
+  "date": "2027-01-20",
+  "kickoff": null,
+  "venue": "PAF",
+  "home": "VIE",
+  "away": "YEM"
+ },
+ {
+  "id": 37,
+  "stage": "r16",
+  "date": "2027-01-22",
+  "kickoff": null,
+  "venue": "KAR",
+  "home": "2A",
+  "away": "2C"
+ },
+ {
+  "id": 38,
+  "stage": "r16",
+  "date": "2027-01-22",
+  "kickoff": null,
+  "venue": "SHB",
+  "home": "1B",
+  "away": "3:ACD"
+ },
+ {
+  "id": 39,
+  "stage": "r16",
+  "date": "2027-01-23",
+  "kickoff": null,
+  "venue": "IMU",
+  "home": "1D",
+  "away": "3:BEF"
+ },
+ {
+  "id": 40,
+  "stage": "r16",
+  "date": "2027-01-23",
+  "kickoff": null,
+  "venue": "ARM",
+  "home": "1A",
+  "away": "3:CDE"
+ },
+ {
+  "id": 41,
+  "stage": "r16",
+  "date": "2027-01-24",
+  "kickoff": null,
+  "venue": "KFS",
+  "home": "1F",
+  "away": "2E"
+ },
+ {
+  "id": 42,
+  "stage": "r16",
+  "date": "2027-01-24",
+  "kickoff": null,
+  "venue": "PAF",
+  "home": "2B",
+  "away": "2F"
+ },
+ {
+  "id": 43,
+  "stage": "r16",
+  "date": "2027-01-25",
+  "kickoff": null,
+  "venue": "KSU",
+  "home": "1E",
+  "away": "2D"
+ },
+ {
+  "id": 44,
+  "stage": "r16",
+  "date": "2027-01-25",
+  "kickoff": null,
+  "venue": "KAS",
+  "home": "1C",
+  "away": "3:ABF"
+ },
+ {
+  "id": 45,
+  "stage": "qf",
+  "date": "2027-01-28",
+  "kickoff": null,
+  "venue": "KAR",
+  "home": "W37",
+  "away": "W39"
+ },
+ {
+  "id": 46,
+  "stage": "qf",
+  "date": "2027-01-28",
+  "kickoff": null,
+  "venue": "KAS",
+  "home": "W38",
+  "away": "W41"
+ },
+ {
+  "id": 47,
+  "stage": "qf",
+  "date": "2027-01-29",
+  "kickoff": null,
+  "venue": "KFS",
+  "home": "W44",
+  "away": "W43"
+ },
+ {
+  "id": 48,
+  "stage": "qf",
+  "date": "2027-01-29",
+  "kickoff": null,
+  "venue": "ARM",
+  "home": "W40",
+  "away": "W42"
+ },
+ {
+  "id": 49,
+  "stage": "sf",
+  "date": "2027-02-01",
+  "kickoff": null,
+  "venue": "ARM",
+  "home": "W45",
+  "away": "W46"
+ },
+ {
+  "id": 50,
+  "stage": "sf",
+  "date": "2027-02-02",
+  "kickoff": null,
+  "venue": "KAS",
+  "home": "W47",
+  "away": "W48"
+ },
+ {
+  "id": 51,
+  "stage": "final",
+  "date": "2027-02-05",
+  "kickoff": null,
+  "venue": "KFS",
+  "home": "W49",
+  "away": "W50"
+ }
+]
