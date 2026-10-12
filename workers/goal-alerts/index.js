@@ -7,8 +7,8 @@
 import { sendPush } from './push.js';
 import { resolver, detectGoals, message, wants } from './goals.js';
 
-const json = (body, status = 200, origin = '*') => new Response(JSON.stringify(body), { status, headers: {
-  'Content-Type': 'application/json', 'Access-Control-Allow-Origin': origin, 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' } });
+const cors = origin => ({ 'Access-Control-Allow-Origin': origin, 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Max-Age': '86400' });
+const json = (body, status = 200, origin = '*') => new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json', ...cors(origin) } });
 const subKey = async endpoint => 'sub:' + [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(endpoint)))].map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 32);
 const vapidOf = env => ({ publicKey: env.VAPID_PUBLIC, privateKey: env.VAPID_PRIVATE, subject: env.VAPID_SUBJECT });
 const validSub = s => s && typeof s.endpoint === 'string' && /^https:\/\//.test(s.endpoint) && s.keys?.p256dh && s.keys?.auth;
@@ -22,7 +22,8 @@ async function teamsOf(env){
 export default {
   async fetch(req, env){
     const allow = new URL(env.SITE_URL).origin;          /* only the site itself may call us from a browser */
-    if(req.method === 'OPTIONS') return json({}, 204, allow);
+    /* the browser's pre-flight before a JSON POST: a 204 must have no body */
+    if(req.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(allow) });
     if(req.method !== 'POST') return json({ ok: true, service: 'afc27 goal alerts' }, 200, allow);
     const path = new URL(req.url).pathname;
     let body; try { body = await req.json(); } catch { return json({ error: 'bad json' }, 400, allow); }

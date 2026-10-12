@@ -11,6 +11,8 @@ scores feed ──(cron, every minute)──▶ Worker: new goal? ──▶ Appl
 - `goals.js` — goal detection from the scores feed, who wants which match, the message (EN/AR). Tested in `tests/goals.test.js`.
 - `index.js` — the Worker: `/subscribe`, `/unsubscribe`, `/test`, and the cron.
 
+**Live:** `https://afc27-goal-alerts.abdulelah12012.workers.dev` (deployed 12 Oct 2026; KV `SUBS`, secret `VAPID_PRIVATE` set). Redeploy after a change: `npx wrangler deploy --config workers/goal-alerts/wrangler.toml`.
+
 ## Deploy (once)
 ```
 cd workers/goal-alerts

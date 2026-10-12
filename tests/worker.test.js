@@ -50,6 +50,11 @@ test('a goal in the feed reaches a subscribed phone, encrypted, and only once', 
   const live = (h, a, goals) => ({ matches: [{ home: 'Saudi Arabia', away: 'Palestine', homeScore: h, awayScore: a, state: 'LIVE', homeGoals: goals, awayGoals: [] },
                                              { home: 'Japan', away: 'Qatar', homeScore: 1, awayScore: 0, state: 'LIVE', homeGoals: [], awayGoals: [] }] });
 
+  /* the browser's pre-flight must succeed and allow the site, or "Turn on" fails in every browser */
+  const pre = await worker.fetch(new Request('https://w.test/subscribe', { method: 'OPTIONS', headers: { Origin: 'https://site.example.test' } }), env);
+  assert.equal(pre.status, 204);
+  assert.equal(pre.headers.get('Access-Control-Allow-Origin'), 'https://site.example.test');
+  assert.match(pre.headers.get('Access-Control-Allow-Headers'), /Content-Type/);
   /* the phone subscribes for Saudi Arabia only, in Arabic */
   const res = await worker.fetch(new Request('https://w.test/subscribe', { method: 'POST', body: JSON.stringify({ subscription: sub, teams: ['KSA'], lang: 'ar' }) }), env);
   assert.equal(res.status, 200);
