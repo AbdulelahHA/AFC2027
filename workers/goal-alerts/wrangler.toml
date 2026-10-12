@@ -1,0 +1,18 @@
+# AFC2027 goal alerts — deploy steps in README.md (this folder)
+name = "afc27-goal-alerts"
+main = "index.js"
+compatibility_date = "2024-09-23"
+
+[triggers]
+crons = ["* * * * *"]          # every minute: look for new goals in the scores feed
+
+[vars]
+SITE_URL = "https://artoriasthewebwalker.github.io/AFC2027/"
+FEED_URL = ""                  # the live scores feed (same as tournament.json feeds.scores); empty = alerts idle
+VAPID_PUBLIC = "BHXAtWkJKgrRa72Gb7JnT06uwIsRTrIHI79wRevEQuCZXJVtnwzlni3XStb86KwCCsfFC_tk2HEAEOslIkDcEyo"
+VAPID_SUBJECT = "mailto:Abdulelah-Hamad@outlook.com"
+# VAPID_PRIVATE is a secret: npx wrangler secret put VAPID_PRIVATE
+
+[[kv_namespaces]]
+binding = "SUBS"               # who wants alerts (sub:<hash>) + last seen scores (state:scores)
+id = "REPLACE_WITH_KV_ID"      # from: npx wrangler kv namespace create SUBS

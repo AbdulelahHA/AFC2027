@@ -50,6 +50,25 @@ function dayHTML(list, isToday){
     ${isToday ? '<p class="countdown" hidden></p>' : ''}<ol class="matches">${list.map(rowHTML).join('')}</ol></section>`;
 }
 
+/* before the first match: count down to it (to the start of its day while its time is TBC) */
+const opening = () => state.model.matches[0];
+const openingAt = m => m.timeTBC ? Date.parse(`${m.date}T00:00:00+03:00`) : m.kickoff;
+function heroHTML(m){
+  const p = local(m.kickoff), u = t('units'), team = c => `${flag(c)}<span>${esc(teamName(c))}</span>`;
+  return `<section class="hero"><p class="hero-k">${t('startsIn')}</p>
+    <div class="hero-clock">${['d', 'h', 'm', 's'].map(k => `<span><b data-u="${k}">–</b><small>${u[k]}</small></span>`).join('')}</div>
+    <button type="button" class="hero-match" data-id="${m.id}">${team(m.home)}<span class="vs">${t('vs')}</span>${team(m.away)}</button>
+    <p class="hero-meta">${t('openingMatch')} · ${dayName(p.weekday)} ${p.d} ${monthName(p.mo)}</p></section>`;
+}
+/* Today with no matches: the countdown before the tournament, else when the next matches are */
+function emptyToday(parts, now){
+  if(now < openingAt(opening())) return heroHTML(opening());
+  const next = parts[2][0];
+  if(!next) return `<p class="empty">${t('noToday')}</p>`;
+  const p = local(next[1][0].kickoff);
+  return `<div class="empty"><p>${t('noToday')}</p><button type="button" class="next-btn">${t('nextOn')(`${dayName(p.weekday)} ${p.d} ${monthName(p.mo)}`)} ›</button></div>`;
+}
+
 /* rebuild when the day, the teams on the cards or the language change; otherwise just tick */
 export function renderScores(){
   if(!state.model) return;
@@ -59,10 +78,11 @@ export function renderScores(){
     renderedSig = sig;
     TABS.forEach((k, i) => { $('tab-' + i).textContent = t(k); });
     parts.forEach((list, i) => {
-      $('pane-' + i).innerHTML = list.length ? list.map(([, ms]) => dayHTML(ms, i === 1)).join('') : `<p class="empty">${t(EMPTY[i])}</p>`;
+      $('pane-' + i).innerHTML = list.length ? list.map(([, ms]) => dayHTML(ms, i === 1)).join('')
+        : i === 1 ? emptyToday(parts, now) : `<p class="empty">${t(EMPTY[i])}</p>`;
     });
-    /* first time: today if anything is on, else what's coming, else what just happened */
-    if(current == null) current = parts[1].length ? 1 : parts[2].length ? 2 : 0;
+    /* first time: Today (matches, the countdown, or when the next ones are); after the final, what just happened */
+    if(current == null) current = parts[1].length || parts[2].length ? 1 : 0;
     requestAnimationFrame(() => showPane(current, false));
   }
   tick();
@@ -83,6 +103,12 @@ export function tick(){
     const g = ['h', 'a'].find(x => now - (goalFx.get(m.id + '|' + x) || 0) < GOAL_FX_MS);
     if(g) el.dataset.goal = g === 'h' ? 'home' : 'away'; else delete el.dataset.goal;
     if(el.closest('#pane-1') && !next && s.phase === 'upcoming' && !m.timeTBC && m.kickoff > now) next = m;
+  }
+  const hero = panes.querySelector('.hero-clock');
+  if(hero){
+    let s = Math.max(0, Math.floor((openingAt(opening()) - now) / 1000));
+    const v = { d: Math.floor(s / 86400), h: Math.floor(s / 3600) % 24, m: Math.floor(s / 60) % 60, s: s % 60 };
+    for(const b of hero.querySelectorAll('b')){ const x = String(v[b.dataset.u]).padStart(b.dataset.u === 'd' ? 1 : 2, '0'); if(b.textContent !== x) b.textContent = x; }
   }
   const cd = panes.querySelector('#pane-1 .countdown');
   if(cd){
@@ -113,6 +139,8 @@ export function initScores(){
   });
   addEventListener('resize', () => current != null && showPane(current, false));
   panes.addEventListener('click', e => {
+    const h = e.target.closest('.hero-match'); if(h) return openCard(+h.dataset.id, () => t('openingMatch'));
+    if(e.target.closest('.next-btn')){ days.classList.add('animate'); return showPane(2); }
     const r = e.target.closest('.row'); if(!r) return;
     const pane = +r.closest('.pane').id.slice(-1);
     openCard(+r.closest('.match').dataset.id, () => t(TABS[pane]));

@@ -9,6 +9,7 @@ import { initCard, refreshCard, tickCard } from './views/card.js';
 import { renderGroups } from './views/groups.js';
 import { initKnockout, renderKnockout } from './views/knockout.js';
 import { initStats, renderStats } from './views/stats.js';
+import { initAlerts, renderAlerts } from './views/alerts.js';
 
 const params = new URLSearchParams(location.search);
 state.data = await loadTournament(params.get('t') || 'afc2027');
@@ -27,6 +28,7 @@ function render(){
   renderGroups();
   renderKnockout();
   renderStats();
+  renderAlerts();
   refreshCard();
 }
 
@@ -45,5 +47,6 @@ initScores();
 initCard();
 initKnockout();
 initStats();
+initAlerts();
 startFeeds();
 setInterval(() => { tick(); tickCard(); }, 1000);

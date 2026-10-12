@@ -5,7 +5,7 @@ import { t } from '../i18n.js';
 
 const $ = id => document.getElementById(id);
 const root = document.documentElement;
-export const PAGES = ['scores', 'groups', 'knockout', 'stats'];
+export const PAGES = ['scores', 'groups', 'knockout', 'stats', 'alerts'];
 
 /* a segmented switch: the pill sits under button `pos` (fractional while a swipe is in progress) */
 export function setPill(seg, pos){
