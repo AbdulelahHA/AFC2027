@@ -359,6 +359,48 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
 .tie[data-winner] .tl:not(:nth-of-type(1)):not(:nth-of-type(2)){opacity:1}
 .tie[data-state="live"]{box-shadow:inset 0 0 0 2px var(--live)}
 .champ-team{display:flex;align-items:center;justify-content:center;gap:6px;font-weight:700;font-size:.75rem}
+
+/* ═════════ countdown before the tournament (Today pane) ═════════ */
+.hero{margin:20px 0 8px;padding:22px 16px 18px;border-radius:calc(var(--r) + 10px);text-align:center;
+  background:linear-gradient(180deg,color-mix(in srgb,#fff 20%,transparent),transparent 45%),color-mix(in srgb,var(--surface) 72%,transparent);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,#fff 30%,transparent),0 6px 24px color-mix(in srgb,var(--ink) 8%,transparent)}
+.hero-k{margin:0;font-size:.875rem;color:var(--muted)}
+.hero-clock{display:flex;justify-content:center;gap:clamp(12px,5vw,26px);margin:10px 0 18px}
+.hero-clock span{display:grid;gap:4px;min-width:2.6ch}
+.hero-clock b{font:700 clamp(2.1rem,11vw,3.2rem)/1 var(--font-display);font-variant-numeric:tabular-nums;color:var(--accent)}
+.hero-clock small{font-size:.75rem;color:var(--muted)}
+.hero-match{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-sizing:border-box;border:0;cursor:pointer;
+  padding:13px 12px;border-radius:var(--r);background:var(--surface);font-weight:600;box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 8%,transparent);transition:transform .12s ease-out}
+.hero-match:active{transform:scale(.98)}
+.hero-match .flag{height:20px}
+.hero-match .vs{color:var(--muted);font-weight:400;font-size:.8125rem}
+.hero-meta{margin:10px 0 0;font-size:.8125rem;color:var(--muted)}
+.empty p{margin:0}
+.next-btn{margin-top:10px;border:0;background:none;color:var(--accent);font-weight:600;cursor:pointer;padding:6px}
+
+/* ═════════ goal alerts page ═════════ */
+.al-card{margin-top:14px;padding:22px 16px 18px;text-align:center}
+.al-bell{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.al-bell svg{width:26px;height:26px}
+.al-state{margin:12px 0 0;font-weight:600}
+.al-state.on{color:var(--ok)}
+.al-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px}
+.btn{border:0;cursor:pointer;padding:11px 16px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:600;transition:transform .12s ease-out}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:color-mix(in srgb,var(--ink) 8%,transparent);color:var(--ink)}
+.btn:disabled{opacity:.6}
+.al-msg{margin:12px auto 0;max-width:34ch;font-size:.875rem;color:var(--muted);line-height:1.45}
+.al-note{margin:12px 0 0;font-size:.875rem;font-weight:500}
+.chip-group{margin-top:12px}
+.chip-g{display:block;font-size:.75rem;color:var(--muted);margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;cursor:pointer;font-size:.8125rem;
+  border:1px solid var(--line);background:var(--surface);transition:background-color .15s,transform .12s ease-out}
+.chip:active{transform:scale(.95)}
+.chip .flag{height:13px}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:transparent}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important}
   #app,.seg-pill,#menu,#toast{transition:none!important}

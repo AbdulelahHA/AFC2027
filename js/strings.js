@@ -33,6 +33,16 @@ export default {
       hasawi: "This visit's style is Hasawi: the gold zari of the Hasawi bisht and the palm weaving of Al-Ahsa."
     },
     emblemAlt: 'AFC Asian Cup Saudi Arabia 2027 emblem',
+    startsIn: 'The tournament starts in', units: { d: 'days', h: 'hrs', m: 'min', s: 'sec' },
+    openingMatch: 'Opening match', nextOn: day => `Next matches: ${day}`,
+    alerts: 'Goal alerts', alertsIntro: 'Get a notification the moment a goal goes in.', alertsOn: 'Goal alerts are on',
+    alertsTurnOn: 'Turn on goal alerts', alertsOff: 'Turn off', alertsTest: 'Send a test alert',
+    alertsTestSent: 'Test alert sent. It should arrive in a few seconds.', alertsAsk: 'Your phone will ask to allow notifications.',
+    alertsDenied: "Notifications are blocked for this app. Allow them in your phone's Settings, then try again.",
+    alertsInstall: 'On iPhone, goal alerts work in the app on your Home Screen: tap Share, then “Add to Home Screen”, and open it from there.',
+    alertsUnsupported: "This browser can't receive notifications.", alertsNotReady: 'Goal alerts switch on once the live score service is running.',
+    alertsError: "Couldn't reach the alerts service. Try again in a moment.",
+    alertsFollow: 'Teams to follow', alertsFollowHint: "Pick teams to get only their goals. Pick none and you'll get every goal of the tournament.",
     weekdays: {},
     months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   },
@@ -68,6 +78,16 @@ export default {
       hasawi: 'طابع هذه الزيارة حساوي: زري البشت الحساوي الذهبي وسفّ الخوص في الأحساء.'
     },
     emblemAlt: 'شعار كأس آسيا السعودية 2027',
+    startsIn: 'تنطلق البطولة بعد', units: { d: 'يوم', h: 'ساعة', m: 'دقيقة', s: 'ثانية' },
+    openingMatch: 'المباراة الافتتاحية', nextOn: day => `المباريات القادمة: ${day}`,
+    alerts: 'تنبيهات الأهداف', alertsIntro: 'يصلك إشعار لحظة تسجيل الهدف.', alertsOn: 'تنبيهات الأهداف مفعّلة',
+    alertsTurnOn: 'فعّل تنبيهات الأهداف', alertsOff: 'إيقاف', alertsTest: 'أرسل تنبيهاً تجريبياً',
+    alertsTestSent: 'تم إرسال تنبيه تجريبي، سيصلك خلال ثوانٍ.', alertsAsk: 'سيطلب جهازك السماح بالإشعارات.',
+    alertsDenied: 'الإشعارات محظورة لهذا التطبيق. اسمح بها من إعدادات جهازك ثم حاول مجدداً.',
+    alertsInstall: 'على الآيفون تعمل تنبيهات الأهداف من التطبيق على الشاشة الرئيسية: اضغط «مشاركة» ثم «إضافة إلى الشاشة الرئيسية» وافتحه من هناك.',
+    alertsUnsupported: 'هذا المتصفح لا يدعم الإشعارات.', alertsNotReady: 'تُفعَّل تنبيهات الأهداف عند تشغيل خدمة النتائج المباشرة.',
+    alertsError: 'تعذّر الوصول إلى خدمة التنبيهات. حاول بعد قليل.',
+    alertsFollow: 'الفرق التي تتابعها', alertsFollowHint: 'اختر فرقاً لتصلك أهدافها فقط، أو لا تختر شيئاً لتصلك كل أهداف البطولة.',
     weekdays: { Sunday: 'الأحد', Monday: 'الإثنين', Tuesday: 'الثلاثاء', Wednesday: 'الأربعاء', Thursday: 'الخميس', Friday: 'الجمعة', Saturday: 'السبت' },
     months: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر']
   }
