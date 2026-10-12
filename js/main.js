@@ -10,9 +10,16 @@ import { renderGroups } from './views/groups.js';
 import { initKnockout, renderKnockout } from './views/knockout.js';
 import { initStats, renderStats } from './views/stats.js';
 
-const id = new URLSearchParams(location.search).get('t') || 'afc2027';
-state.data = await loadTournament(id);
+const params = new URLSearchParams(location.search);
+state.data = await loadTournament(params.get('t') || 'afc2027');
 setTimezone(state.data.tournament.timezone);
+
+/* testing: ?now=2027-01-08T12:40:00+03:00 (or a test tournament's "demoNow") runs the clock from that moment */
+const testNow = params.get('now') || state.data.tournament.demoNow;
+if(testNow && !isNaN(Date.parse(testNow))){
+  const off = Date.parse(testNow) - Date.now(), real = Date.now.bind(Date);
+  Date.now = () => real() + off;
+}
 
 function render(){
   if(!state.model) return;

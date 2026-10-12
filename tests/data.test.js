@@ -93,6 +93,22 @@ test('a simulated tournament resolves to a champion', () => {
   assert.ok(model.champion, 'a champion');
 });
 
+test('the demo tournament (?t=demo) resolves every feed team and scorer', () => {
+  const demo = f => JSON.parse(readFileSync(new URL('../tournaments/demo/' + f + '.json', import.meta.url)));
+  const T2 = demo('tournament');
+  assert.equal(T2.dataFrom, 'afc2027');
+  assert.ok(!isNaN(Date.parse(T2.demoNow)), 'demoNow is a date');
+  const feed = buildResults(demo('scores'), demo('extra'), teams, data.aliases);
+  assert.deepEqual(feed.unmatched, [], 'every demo team name matches a real team');
+  assert.equal(feed.results.size, 3);
+  const model = buildModel({ ...data, tournament: T2 }, feed, Date.parse(T2.demoNow));
+  const live = model.matches.find(m => m.home === 'BHR' && m.away === 'PRK');
+  assert.equal(live.state, 'LIVE');
+  const ksa = model.matches.find(m => m.home === 'KSA' && m.away === 'PLE');
+  assert.deepEqual(ksa.result.goals.map(g => g.name), ['Saudi Nine', 'Saudi Ten'], 'scorers keep their own names');
+  assert.equal(ksa.extra.lineups.KSA.xi.length, 11);
+});
+
 test('match stats follow the fixture home side when the feed lists the teams the other way round', () => {
   const name = c => teams[c].en;
   const { results } = buildResults({ matches: [{ home: name('PLE'), away: name('KSA'), homeScore: 0, awayScore: 2, state: 'FT', type: 'group',

@@ -15,6 +15,13 @@ npx serve .     # ES modules don't load from file://
 npm test
 ```
 
+**Try the design with fake match data:** open the site with `?t=demo`
+(e.g. `https://artoriasthewebwalker.github.io/AFC2027/?t=demo`). It runs on the real
+teams and fixtures plus the fake feeds in `tournaments/demo/`, with the clock set to
+8 Jan 2027, 12:40 Mecca time (yesterday's result, today's finished + live matches,
+lineups, stats). Any page also takes `?now=2027-01-22T19:00:00+03:00` to try another moment.
+The plain address always shows the real tournament.
+
 ## Layout
 
 ```

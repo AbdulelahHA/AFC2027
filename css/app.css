@@ -205,7 +205,7 @@ table.gt{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;f
   padding:4% 2% 3%;background:color-mix(in srgb,var(--ink) 4%,transparent)}
 .pitch[data-side="away"]{--pc:var(--accent-2)}
 /* the markings: outline, halfway line, centre circle, both boxes — drawn once as a mask, coloured by the theme */
-.pitch::before{content:"";position:absolute;inset:0;pointer-events:none;background:var(--line);
+.pitch::before{content:"";position:absolute;inset:0;pointer-events:none;background:color-mix(in srgb,var(--ink) 24%,transparent);
   -webkit-mask:var(--pitch-svg) center/100% 100% no-repeat;mask:var(--pitch-svg) center/100% 100% no-repeat;
   --pitch-svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 880' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='black' stroke-width='4'%3E%3Crect x='2' y='2' width='676' height='876' rx='28'/%3E%3Cpath d='M2 440h676'/%3E%3Ccircle cx='340' cy='440' r='86'/%3E%3Cpath d='M150 2v150h380V2M262 2v56h156V2M150 878V728h380v150M262 878v-56h156v56M270 152a86 86 0 0 0 140 0M270 728a86 86 0 0 1 140 0'/%3E%3C/g%3E%3C/svg%3E")}
 .lu-row{position:relative;display:flex;justify-content:space-around;align-items:flex-start}

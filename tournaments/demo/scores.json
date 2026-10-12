@@ -1,0 +1,132 @@
+{
+ "matches": [
+  {
+   "home": "Saudi Arabia",
+   "away": "Palestine",
+   "homeScore": 2,
+   "awayScore": 0,
+   "state": "FT",
+   "type": "group",
+   "homeGoals": [
+    {
+     "name": "Saudi Nine",
+     "minute": "23'"
+    },
+    {
+     "name": "Saudi Ten",
+     "minute": "71'",
+     "pen": true
+    }
+   ],
+   "awayGoals": [],
+   "stats": {
+    "possession": [
+     64,
+     36
+    ],
+    "shots": [
+     15,
+     6
+    ],
+    "shotsOnTarget": [
+     7,
+     2
+    ],
+    "corners": [
+     8,
+     3
+    ],
+    "fouls": [
+     9,
+     13
+    ],
+    "offsides": [
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "home": "Kuwait",
+   "away": "Oman",
+   "homeScore": 0,
+   "awayScore": 1,
+   "state": "FT",
+   "type": "group",
+   "homeGoals": [],
+   "awayGoals": [
+    {
+     "name": "Oman Nine",
+     "minute": "58'"
+    }
+   ],
+   "stats": {
+    "possession": [
+     48,
+     52
+    ],
+    "shots": [
+     9,
+     11
+    ],
+    "shotsOnTarget": [
+     2,
+     4
+    ],
+    "corners": [
+     4,
+     5
+    ],
+    "fouls": [
+     14,
+     12
+    ],
+    "offsides": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "home": "Bahrain",
+   "away": "North Korea",
+   "homeScore": 1,
+   "awayScore": 0,
+   "state": "LIVE",
+   "type": "group",
+   "homeGoals": [
+    {
+     "name": "Bahrain Nine",
+     "minute": "31'"
+    }
+   ],
+   "awayGoals": [],
+   "stats": {
+    "possession": [
+     55,
+     45
+    ],
+    "shots": [
+     8,
+     5
+    ],
+    "shotsOnTarget": [
+     3,
+     1
+    ],
+    "corners": [
+     4,
+     2
+    ],
+    "fouls": [
+     7,
+     9
+    ],
+    "offsides": [
+     0,
+     2
+    ]
+   }
+  }
+ ]
+}
