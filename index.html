@@ -38,7 +38,7 @@
   <header id="site-header">
     <span class="emblem"><img src="assets/emblem/trophy.png" alt="" id="emblem-mark"></span>
     <h1 id="t-title">AFC Asian Cup 2027</h1>
-    <button type="button" id="menu-btn" popovertarget="menu" aria-haspopup="menu" aria-expanded="false" aria-label="Menu">
+    <button type="button" id="menu-btn" aria-controls="menu" aria-haspopup="menu" aria-expanded="false" aria-label="Menu">
       <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.2 9.2L10 3.4l6.8 5.8M5.2 7.6v8.4a.8.8 0 0 0 .8.8h2.7v-4.6h2.6v4.6H14a.8.8 0 0 0 .8-.8V7.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
     </button>
   </header>
@@ -78,7 +78,7 @@
   </footer>
 </div>
 
-<div id="menu" popover>
+<div id="menu" popover="manual">
   <ul>
     <li><a href="#scores" data-go="scores"><span class="ico"><svg viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></span><span data-t="scores"></span></a></li>
     <li><a href="#groups" data-go="groups"><span class="ico"><svg viewBox="0 0 16 16"><path d="M2 3h12M2 8h12M2 13h12M5 1v14" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></span><span data-t="groups"></span></a></li>

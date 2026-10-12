@@ -43,10 +43,33 @@ export function showPage(){
 const pageFromHash = () => { const h = location.hash.slice(1); return PAGES.includes(h) ? h : 'scores'; };
 
 export function initShell(){
-  const menu = $('menu');
-  menu.addEventListener('toggle', e => $('menu-btn').setAttribute('aria-expanded', e.newState === 'open'));
-  /* page links: the hash change does the routing; the menu just closes */
-  menu.addEventListener('click', e => { if(e.target.closest('[data-go]')) menu.hidePopover(); });
+  /* The menu is a manual popover so its close is animated by us in every browser: Safari can't animate a
+     popover leaving the top layer, so the browser's own close (light dismiss, hidePopover) was instant.
+     It shrinks back into the Home button, then hides; a chosen page opens only after that. */
+  const menu = $('menu'), btn = $('menu-btn');
+  const isOpen = () => menu.matches(':popover-open');
+  const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let closing = null;
+  const open = () => { if(isOpen()) return; menu.classList.remove('closing'); menu.showPopover(); btn.setAttribute('aria-expanded', 'true'); };
+  const close = then => {
+    if(!isOpen()){ then?.(); return; }
+    if(closing) return;
+    btn.setAttribute('aria-expanded', 'false');
+    const done = () => { if(!closing) return; clearTimeout(closing); closing = null; menu.hidePopover(); menu.classList.remove('closing'); then?.(); };
+    if(reduced()){ closing = -1; return done(); }
+    menu.classList.add('closing');
+    closing = setTimeout(done, 210);                 /* hide right after the 0.2 s shrink */
+  };
+  btn.addEventListener('click', () => isOpen() ? close() : open());
+  /* a page link: close first, then switch page, so the two never fight for the same frames */
+  menu.addEventListener('click', e => {
+    const a = e.target.closest('[data-go]'); if(!a) return;
+    e.preventDefault();
+    close(() => { if(location.hash !== a.hash) location.hash = a.hash; else update({ page: pageFromHash() }); });
+  });
+  /* light dismiss, done by hand: a tap outside the menu and the button, or Esc */
+  document.addEventListener('pointerdown', e => { if(isOpen() && !menu.contains(e.target) && !btn.contains(e.target)) close(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && isOpen()){ close(); btn.focus(); } });
   $('lang-seg').addEventListener('click', e => {
     const b = e.target.closest('button'); if(!b || b.dataset.v === state.lang) return;
     $('lang-seg').classList.add('animate'); update({ lang: b.dataset.v });
