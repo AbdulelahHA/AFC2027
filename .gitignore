@@ -1,0 +1,3 @@
+# local tool caches — never commit (Wrangler's cache holds the Cloudflare account id)
+.wrangler/
+node_modules/

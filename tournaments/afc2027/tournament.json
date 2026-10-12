@@ -12,7 +12,7 @@
  },
  "spotlight": "KSA",
  "alerts": {
-  "worker": "",
+  "worker": "https://afc27-goal-alerts.abdulelah12012.workers.dev",
   "vapidPublicKey": "BHXAtWkJKgrRa72Gb7JnT06uwIsRTrIHI79wRevEQuCZXJVtnwzlni3XStb86KwCCsfFC_tk2HEAEOslIkDcEyo",
   "note": "Goal alerts: set worker to the deployed Cloudflare Worker URL (workers/goal-alerts/README.md). Empty = the Goal alerts page explains alerts aren't on yet."
  },
