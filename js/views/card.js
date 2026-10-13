@@ -163,6 +163,7 @@ function lockPage(on){
   else { b.style.position = b.style.top = b.style.insetInline = ''; scrollTo({ top: savedY, behavior: 'instant' }); }
 }
 export function openCard(id, title){
+  if(sheet.open || $('menu').matches(':popover-open')) return;     /* never on top of the menu or another card */
   openId = id; titleOf = title || (() => '');
   wrap.style.removeProperty('--pull');
   lockPage(true); sheet.showModal(); build();

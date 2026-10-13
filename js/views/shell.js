@@ -67,8 +67,17 @@ export function initShell(){
     e.preventDefault();
     close(() => { if(location.hash !== a.hash) location.hash = a.hash; else update({ page: pageFromHash() }); });
   });
-  /* light dismiss, done by hand: a tap outside the menu and the button, or Esc */
-  document.addEventListener('pointerdown', e => { if(isOpen() && !menu.contains(e.target) && !btn.contains(e.target)) close(); });
+  /* light dismiss, done by hand: a tap outside the menu and the button, or Esc. Like iOS, that tap only closes
+     the menu — it is swallowed, so it can't also open the match underneath (that collision made the card jump
+     right after switching theme or language, when the menu was still open). */
+  const swallowNextClick = () => {
+    const eat = e => { e.preventDefault(); e.stopPropagation(); };
+    document.addEventListener('click', eat, { capture: true, once: true });
+    setTimeout(() => document.removeEventListener('click', eat, { capture: true }), 600);   /* a scroll fires no click */
+  };
+  document.addEventListener('pointerdown', e => {
+    if(isOpen() && !menu.contains(e.target) && !btn.contains(e.target)){ close(); swallowNextClick(); }
+  });
   document.addEventListener('keydown', e => { if(e.key === 'Escape' && isOpen()){ close(); btn.focus(); } });
   $('lang-seg').addEventListener('click', e => {
     const b = e.target.closest('button'); if(!b || b.dataset.v === state.lang) return;
