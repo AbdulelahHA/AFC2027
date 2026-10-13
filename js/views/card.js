@@ -159,7 +159,7 @@ export function tickCard(){
 let savedY = 0;
 function lockPage(on){
   const b = document.body;
-  if(on){ savedY = scrollY; Object.assign(b.style, { position: 'fixed', top: -savedY + 'px', insetInline: '0' }); $('app').style.transformOrigin = `50% ${savedY}px`; }
+  if(on){ savedY = scrollY; Object.assign(b.style, { position: 'fixed', top: -savedY + 'px', insetInline: '0' }); }
   else { b.style.position = b.style.top = b.style.insetInline = ''; scrollTo({ top: savedY, behavior: 'instant' }); }
 }
 export function openCard(id, title){
@@ -167,8 +167,12 @@ export function openCard(id, title){
   wrap.style.removeProperty('--pull');
   lockPage(true); sheet.showModal(); build();
   document.documentElement.classList.add('sheet-open');
-  void wrap.offsetHeight;                        /* commit the start position, then slide */
-  sheet.classList.add('up');
+  void wrap.offsetHeight;                        /* commit the start position… */
+  /* …let the card's content render first, then slide: starting in the same frame made the first frames stutter */
+  let started = false;
+  const go = () => { if(!started){ started = true; sheet.classList.add('up'); } };
+  requestAnimationFrame(() => requestAnimationFrame(go));
+  setTimeout(go, 90);                            /* in case animation frames are throttled */
 }
 function closeCard(){
   if(!sheet.open || !sheet.classList.contains('up')) return;
@@ -176,7 +180,7 @@ function closeCard(){
   let finished = false;
   const done = () => { if(finished || sheet.classList.contains('up')) return; finished = true; sheet.close(); openId = null; lockPage(false); };
   wrap.addEventListener('transitionend', e => { if(e.target === wrap) done(); }, { once: true });
-  setTimeout(done, 450);                         /* the slide-down is 0.35 s; never leave an invisible overlay */
+  setTimeout(done, 620);                         /* the slide-down is 0.55 s; never leave an invisible overlay */
 }
 
 export function initCard(){
