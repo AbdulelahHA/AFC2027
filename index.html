@@ -26,6 +26,9 @@
   try { if(localStorage.getItem('afc27_lang') === 'ar'){ r.lang = 'ar'; r.dir = 'rtl'; } } catch(e) {}
   /* the page doesn't zoom on a phone: Safari ignores user-scalable=no, so stop its pinch gesture too */
   ['gesturestart', 'gesturechange'].forEach(function(t){ document.addEventListener(t, function(e){ e.preventDefault(); }, { passive: false }); });
+  /* the launch screen stays until the app is ready (js/views/splash.js); if anything fails it still goes after 8 s */
+  r.classList.add('splashing');
+  setTimeout(function(){ var s = document.getElementById('splash'); if(s){ s.remove(); r.classList.remove('splashing'); } }, 8000);
 })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +39,14 @@
 <script type="module" src="js/main.js"></script>
 </head>
 <body>
+<!-- launch screen: the cup on this visit's regional plaque, "Our pride is in our nature" -->
+<div id="splash" aria-hidden="true">
+  <div class="sp-bg"></div>
+  <div class="sp-in">
+    <span class="emblem xl" id="sp-plq"><img src="assets/emblem/trophy.png" alt=""></span>
+    <p class="sp-phrase" lang="ar" dir="rtl">عزنا بطبعنا</p>
+  </div>
+</div>
 <div id="app">
   <header id="site-header">
     <span class="emblem"><img src="assets/emblem/trophy.png" alt="" id="emblem-mark"></span>

@@ -174,6 +174,17 @@
 :root[data-variant="hasawi"] .emblem{box-shadow:inset 0 0 0 2px #C9A23A,inset 0 0 0 4px #1A1511,inset 0 0 0 5px #E9D59A}
 #t-footer{text-align:center}
 #t-footer .emblem{margin-bottom:14px}
+/* launch screen plaque: exactly 3× the header plaque, so when it flies into the header at 1/3 it matches it */
+.emblem.xl{width:150px;height:186px;border-radius:18px;box-shadow:inset 0 0 0 3px color-mix(in srgb,#fff 12%,transparent)}
+.emblem.xl img{height:138px;margin-top:-12px}
+:root[data-variant="najdi"] .emblem.xl::after{height:18px;
+  background:conic-gradient(from -45deg at 50% 100%,#A3271F 0 90deg,transparent 0) 0 0/30px 18px repeat-x,#F1E4CF}
+:root[data-variant="hejazi"] .emblem.xl{border-radius:75px 75px 18px 18px;box-shadow:inset 0 0 0 6px #8A5A33,inset 0 0 0 12px #1E4D43,inset 0 0 0 15px color-mix(in srgb,#E3B23C 55%,transparent)}
+:root[data-variant="asiri"] .emblem.xl::after{height:21px;
+  background:conic-gradient(from 135deg at 50% 0,#C8322B 0 90deg,transparent 0) 0 0/72px 21px repeat-x,
+    conic-gradient(from 135deg at 50% 0,#F2B632 0 90deg,transparent 0) 24px 0/72px 21px repeat-x,
+    conic-gradient(from 135deg at 50% 0,#2E8B57 0 90deg,transparent 0) 48px 0/72px 21px repeat-x}
+:root[data-variant="hasawi"] .emblem.xl{box-shadow:inset 0 0 0 6px #C9A23A,inset 0 0 0 12px #1A1511,inset 0 0 0 15px #E9D59A}
 
 /* ═════════ regional touches inside the page ═════════ */
 :root[data-variant="najdi"] .seg-pill{box-shadow:0 1px 3px color-mix(in srgb,var(--ink) 18%,transparent),inset 0 -2px 0 var(--p3)}
