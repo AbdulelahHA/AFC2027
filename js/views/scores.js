@@ -25,8 +25,11 @@ function split(now){
   return [all.filter(([k]) => k === yest), all.filter(([k]) => k === today), all.filter(([k]) => k > today)];
 }
 
+/* a team picked for goal alerts wears a star (coloured by the visit's region) */
+export const starHTML = code => state.follow.includes(code)
+  ? `<svg class="star" viewBox="0 0 12 12" role="img" aria-label="★"><path d="M6 .7l1.62 3.3 3.63.52-2.63 2.56.62 3.62L6 9l-3.24 1.7.62-3.62L.75 4.52l3.63-.52z"/></svg>` : '';
 function side(m, which){
-  if(m[which]) return `${flag(m[which])} <span class="team-name">${esc(teamName(m[which]))}</span>`;
+  if(m[which]) return `${flag(m[which])} <span class="team-name">${esc(teamName(m[which]))}</span>${starHTML(m[which])}`;
   return `<span class="team-name" data-tbd>${esc(slotText(fixtureOf(m.id)[which]))}</span>`;
 }
 const stageText = m => m.stage === 'group' ? `${t('group')} ${m.group}` : roundLabel(m.stage);
@@ -54,7 +57,7 @@ function dayHTML(list, isToday){
 const opening = () => state.model.matches[0];
 const openingAt = m => m.timeTBC ? Date.parse(`${m.date}T00:00:00+03:00`) : m.kickoff;
 function heroHTML(m){
-  const p = local(m.kickoff), u = t('units'), team = c => `${flag(c)}<span>${esc(teamName(c))}</span>`;
+  const p = local(m.kickoff), u = t('units'), team = c => `${flag(c)}<span>${esc(teamName(c))}</span>${starHTML(c)}`;
   return `<section class="hero"><p class="hero-k">${t('startsIn')}</p>
     <div class="hero-clock">${['d', 'h', 'm', 's'].map(k => `<span><b data-u="${k}">–</b><small>${u[k]}</small></span>`).join('')}</div>
     <button type="button" class="hero-match" data-id="${m.id}">${team(m.home)}<span class="vs">${t('vs')}</span>${team(m.away)}</button>
@@ -73,7 +76,7 @@ function emptyToday(parts, now){
 export function renderScores(){
   if(!state.model) return;
   const now = Date.now(), parts = split(now);
-  const sig = state.lang + dayNum(now) + state.model.matches.map(m => `${m.id}:${m.home}>${m.away}`).join('|');
+  const sig = state.lang + dayNum(now) + state.model.matches.map(m => `${m.id}:${m.home}>${m.away}`).join('|') + '*' + state.follow.join();
   if(sig !== renderedSig){
     renderedSig = sig;
     TABS.forEach((k, i) => { $('tab-' + i).textContent = t(k); });

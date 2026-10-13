@@ -1,13 +1,12 @@
 /* Goal alerts page: turn push notifications on/off, send a test, pick teams (none = every goal).
    The phone subscribes through the browser's Push API; the Cloudflare Worker in workers/goal-alerts
    keeps the list and sends the alerts. */
-import { state } from '../store.js';
+import { state, update } from '../store.js';
 import { t, teamName, flag } from '../i18n.js';
 
 const $ = id => document.getElementById(id);
 const get = k => { try { return localStorage.getItem(k); } catch { return null; } };
 const put = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
-let teams = (() => { try { return JSON.parse(get('afc27_alert_teams')) || []; } catch { return []; } })();
 let note = '', busy = false;
 
 const cfg = () => state.data.tournament.alerts || {};
@@ -26,7 +25,7 @@ async function currentSub(){
 }
 /* tell the Worker which teams and which language, whenever either changes */
 async function register(sub){
-  const r = await post('/subscribe', { subscription: sub.toJSON(), teams, lang: state.lang });
+  const r = await post('/subscribe', { subscription: sub.toJSON(), teams: state.follow, lang: state.lang });
   if(r.ok) put('afc27_alert_lang', state.lang);
   return r.ok;
 }
@@ -51,11 +50,11 @@ async function sendTest(){
   note = r.ok ? t('alertsTestSent') : t('alertsError');
 }
 
+/* one list, alphabetical in the current language, with the host nation first */
 function chipsHTML(){
-  const byGroup = {};
-  for(const [c, tm] of Object.entries(state.data.teams)) (byGroup[tm.group] ||= []).push(c);
-  return Object.keys(byGroup).sort().map(g => `<div class="chip-group"><span class="chip-g">${t('group')} ${g}</span><div class="chips">${byGroup[g]
-    .map(c => `<button type="button" class="chip" data-team="${c}" aria-pressed="${teams.includes(c)}">${flag(c)}${teamName(c)}</button>`).join('')}</div></div>`).join('');
+  const host = state.data.tournament.spotlight;
+  const codes = Object.keys(state.data.teams).sort((a, b) => (b === host) - (a === host) || teamName(a).localeCompare(teamName(b), state.lang));
+  return `<div class="chips">${codes.map(c => `<button type="button" class="chip" data-team="${c}" aria-pressed="${state.follow.includes(c)}">${flag(c)}${teamName(c)}</button>`).join('')}</div>`;
 }
 
 export async function renderAlerts(){
@@ -81,9 +80,8 @@ export function initAlerts(){
     const chip = e.target.closest('.chip');
     if(chip){
       const c = chip.dataset.team;
-      teams = teams.includes(c) ? teams.filter(x => x !== c) : [...teams, c];
-      put('afc27_alert_teams', JSON.stringify(teams));
-      chip.setAttribute('aria-pressed', teams.includes(c));
+      chip.setAttribute('aria-pressed', !state.follow.includes(c));
+      update({ follow: state.follow.includes(c) ? state.follow.filter(x => x !== c) : [...state.follow, c] });   /* stars everywhere follow */
       const sub = configured() && await currentSub(); if(sub) register(sub);
       return;
     }
