@@ -1,9 +1,5 @@
 /* Layout and components shared by every regional style; colours come from the tokens in css/regions.css. */
 :root{--page-w:44rem}            /* the content column: a phone-width column; the PC layout widens it (end of file) */
-/* match boxes (rows, bracket chips, the opening match): rounded glass in the same family as the match card */
-:root{--box-r:16px;--glass-blur:blur(12px) saturate(170%);
-  --glass:linear-gradient(180deg,color-mix(in srgb,#fff 22%,transparent),transparent 45%),color-mix(in srgb,var(--surface) 58%,transparent);
-  --glass-rim:inset 0 0 0 1px color-mix(in srgb,#fff 34%,transparent),inset 0 1px 0 color-mix(in srgb,#fff 60%,transparent),0 4px 16px color-mix(in srgb,var(--ink) 7%,transparent)}
 /* ═════════ Shared base ═════════ */
 html{background:var(--bg);touch-action:pan-x pan-y;-webkit-text-size-adjust:100%;text-size-adjust:100%}  /* scroll and swipe, but no pinch or double-tap zoom */
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.5 var(--font-ui);
@@ -57,9 +53,8 @@ button{font:inherit;color:inherit}
 
 .row{display:grid;width:100%;box-sizing:border-box;border:0;cursor:pointer;text-align:start;
   grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);grid-template-areas:"kick stage status" "home score away";
-  align-items:center;column-gap:12px;row-gap:8px;padding:12px 14px;
-  background:var(--glass);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);border-radius:var(--box-r);
-  box-shadow:var(--glass-rim);transition:transform .12s ease-out,background-color .2s}
+  align-items:center;column-gap:12px;row-gap:8px;padding:12px 14px;background:var(--surface);border-radius:var(--r);
+  box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 8%,transparent);transition:transform .12s ease-out,background-color .2s}
 .row:active{transform:scale(.98)}
 .kickoff{grid-area:kick;justify-self:start;font-size:.8125rem;color:var(--muted);font-variant-numeric:tabular-nums}
 .kickoff[data-tbc]{border:1px dashed var(--line);border-radius:999px;padding:1px 8px;font-size:.75rem}
@@ -75,7 +70,7 @@ button{font:inherit;color:inherit}
 .score{grid-area:score;min-width:4.5ch;text-align:center;font:700 1.25rem/1 var(--font-ui);font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .score:empty::before{content:"vs";font-size:.8125rem;font-weight:400;color:var(--muted)}
 :root[lang="ar"] .score:empty::before{content:"ضد"}
-.match[data-state="live"] .row{background:linear-gradient(180deg,color-mix(in srgb,#fff 22%,transparent),transparent 45%),color-mix(in srgb,var(--live-bg) 72%,transparent)}
+.match[data-state="live"] .row{background:var(--live-bg)}
 .match[data-state="live"] .status{color:var(--live)}
 .live-dot::before,.match[data-state="live"] .status::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;animation:pulse 1.4s ease-in-out infinite}
 .match[data-state="finished"] .status{color:var(--muted)}
@@ -311,8 +306,8 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
 .col.R.in .tie::before{inset-inline-start:100%}
 .col.F .tie::before{inset-inline-end:100%}
 .col.F .tie::after{inset-inline-start:100%}
-.tie{position:relative;display:grid;gap:3px;width:100%;box-sizing:border-box;padding:6px 4px;border:0;border-radius:12px;cursor:pointer;
-  background:var(--glass);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);box-shadow:var(--glass-rim);transition:transform .12s ease-out}
+.tie{position:relative;display:grid;gap:3px;width:100%;box-sizing:border-box;padding:6px 4px;border:0;border-radius:calc(var(--r) + 2px);cursor:pointer;
+  background:var(--surface);box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 8%,transparent);transition:transform .12s ease-out}
 .tie:active{transform:scale(.95)}
 .tie .no{font-size:.625rem;line-height:1;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums}
 .tl{display:flex;align-items:center;justify-content:center;gap:5px;min-height:18px;font:600 .6875rem/1 var(--font-ui);letter-spacing:.01em;white-space:nowrap}
@@ -377,8 +372,7 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
 .hero-clock b{font:700 clamp(2.1rem,11vw,3.2rem)/1 var(--font-display);font-variant-numeric:tabular-nums;color:var(--accent)}
 .hero-clock small{font-size:.75rem;color:var(--muted)}
 .hero-match{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-sizing:border-box;border:0;cursor:pointer;
-  padding:13px 12px;border-radius:var(--box-r);background:var(--glass);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);
-  font-weight:600;box-shadow:var(--glass-rim);transition:transform .12s ease-out}
+  padding:13px 12px;border-radius:var(--r);background:var(--surface);font-weight:600;box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 8%,transparent);transition:transform .12s ease-out}
 .hero-match:active{transform:scale(.98)}
 .hero-match .flag{height:20px}
 .hero-match .vs{color:var(--muted);font-weight:400;font-size:.8125rem}
@@ -442,8 +436,7 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
   #sheet.up .deck-wrap{opacity:1}
 }
 @media (prefers-reduced-transparency:reduce){.daybar{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}
-  #menu{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}
-  :root{--glass:var(--surface);--glass-blur:none}}
+  #menu{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}}
 
 /* ═════════ PC layout: the same design, scaled and arranged for a computer screen (1000 px and wider) ═════════ */
 @media (min-width:1000px){
