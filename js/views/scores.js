@@ -122,8 +122,13 @@ export function tick(){
 }
 
 /* ── the Yesterday · Today · Upcoming switch: the pill follows a swipe 1:1, a tap scrolls to the pane ── */
+/* the row of panes is as tall as the pane in view (mid-swipe: the taller of the two), not the tallest of all three */
+function fitHeight(pos){
+  const h = i => $('pane-' + i)?.offsetHeight || 0;
+  panes.style.height = Math.max(h(Math.floor(pos)), h(Math.ceil(pos))) + 'px';
+}
 function showPane(i, smooth = true){
-  current = i;
+  current = i; fitHeight(i);
   panes.scrollTo({ left: (document.documentElement.dir === 'rtl' ? -1 : 1) * i * panes.clientWidth, behavior: smooth ? 'smooth' : 'instant' });
   setPill(days, i);
 }
@@ -132,8 +137,11 @@ export function initScores(){
   panes.addEventListener('scroll', () => {
     days.classList.remove('animate');
     const pos = Math.abs(panes.scrollLeft) / panes.clientWidth;
-    setPill(days, pos); current = Math.round(pos);
+    setPill(days, pos); current = Math.round(pos); fitHeight(pos);
   }, { passive: true });
+  /* a pane's content changed (new day, feed, language): refit */
+  const ro = new ResizeObserver(() => current != null && fitHeight(Math.abs(panes.scrollLeft) / panes.clientWidth || current));
+  for(const p of panes.children) ro.observe(p);
   days.addEventListener('click', e => { const b = e.target.closest('button'); if(!b) return; days.classList.add('animate'); showPane(+b.dataset.i); });
   days.addEventListener('keydown', e => {
     const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key]; if(!step) return;
