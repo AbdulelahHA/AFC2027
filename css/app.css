@@ -468,6 +468,9 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
   .empty{max-width:40rem;margin-inline:auto}
   /* match card: a floating glass panel in the middle of the screen, not a bottom sheet */
   .deck-wrap{max-width:46rem;padding-bottom:4vh}
+  /* a tall screen means a long rise: open slower and start gently, so it glides up instead of popping (close unchanged) */
+  #sheet.up .deck-wrap{transition:transform .95s cubic-bezier(.22,.9,.3,1)}
+  #sheet.up::backdrop{transition-duration:.95s}
   .deck{padding-inline:0}
   .card{border-radius:22px}
   /* pages */
