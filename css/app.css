@@ -399,6 +399,12 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
 .al-msg{margin:12px auto 0;max-width:34ch;font-size:.875rem;color:var(--muted);line-height:1.45}
 .al-note{margin:12px 0 0;font-size:.875rem;font-weight:500}
 #alerts-page .chips{margin-top:12px}
+/* phones: bigger team chips, easier to read and tap (the PC size stays as it was) */
+@media (max-width:999px){
+  #alerts-page .chips{gap:10px}
+  #alerts-page .chip{padding:11px 16px;gap:9px;font-size:1rem;font-weight:500}
+  #alerts-page .chip .flag{height:18px}
+}
 /* the star on a team picked for goal alerts (colour per region: --star in regions.css) */
 .star{width:14px;height:14px;flex:none;fill:var(--star,var(--win));filter:drop-shadow(0 1px 1px rgb(0 0 0 / .25))}
 .hero-match .star{width:16px;height:16px}
