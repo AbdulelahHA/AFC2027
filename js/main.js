@@ -38,7 +38,7 @@ subscribe(patch => {
   if('lang' in patch) applyChrome();
   if('theme' in patch){ applyTheme(); applyChrome(); }
   if('page' in patch){ showPage(); if(state.page === 'scores') realignScores(); }
-  if('model' in patch || 'lang' in patch || 'page' in patch) render();
+  if('model' in patch || 'lang' in patch || 'page' in patch || 'follow' in patch) render();
 });
 
 initShell();
