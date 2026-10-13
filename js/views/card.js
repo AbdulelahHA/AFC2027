@@ -166,6 +166,7 @@ export function openCard(id, title){
   if(sheet.open || $('menu').matches(':popover-open')) return;     /* never on top of the menu or another card */
   openId = id; titleOf = title || (() => '');
   wrap.style.removeProperty('--pull');
+  deck.replaceChildren();                        /* a new card starts at the top, not where the last one was scrolled to */
   lockPage(true); sheet.showModal(); build();
   document.documentElement.classList.add('sheet-open');
   void wrap.offsetHeight;                        /* commit the start position… */
