@@ -1,6 +1,7 @@
 /* Layout and components shared by every regional style; colours come from the tokens in css/regions.css. */
+:root{--page-w:44rem}            /* the content column: a phone-width column; the PC layout widens it (end of file) */
 /* ═════════ Shared base ═════════ */
-html{background:var(--bg)}
+html{background:var(--bg);touch-action:pan-x pan-y;-webkit-text-size-adjust:100%;text-size-adjust:100%}  /* scroll and swipe, but no pinch or double-tap zoom */
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.5 var(--font-ui);
   position:relative;z-index:0;min-height:100%;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:var(--pat);
@@ -14,7 +15,7 @@ button{font:inherit;color:inherit}
 /* header: title and the menu button share one row */
 #site-header{position:relative;background:var(--head-bg);color:var(--head-ink);margin-bottom:var(--band-h);
   display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"logo title menu";align-items:center;column-gap:12px;
-  padding:calc(18px + env(safe-area-inset-top,0px)) 16px 16px}  /* room for the notch when opened from the home screen */
+  padding:calc(18px + env(safe-area-inset-top,0px)) max(16px,calc((100% - var(--page-w)) / 2 + 16px)) 16px}  /* room for the notch when opened from the home screen */
 #site-header::after{content:"";position:absolute;inset-inline:0;bottom:calc(-1 * var(--band-h));height:var(--band-h);background:var(--band)}
 #t-title{grid-area:title;margin:0;font:700 clamp(1.75rem,7vw,2.6rem)/1.05 var(--font-display);letter-spacing:-.01em;text-wrap:balance}
 :root[lang="ar"] #t-title{letter-spacing:0;line-height:1.3}
@@ -27,7 +28,7 @@ button{font:inherit;color:inherit}
 /* Yesterday · Today · Upcoming: a quiet segmented switch on frosted glass, sticky under the header */
 .daybar{position:sticky;top:env(safe-area-inset-top,0px);z-index:3;padding:10px 16px;
   background:color-mix(in srgb,var(--bg) 76%,transparent);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%)}
-.seg{--pos:1;position:relative;display:grid;grid-template-columns:repeat(var(--n,3),1fr);max-width:44rem;margin-inline:auto;padding:3px;
+.seg{--pos:1;position:relative;display:grid;grid-template-columns:repeat(var(--n,3),1fr);max-width:var(--page-w);margin-inline:auto;padding:3px;
   border-radius:999px;background:color-mix(in srgb,var(--ink) 9%,transparent)}
 .seg-pill{position:absolute;inset-block:3px;inset-inline-start:3px;width:calc((100% - 6px) / var(--n,3));border-radius:999px;
   background:var(--surface);box-shadow:0 1px 3px color-mix(in srgb,var(--ink) 18%,transparent);
@@ -40,7 +41,7 @@ button{font:inherit;color:inherit}
 .seg button:active{transform:scale(.96)}
 
 /* three panes, side by side; native scroll-snap gives the swipe its momentum and edge bounce */
-.panes{display:flex;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;max-width:44rem;margin-inline:auto}
+.panes{display:flex;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;max-width:var(--page-w);margin-inline:auto}
 .panes::-webkit-scrollbar{display:none}
 .pane{flex:0 0 100%;min-width:0;box-sizing:border-box;padding-inline:16px;scroll-snap-align:start;scroll-snap-stop:always}
 .empty{margin:28px 0;padding:20px;border:1px dashed var(--line);border-radius:var(--r);color:var(--muted);text-align:center;background:color-mix(in srgb,var(--surface) 70%,transparent)}
@@ -80,12 +81,12 @@ button{font:inherit;color:inherit}
 .match[data-stage="final"] .row{box-shadow:inset 0 0 0 2px var(--win)}
 .match[data-stage="final"] .stage{color:var(--win);font-weight:700}
 .match[data-goal="home"] .team.home .team-name,.match[data-goal="away"] .team.away .team-name{color:var(--live)}
-#t-footer{max-width:44rem;margin:40px auto 0;padding:14px 16px;font-size:.8125rem;color:var(--muted)}
+#t-footer{max-width:var(--page-w);margin:40px auto 0;padding:14px 16px;font-size:.8125rem;color:var(--muted)}
 #t-footer p{margin:0 0 4px}
 #t-footer .style-credit{color:var(--ink)}
 
 /* ═════════ menu: grows out of the button that opened it ═════════ */
-#menu{position:fixed;inset:auto;top:calc(env(safe-area-inset-top,0px) + 66px);inset-inline-end:max(16px,calc((100vw - 44rem) / 2 + 16px));inset-inline-start:auto;
+#menu{position:fixed;inset:auto;top:calc(env(safe-area-inset-top,0px) + 66px);inset-inline-end:max(16px,calc((100vw - var(--page-w)) / 2 + 16px));inset-inline-start:auto;
   margin:0;width:min(300px,calc(100vw - 32px));padding:8px;border:0;border-radius:18px;color:var(--ink);
   /* the same glass as the match card: thin surface, light blur, a sheen over the top and a bright rim */
   background:linear-gradient(180deg,color-mix(in srgb,#fff 24%,transparent),transparent 38%),color-mix(in srgb,var(--surface) 42%,transparent);
@@ -251,14 +252,14 @@ table.gt{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;f
 @keyframes view-in{from{opacity:0}}
 .pagebar{position:sticky;top:env(safe-area-inset-top,0px);z-index:3;padding:8px 16px;
   background:color-mix(in srgb,var(--bg) 76%,transparent);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%)}
-.pagebar-in{max-width:44rem;margin-inline:auto;text-align:center;padding-block:6px}
+.pagebar-in{max-width:var(--page-w);margin-inline:auto;text-align:center;padding-block:6px}
 .back{justify-self:start;display:inline-flex;align-items:center;gap:4px;border:0;background:none;cursor:pointer;padding:8px 6px;margin-inline-start:-6px;
   border-radius:10px;color:var(--accent);font-weight:600;font-size:.9375rem}
 .back::before{content:"‹";font-size:1.5rem;line-height:.8}
 :root[dir="rtl"] .back::before{content:"›"}
 .back:active{transform:scale(.95)}
 .pagebar h2{margin:0;font:700 1.125rem/1.2 var(--font-display)}
-.page{max-width:44rem;margin-inline:auto;padding:4px 16px 0}
+.page{max-width:var(--page-w);margin-inline:auto;padding:4px 16px 0}
 .sec{margin-block-start:22px}
 .sec > h3{display:flex;align-items:baseline;gap:8px;margin:0 0 10px;font:700 1.125rem/1.3 var(--font-display)}
 .sec > h3 small{font:600 .75rem/1 var(--font-ui);color:var(--live);display:inline-flex;align-items:center;gap:5px}
@@ -410,3 +411,48 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
 }
 @media (prefers-reduced-transparency:reduce){.daybar{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}
   #menu{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}}
+
+/* ═════════ PC layout: the same design, scaled and arranged for a computer screen (1000 px and wider) ═════════ */
+@media (min-width:1000px){
+  :root{--page-w:78rem}
+  html{font-size:106.25%}
+  #site-header{padding-top:calc(26px + env(safe-area-inset-top,0px));padding-bottom:22px;column-gap:18px}
+  #site-header .emblem{width:62px;height:76px}
+  #site-header .emblem img{height:58px}
+  #t-title{font-size:2.9rem}
+  #menu-btn{width:48px;height:48px}
+  .daybar{padding-block:14px}
+  .daybar .seg{max-width:34rem}
+  /* scores: each day's matches in two columns */
+  .pane{padding-inline:24px}
+  .day{margin-block-start:28px}
+  .day > h3{font-size:1.3rem}
+  .matches{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .row{padding:14px 18px;row-gap:10px}
+  .row .flag{height:18px}
+  .team-name{font-size:1.0625rem}
+  .score{font-size:1.45rem}
+  .hero{max-width:40rem;margin-inline:auto;margin-top:32px}
+  .empty{max-width:40rem;margin-inline:auto}
+  /* match card: a floating glass panel in the middle of the screen, not a bottom sheet */
+  .deck-wrap{max-width:46rem;padding-bottom:4vh}
+  .deck{padding-inline:0}
+  .card{border-radius:22px}
+  /* pages */
+  .pagebar h2{font-size:1.35rem}
+  .page{padding-inline:24px}
+  #groups-page{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;align-items:start}
+  #groups-page > .legend,#groups-page > .sec:last-child{grid-column:1/-1}
+  #groups-page > .sec:last-child{max-width:calc(50% - 14px)}
+  .bk{--g:26px}
+  .col{min-height:560px}
+  .tie{padding:10px 8px;gap:5px}
+  .tl{font-size:.875rem;min-height:22px}
+  .tl .flag{height:16px}
+  .tie .no{font-size:.75rem}
+  .cup svg{width:40px;height:40px}
+  #stats-page{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;align-items:start}
+  #stats-page > .tiles{grid-column:1/-1}
+  #alerts-page{max-width:52rem}
+  #t-footer{padding-top:24px}
+}

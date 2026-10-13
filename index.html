@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>AFC 2027 Saudi — Live scores</title>
 <meta name="description" content="AFC Asian Cup Saudi Arabia 2027: scores, group tables, knockout bracket and stats in Mecca time, in English and Arabic.">
 <!-- app icon: the tournament trophy on the 2027 identity teal with stepped Najdi bands -->
@@ -24,6 +24,8 @@
   try { localStorage.setItem('afc27_style', r.dataset.variant); } catch(e) {}
   if(theme === 'light' || theme === 'dark') r.dataset.theme = theme;
   try { if(localStorage.getItem('afc27_lang') === 'ar'){ r.lang = 'ar'; r.dir = 'rtl'; } } catch(e) {}
+  /* the page doesn't zoom on a phone: Safari ignores user-scalable=no, so stop its pinch gesture too */
+  ['gesturestart', 'gesturechange'].forEach(function(t){ document.addEventListener(t, function(e){ e.preventDefault(); }, { passive: false }); });
 })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
