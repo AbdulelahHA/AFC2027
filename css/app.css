@@ -402,6 +402,25 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
 .chip .flag{height:13px}
 .chip[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:transparent}
 
+/* ═════════ launch screen: the cup on this visit's regional plaque, then it flies into the header ═════════ */
+:root.splashing{overflow:hidden}
+#splash{position:fixed;inset:0;z-index:200;display:grid;place-items:center;transition:opacity .3s ease}
+#splash .sp-bg{position:absolute;inset:0;background:var(--head-bg);transition:opacity .5s ease .12s}
+#splash .sp-bg::before{content:"";position:absolute;inset:0;background:color-mix(in srgb,var(--head-ink) 7%,transparent);
+  -webkit-mask:var(--pat-svg) 0 0/var(--pat-size) repeat;mask:var(--pat-svg) 0 0/var(--pat-size) repeat}
+#splash .sp-bg::after{content:"";position:absolute;inset-inline:0;bottom:calc(env(safe-area-inset-bottom,0px) + 9vh);height:var(--band-h);background:var(--band)}
+.sp-in{position:relative;display:grid;justify-items:center;gap:24px;margin-bottom:6vh}
+#sp-plq{transform-origin:50% 50%;filter:drop-shadow(0 16px 30px rgb(0 0 0 / .28));
+  transition:transform .7s cubic-bezier(.32,.72,0,1),filter .5s ease;animation:sp-pop .7s cubic-bezier(.32,.72,0,1) backwards}
+.sp-phrase{margin:0;font:700 clamp(2rem,9vw,3rem)/1.35 var(--font-display);color:var(--head-ink);letter-spacing:0;
+  transition:opacity .25s ease,transform .25s ease;animation:sp-rise .7s cubic-bezier(.32,.72,0,1) .25s backwards}
+#splash.leaving .sp-bg{opacity:0}
+#splash.leaving #sp-plq{filter:none}
+#splash.leaving .sp-phrase{opacity:0;transform:translateY(8px)}
+#splash.fade.leaving{opacity:0}
+@keyframes sp-pop{from{opacity:0;transform:scale(.86)}}
+@keyframes sp-rise{from{opacity:0;transform:translateY(10px)}}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important}
   #app,.seg-pill,#menu,#toast{transition:none!important}

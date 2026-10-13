@@ -10,6 +10,7 @@ import { renderGroups } from './views/groups.js';
 import { initKnockout, renderKnockout } from './views/knockout.js';
 import { initStats, renderStats } from './views/stats.js';
 import { initAlerts, renderAlerts } from './views/alerts.js';
+import { hideSplash } from './views/splash.js';
 
 const params = new URLSearchParams(location.search);
 state.data = await loadTournament(params.get('t') || 'afc2027');
@@ -30,6 +31,7 @@ function render(){
   renderStats();
   renderAlerts();
   refreshCard();
+  hideSplash();                       /* first real render: the launch screen may go (after its 2 s) */
 }
 
 subscribe(patch => {
