@@ -13,8 +13,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:var(--pat);
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 button{font:inherit;color:inherit}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-#app{transform-origin:50% 0;transition:transform .5s cubic-bezier(.32,.72,0,1),filter .5s ease;padding-block-end:40px}
-:root.sheet-open #app{transform:scale(.94) translateY(8px);filter:brightness(.92)}
+#app{padding-block-end:40px}       /* the page stays put behind an open match card; only the dim fades in */
 
 /* header: title and the menu button share one row */
 #site-header{position:relative;background:var(--head-bg);color:var(--head-ink);margin-bottom:var(--band-h);
@@ -122,11 +121,12 @@ button{font:inherit;color:inherit}
 #sheet{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;overflow:hidden;color:var(--ink)}
 #sheet[open]{display:flex;flex-direction:column}
 :root.sheet-open{overflow:hidden}
-#sheet::backdrop{background:rgb(0 0 0 / 0);transition:background .35s ease}
-#sheet.up::backdrop{background:rgb(0 0 0 / .18)}
-.deck-wrap{flex:1;display:flex;flex-direction:column;min-height:0;max-width:46rem;width:100%;margin-inline:auto;
-  transform:translateY(100%);transition:transform .35s cubic-bezier(.32,.72,0,1)}
-#sheet.up .deck-wrap{transform:translateY(var(--pull,0px));transition-duration:.6s}
+/* open: 0.75 s, decelerating gently into place; close: 0.55 s, easing away. The dim follows the same timing. */
+#sheet::backdrop{background:rgb(0 0 0 / 0);transition:background .55s cubic-bezier(.4,0,.2,1)}
+#sheet.up::backdrop{background:rgb(0 0 0 / .22);transition-duration:.75s}
+.deck-wrap{flex:1;display:flex;flex-direction:column;min-height:0;max-width:46rem;width:100%;margin-inline:auto;will-change:transform;
+  transform:translateY(100%);transition:transform .55s cubic-bezier(.45,0,.75,.35)}
+#sheet.up .deck-wrap{transform:translateY(var(--pull,0px));transition:transform .75s cubic-bezier(.16,1,.3,1)}
 #sheet.dragging .deck-wrap{transition:none}
 .deck-title{flex:none;margin:0;text-align:center;color:#fff;font-weight:600;font-size:.9375rem;box-sizing:border-box;
   padding-top:calc(env(safe-area-inset-top,0px) + 14px);height:calc(env(safe-area-inset-top,0px) + 46px)}
@@ -439,7 +439,6 @@ table.gt.full td:last-child,table.gt.full th:last-child{padding-inline-end:12px}
   #app,.seg-pill,#menu,#toast{transition:none!important}
   .deck-wrap{transition:opacity .2s ease!important;transform:none!important;opacity:0}
   #sheet.up .deck-wrap{opacity:1}
-  :root.sheet-open #app{transform:none}
 }
 @media (prefers-reduced-transparency:reduce){.daybar{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}
   #menu{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}
