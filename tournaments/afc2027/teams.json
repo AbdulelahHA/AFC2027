@@ -5,7 +5,8 @@
   "flag": "sa",
   "group": "A",
   "position": "A1",
-  "region": "West"
+  "region": "West",
+  "color": "#006C35"
  },
  "KUW": {
   "en": "Kuwait",
@@ -13,7 +14,8 @@
   "flag": "kw",
   "group": "A",
   "position": "A2",
-  "region": "West"
+  "region": "West",
+  "color": "#007A3D"
  },
  "OMA": {
   "en": "Oman",
@@ -21,7 +23,8 @@
   "flag": "om",
   "group": "A",
   "position": "A3",
-  "region": "West"
+  "region": "West",
+  "color": "#C8102E"
  },
  "PLE": {
   "en": "Palestine",
@@ -29,7 +32,8 @@
   "flag": "ps",
   "group": "A",
   "position": "A4",
-  "region": "West"
+  "region": "West",
+  "color": "#CE1126"
  },
  "UZB": {
   "en": "Uzbekistan",
@@ -37,7 +41,8 @@
   "flag": "uz",
   "group": "B",
   "position": "B1",
-  "region": "Central"
+  "region": "Central",
+  "color": "#0099B5"
  },
  "BHR": {
   "en": "Bahrain",
@@ -45,7 +50,8 @@
   "flag": "bh",
   "group": "B",
   "position": "B2",
-  "region": "West"
+  "region": "West",
+  "color": "#CE1126"
  },
  "PRK": {
   "en": "North Korea",
@@ -53,7 +59,8 @@
   "flag": "kp",
   "group": "B",
   "position": "B3",
-  "region": "East"
+  "region": "East",
+  "color": "#024FA2"
  },
  "JOR": {
   "en": "Jordan",
@@ -61,7 +68,8 @@
   "flag": "jo",
   "group": "B",
   "position": "B4",
-  "region": "West"
+  "region": "West",
+  "color": "#007A3D"
  },
  "IRN": {
   "en": "Iran",
@@ -69,7 +77,8 @@
   "flag": "ir",
   "group": "C",
   "position": "C1",
-  "region": "Central"
+  "region": "Central",
+  "color": "#239F40"
  },
  "SYR": {
   "en": "Syria",
@@ -77,7 +86,8 @@
   "flag": "sy",
   "group": "C",
   "position": "C2",
-  "region": "West"
+  "region": "West",
+  "color": "#CE1126"
  },
  "KGZ": {
   "en": "Kyrgyzstan",
@@ -85,7 +95,8 @@
   "flag": "kg",
   "group": "C",
   "position": "C3",
-  "region": "Central"
+  "region": "Central",
+  "color": "#D4A100"
  },
  "CHN": {
   "en": "China",
@@ -93,7 +104,8 @@
   "flag": "cn",
   "group": "C",
   "position": "C4",
-  "region": "East"
+  "region": "East",
+  "color": "#DE2910"
  },
  "AUS": {
   "en": "Australia",
@@ -101,7 +113,8 @@
   "flag": "au",
   "group": "D",
   "position": "D1",
-  "region": "ASEAN"
+  "region": "ASEAN",
+  "color": "#012169"
  },
  "TJK": {
   "en": "Tajikistan",
@@ -109,7 +122,8 @@
   "flag": "tj",
   "group": "D",
   "position": "D2",
-  "region": "Central"
+  "region": "Central",
+  "color": "#006600"
  },
  "IRQ": {
   "en": "Iraq",
@@ -117,7 +131,8 @@
   "flag": "iq",
   "group": "D",
   "position": "D3",
-  "region": "West"
+  "region": "West",
+  "color": "#CE1126"
  },
  "SGP": {
   "en": "Singapore",
@@ -125,7 +140,8 @@
   "flag": "sg",
   "group": "D",
   "position": "D4",
-  "region": "ASEAN"
+  "region": "ASEAN",
+  "color": "#ED2939"
  },
  "KOR": {
   "en": "South Korea",
@@ -133,7 +149,8 @@
   "flag": "kr",
   "group": "E",
   "position": "E1",
-  "region": "East"
+  "region": "East",
+  "color": "#CD2E3A"
  },
  "UAE": {
   "en": "United Arab Emirates",
@@ -141,7 +158,8 @@
   "flag": "ae",
   "group": "E",
   "position": "E2",
-  "region": "West"
+  "region": "West",
+  "color": "#00732F"
  },
  "VIE": {
   "en": "Vietnam",
@@ -149,7 +167,8 @@
   "flag": "vn",
   "group": "E",
   "position": "E3",
-  "region": "ASEAN"
+  "region": "ASEAN",
+  "color": "#DA251D"
  },
  "YEM": {
   "en": "Yemen",
@@ -157,7 +176,8 @@
   "flag": "ye",
   "group": "E",
   "position": "E4",
-  "region": "West"
+  "region": "West",
+  "color": "#CE1126"
  },
  "JPN": {
   "en": "Japan",
@@ -165,7 +185,8 @@
   "flag": "jp",
   "group": "F",
   "position": "F1",
-  "region": "East"
+  "region": "East",
+  "color": "#BC002D"
  },
  "QAT": {
   "en": "Qatar",
@@ -173,7 +194,8 @@
   "flag": "qa",
   "group": "F",
   "position": "F2",
-  "region": "West"
+  "region": "West",
+  "color": "#8A1538"
  },
  "THA": {
   "en": "Thailand",
@@ -181,7 +203,8 @@
   "flag": "th",
   "group": "F",
   "position": "F3",
-  "region": "ASEAN"
+  "region": "ASEAN",
+  "color": "#241D6B"
  },
  "IDN": {
   "en": "Indonesia",
@@ -189,6 +212,7 @@
   "flag": "id",
   "group": "F",
   "position": "F4",
-  "region": "ASEAN"
+  "region": "ASEAN",
+  "color": "#CE1126"
  }
 }

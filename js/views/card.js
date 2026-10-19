@@ -2,9 +2,10 @@
    Score + scorers, then two tabs: Stats (+ starting lineup) and Group (group stage) or Knockout (road to the final).
    Closes with ✕, Esc, a tap outside, or a pull down from the top of its content. */
 import { state } from '../store.js';
-import { t, teamName, flag, esc, venueText, slotText } from '../i18n.js';
+import { t, teamName, flag, esc, venueText, slotText, monthName } from '../i18n.js';
 import { surname } from '../logic/names.js';
 import { matchStatus } from './match-status.js';
+import { h2hOf } from '../logic/h2h.js';
 import { setPill } from './shell.js';
 
 const $ = id => document.getElementById(id);
@@ -105,8 +106,40 @@ function pathHTML(m){
 const roundOf = stage => state.data.tournament.roundLabel[stage]?.[state.lang] || stage;
 
 /* ── the card ── */
-const tabOf = (m, s) => tabs[m.id] ?? (s.phase === 'upcoming' ? 1 : 0);
-const paneHTML = (m, s) => tabOf(m, s) === 0 ? statsHTML(m, s) + lineupHTML(m) : m.stage === 'group' ? groupHTML(m) : pathHTML(m);
+/* tabs: the group table (or knockout path), the head-to-head when an approved record exists, then stats.
+   "?h2h" in the address also shows records not yet approved, for review. */
+const REVIEW = new URLSearchParams(location.search).has('h2h');
+const h2hFor = m => m.home && m.away ? h2hOf(state.data.h2h, m.home, m.away, { review: REVIEW }) : null;
+/* stats lead once a match is live or over; before kick-off there are none, so group and head-to-head come first */
+const tabKeys = (m, s = matchStatus(m, Date.now())) => (s.phase === 'upcoming' ? ['table', h2hFor(m) && 'h2h', 'stats'] : ['stats', 'table', h2hFor(m) && 'h2h']).filter(Boolean);
+const tabOf = (m, s) => { const k = tabKeys(m, s), want = tabs[m.id] ?? (s.phase === 'upcoming' ? 'table' : 'stats'); return k.includes(want) ? want : k[0]; };
+const tabLabel = (m, k) => k === 'stats' ? t('stats') : k === 'h2h' ? t('h2h') : m.stage === 'group' ? `${t('group')} ${m.group}` : t('knockout');
+const tabsHTML = (m, s) => tabKeys(m, s).map(k => `<button type="button" role="tab" data-k="${k}">${tabLabel(m, k)}</button>`).join('');
+
+/* ── head-to-head: record, goals, the last five meetings ── */
+const rgb = hex => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16));
+function sideColors(m){
+  const [c1, c2] = [m.home, m.away].map(c => state.data.teams[c]?.color || '#888888');
+  const near = rgb(c1).reduce((n, v, i) => n + Math.abs(v - rgb(c2)[i]), 0) < 150;      /* two similar colours can't be told apart */
+  return [c1, near ? 'var(--accent-2)' : c2];
+}
+const dateText = iso => { const [y, mo, d] = iso.split('-').map(Number); return `${d} ${monthName(mo - 1)} ${y}`; };
+function h2hHTML(m){
+  const h = h2hFor(m), [c1, c2] = sideColors(m), comp = t('h2hComp');
+  const rows = h.last.map(x => {
+    const flip = x.home !== m.home, [g1, g2] = flip ? [x.ag, x.hg] : [x.hg, x.ag];
+    return `<li data-r="${g1 > g2 ? 'home' : g1 < g2 ? 'away' : 'draw'}"><span class="when"><b>${dateText(x.date)}</b><small>${esc(comp[x.competition] || x.competition)}</small></span>
+      <b class="sc">${g1} – ${g2}</b></li>`;
+  }).join('');
+  return `<section class="h2h" style="--c1:${c1};--c2:${c2}">
+    <div class="h2h-sum"><div class="h"><b>${h.wins[0]}</b><span>${esc(t('h2hWon')(teamName(m.home)))}</span></div>
+      <div class="d"><b>${h.draws}</b><span>${t('h2hDrawn')}</span></div>
+      <div class="a"><b>${h.wins[1]}</b><span>${esc(t('h2hWon')(teamName(m.away)))}</span></div></div>
+    <div class="h2h-bar" aria-hidden="true"><i style="flex:${h.wins[0] || .001}"></i><i style="flex:${h.draws || .001}"></i><i style="flex:${h.wins[1] || .001}"></i></div>
+    <p class="h2h-goals"><span>${t('h2hGoals')} ${h.goals[0]}</span><span>${t('h2hGoals')} ${h.goals[1]}</span></p>
+    <h4>${t('h2hLast')}</h4><ol class="h2h-last">${rows}</ol></section>`;
+}
+const paneHTML = (m, s) => { const k = tabOf(m, s); return k === 'stats' ? statsHTML(m, s) + lineupHTML(m) : k === 'h2h' ? h2hHTML(m) : m.stage === 'group' ? groupHTML(m) : pathHTML(m); };
 function centerHTML(m, s){
   return s.score ? `<b>${s.score}</b><span class="${s.phase === 'live' ? 'is-live live-dot' : ''}">${esc(s.label)}</span>`
     : `<b class="small">${esc(s.label)}</b><span>${t('kickoff')}</span>`;
@@ -126,14 +159,13 @@ function cardHTML(m){
         <div class="sheet-teams">${team('home')}<div class="st-score">${centerHTML(m, s)}</div>${team('away')}</div></div>
       <div class="sheet-band" aria-hidden="true"></div>
       <div class="sheet-body">${s.phase !== 'upcoming' ? `<ol class="timeline">${goals || `<li class="none">${t('noGoalsYet')}</li>`}</ol>` : ''}
-        <div class="seg card-seg" role="tablist" style="--n:2"><span class="seg-pill" aria-hidden="true"></span>
-          <button type="button" role="tab" data-i="0">${t('stats')}</button><button type="button" role="tab" data-i="1">${m.stage === 'group' ? `${t('group')} ${m.group}` : t('knockout')}</button></div>
+        <div class="seg card-seg" role="tablist" style="--n:${tabKeys(m, s).length}"><span class="seg-pill" aria-hidden="true"></span>${tabsHTML(m, s)}</div>
         <div class="card-pane">${paneHTML(m, s)}</div></div>
     </div></article>`;
 }
 function syncPills(m){
   const s = matchStatus(m, Date.now());
-  const cs = deck.querySelector('.card-seg'); if(cs) setPill(cs, tabOf(m, s));
+  const cs = deck.querySelector('.card-seg'); if(cs) setPill(cs, tabKeys(m, s).indexOf(tabOf(m, s)));
   const ls = deck.querySelector('.lu-seg'); if(ls) setPill(ls, luTab[m.id] ?? 0);
 }
 function build(){
@@ -191,7 +223,7 @@ export function initCard(){
     if([sheet, deck, wrap, $('deck-title')].includes(e.target) || e.target.closest('.card-close')) return closeCard();
     const m = matchOf(openId); if(!m) return;
     const cb = e.target.closest('.card-seg button');
-    if(cb){ tabs[m.id] = +cb.dataset.i; const seg = cb.parentElement; seg.classList.add('animate'); setPill(seg, tabs[m.id]);
+    if(cb){ tabs[m.id] = cb.dataset.k; const seg = cb.parentElement; seg.classList.add('animate'); setPill(seg, tabKeys(m).indexOf(tabs[m.id]));
       deck.querySelector('.card-pane').innerHTML = paneHTML(m, matchStatus(m, Date.now())); syncPills(m); return; }
     const lb = e.target.closest('.lu-seg button');
     if(lb){ luTab[m.id] = +lb.dataset.i; const seg = lb.parentElement; seg.classList.add('animate'); setPill(seg, luTab[m.id]);

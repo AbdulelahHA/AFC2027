@@ -169,6 +169,30 @@ button{font:inherit;color:inherit}
 .timeline small{color:var(--muted)}
 .timeline .none{justify-content:center;color:var(--muted);border:0}
 .sheet-body .seg{margin-bottom:14px;--n:2}
+/* head-to-head tab: team colours come from teams.json (--c1 home, --c2 away) */
+.h2h-sum{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;align-items:end;gap:4px}
+.h2h-sum b{display:block;font-family:var(--font-display);font-size:2.75rem;line-height:1;font-variant-numeric:tabular-nums}
+.h2h-sum span{font-size:.8125rem}
+.h2h-sum .h b{color:color-mix(in srgb,var(--c1) 80%,var(--ink))}
+.h2h-sum .a b{color:color-mix(in srgb,var(--c2) 80%,var(--ink))}
+.h2h-sum .d b{color:var(--muted)}
+.h2h-bar{display:flex;gap:3px;height:8px;margin-top:12px}
+.h2h-bar i{background:var(--line)}
+.h2h-bar i:first-child{background:var(--c1);border-radius:4px 0 0 4px}
+.h2h-bar i:last-child{background:var(--c2);border-radius:0 4px 4px 0}
+.h2h-goals{display:flex;justify-content:space-between;margin:10px 0 0;font-size:.8125rem;color:var(--muted)}
+.h2h h4{margin:18px 0 8px;font-family:var(--font-display);font-size:1.0625rem}
+.h2h-last{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.h2h-last li{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r);
+  background:color-mix(in srgb,var(--surface) 70%,transparent);box-shadow:inset 4px 0 0 var(--line)}
+.h2h-last li[data-r="home"]{box-shadow:inset 4px 0 0 var(--c1)}
+.h2h-last li[data-r="away"]{box-shadow:inset 4px 0 0 var(--c2)}
+:root[dir="rtl"] .h2h-last li[data-r]{box-shadow:inset -4px 0 0 var(--line)}
+:root[dir="rtl"] .h2h-last li[data-r="home"]{box-shadow:inset -4px 0 0 var(--c1)}
+:root[dir="rtl"] .h2h-last li[data-r="away"]{box-shadow:inset -4px 0 0 var(--c2)}
+.h2h-last .when{display:flex;flex-direction:column;gap:2px;font-size:.8125rem}
+.h2h-last .when small{font-size:.75rem;color:var(--muted)}
+.h2h-last .sc{font-family:var(--font-display);font-size:1.0625rem;font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .stat{display:grid;grid-template-columns:3ch 1fr 3ch;align-items:center;column-gap:10px;row-gap:4px;margin-bottom:12px;font-variant-numeric:tabular-nums}
 .stat .lbl{grid-column:1/-1;text-align:center;font-size:.8125rem;color:var(--muted)}
 .stat .v{font-weight:700}
