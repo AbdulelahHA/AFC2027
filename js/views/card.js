@@ -110,10 +110,11 @@ const roundOf = stage => state.data.tournament.roundLabel[stage]?.[state.lang] |
    "?h2h" in the address also shows records not yet approved, for review. */
 const REVIEW = new URLSearchParams(location.search).has('h2h');
 const h2hFor = m => m.home && m.away ? h2hOf(state.data.h2h, m.home, m.away, { review: REVIEW }) : null;
-const tabKeys = m => ['table', h2hFor(m) && 'h2h', 'stats'].filter(Boolean);
-const tabOf = (m, s) => { const k = tabKeys(m), want = tabs[m.id] ?? (s.phase === 'upcoming' ? 'table' : 'stats'); return k.includes(want) ? want : k[0]; };
+/* stats lead once a match is live or over; before kick-off there are none, so group and head-to-head come first */
+const tabKeys = (m, s = matchStatus(m, Date.now())) => (s.phase === 'upcoming' ? ['table', h2hFor(m) && 'h2h', 'stats'] : ['stats', 'table', h2hFor(m) && 'h2h']).filter(Boolean);
+const tabOf = (m, s) => { const k = tabKeys(m, s), want = tabs[m.id] ?? (s.phase === 'upcoming' ? 'table' : 'stats'); return k.includes(want) ? want : k[0]; };
 const tabLabel = (m, k) => k === 'stats' ? t('stats') : k === 'h2h' ? t('h2h') : m.stage === 'group' ? `${t('group')} ${m.group}` : t('knockout');
-const tabsHTML = (m, s) => tabKeys(m).map(k => `<button type="button" role="tab" data-k="${k}">${tabLabel(m, k)}</button>`).join('');
+const tabsHTML = (m, s) => tabKeys(m, s).map(k => `<button type="button" role="tab" data-k="${k}">${tabLabel(m, k)}</button>`).join('');
 
 /* ── head-to-head: record, goals, the last five meetings ── */
 const rgb = hex => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16));
@@ -158,13 +159,13 @@ function cardHTML(m){
         <div class="sheet-teams">${team('home')}<div class="st-score">${centerHTML(m, s)}</div>${team('away')}</div></div>
       <div class="sheet-band" aria-hidden="true"></div>
       <div class="sheet-body">${s.phase !== 'upcoming' ? `<ol class="timeline">${goals || `<li class="none">${t('noGoalsYet')}</li>`}</ol>` : ''}
-        <div class="seg card-seg" role="tablist" style="--n:${tabKeys(m).length}"><span class="seg-pill" aria-hidden="true"></span>${tabsHTML(m, s)}</div>
+        <div class="seg card-seg" role="tablist" style="--n:${tabKeys(m, s).length}"><span class="seg-pill" aria-hidden="true"></span>${tabsHTML(m, s)}</div>
         <div class="card-pane">${paneHTML(m, s)}</div></div>
     </div></article>`;
 }
 function syncPills(m){
   const s = matchStatus(m, Date.now());
-  const cs = deck.querySelector('.card-seg'); if(cs) setPill(cs, tabKeys(m).indexOf(tabOf(m, s)));
+  const cs = deck.querySelector('.card-seg'); if(cs) setPill(cs, tabKeys(m, s).indexOf(tabOf(m, s)));
   const ls = deck.querySelector('.lu-seg'); if(ls) setPill(ls, luTab[m.id] ?? 0);
 }
 function build(){
