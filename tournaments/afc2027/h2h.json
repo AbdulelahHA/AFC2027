@@ -1,5 +1,5 @@
 {
- "note": "Competitive meetings only: Asian Cup, Arab Cup, Gulf Cup, World Cup, World Cup qualifiers. Source: eloratings.net match records (unofficial). A pair shows in the app only when approved is true.",
+ "note": "Competitive meetings only: Asian Cup, Arab Cup, Gulf Cup, World Cup, World Cup qualifiers. Source: eloratings.net match records (unofficial). All 36 group pairs approved by the owner on 2026-10-20; a pair shows only when approved is true and it has at least one meeting.",
  "pairs": {
   "KSA-KUW": {
    "group": "A",
@@ -276,7 +276,7 @@
    ],
    "source": "https://www.eloratings.net/Saudi_Arabia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "KSA-OMA": {
    "group": "A",
@@ -462,7 +462,7 @@
    ],
    "source": "https://www.eloratings.net/Saudi_Arabia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "KSA-PLE": {
    "group": "A",
@@ -536,7 +536,7 @@
    ],
    "source": "https://www.eloratings.net/Saudi_Arabia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "KUW-OMA": {
    "group": "A",
@@ -722,7 +722,7 @@
    ],
    "source": "https://www.eloratings.net/Kuwait",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "KUW-PLE": {
    "group": "A",
@@ -768,7 +768,7 @@
    ],
    "source": "https://www.eloratings.net/Kuwait",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "OMA-PLE": {
    "group": "A",
@@ -800,7 +800,7 @@
    ],
    "source": "https://www.eloratings.net/Oman",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "BHR-JOR": {
    "group": "B",
@@ -860,7 +860,7 @@
    ],
    "source": "https://www.eloratings.net/Bahrain",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "BHR-PRK": {
    "group": "B",
@@ -906,7 +906,7 @@
    ],
    "source": "https://www.eloratings.net/Bahrain",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "BHR-UZB": {
    "group": "B",
@@ -980,7 +980,7 @@
    ],
    "source": "https://www.eloratings.net/Bahrain",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "JOR-PRK": {
    "group": "B",
@@ -1012,7 +1012,7 @@
    ],
    "source": "https://www.eloratings.net/Jordan",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "JOR-UZB": {
    "group": "B",
@@ -1065,7 +1065,7 @@
    ],
    "source": "https://www.eloratings.net/Jordan",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "PRK-UZB": {
    "group": "B",
@@ -1132,7 +1132,7 @@
    ],
    "source": "https://www.eloratings.net/North_Korea",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "CHN-IRN": {
    "group": "C",
@@ -1241,7 +1241,7 @@
    ],
    "source": "https://www.eloratings.net/China",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "CHN-KGZ": {
    "group": "C",
@@ -1266,7 +1266,7 @@
    ],
    "source": "https://www.eloratings.net/China",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "CHN-SYR": {
    "group": "C",
@@ -1333,7 +1333,7 @@
    ],
    "source": "https://www.eloratings.net/China",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "IRN-KGZ": {
    "group": "C",
@@ -1379,7 +1379,7 @@
    ],
    "source": "https://www.eloratings.net/Iran",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "IRN-SYR": {
    "group": "C",
@@ -1502,7 +1502,7 @@
    ],
    "source": "https://www.eloratings.net/Iran",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "KGZ-SYR": {
    "group": "C",
@@ -1541,7 +1541,7 @@
    ],
    "source": "https://www.eloratings.net/Kyrgyzstan",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "AUS-IRQ": {
    "group": "D",
@@ -1629,7 +1629,7 @@
    ],
    "source": "https://www.eloratings.net/Australia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "AUS-SGP": {
    "group": "D",
@@ -1646,7 +1646,7 @@
    "matches": [],
    "source": "https://www.eloratings.net/Australia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "AUS-TJK": {
    "group": "D",
@@ -1678,7 +1678,7 @@
    ],
    "source": "https://www.eloratings.net/Australia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "IRQ-SGP": {
    "group": "D",
@@ -1710,7 +1710,7 @@
    ],
    "source": "https://www.eloratings.net/Iraq",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "IRQ-TJK": {
    "group": "D",
@@ -1727,7 +1727,7 @@
    "matches": [],
    "source": "https://www.eloratings.net/Iraq",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "SGP-TJK": {
    "group": "D",
@@ -1759,7 +1759,7 @@
    ],
    "source": "https://www.eloratings.net/Singapore",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "KOR-UAE": {
    "group": "E",
@@ -1868,7 +1868,7 @@
    ],
    "source": "https://www.eloratings.net/South_Korea",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "KOR-VIE": {
    "group": "E",
@@ -1900,7 +1900,7 @@
    ],
    "source": "https://www.eloratings.net/South_Korea",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "KOR-YEM": {
    "group": "E",
@@ -1917,7 +1917,7 @@
    "matches": [],
    "source": "https://www.eloratings.net/South_Korea",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "UAE-VIE": {
    "group": "E",
@@ -1970,7 +1970,7 @@
    ],
    "source": "https://www.eloratings.net/United_Arab_Emirates",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "UAE-YEM": {
    "group": "E",
@@ -2065,7 +2065,7 @@
    ],
    "source": "https://www.eloratings.net/United_Arab_Emirates",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "VIE-YEM": {
    "group": "E",
@@ -2090,7 +2090,7 @@
    ],
    "source": "https://www.eloratings.net/Vietnam",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "IDN-JPN": {
    "group": "F",
@@ -2143,7 +2143,7 @@
    ],
    "source": "https://www.eloratings.net/Indonesia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "IDN-QAT": {
    "group": "F",
@@ -2196,7 +2196,7 @@
    ],
    "source": "https://www.eloratings.net/Indonesia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "IDN-THA": {
    "group": "F",
@@ -2249,7 +2249,7 @@
    ],
    "source": "https://www.eloratings.net/Indonesia",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "JPN-QAT": {
    "group": "F",
@@ -2316,7 +2316,7 @@
    ],
    "source": "https://www.eloratings.net/Japan",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "JPN-THA": {
    "group": "F",
@@ -2383,7 +2383,7 @@
    ],
    "source": "https://www.eloratings.net/Japan",
    "official": false,
-   "approved": false
+   "approved": true
   },
   "QAT-THA": {
    "group": "F",
@@ -2408,7 +2408,7 @@
    ],
    "source": "https://www.eloratings.net/Qatar",
    "official": false,
-   "approved": false
+   "approved": true
   }
  }
 }
