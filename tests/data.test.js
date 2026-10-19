@@ -117,3 +117,31 @@ test('match stats follow the fixture home side when the feed lists the teams the
   assert.deepEqual(r.stats, { possession: [64, 36], shots: [15, 6] });
   assert.equal(r.homeScore, 2);
 });
+
+/* ── head-to-head records (tournaments/afc2027/h2h.json) ── */
+import { h2hOf } from '../js/logic/h2h.js';
+test('h2h records add up and are keyed by group pair', () => {
+  const { pairs } = load('h2h'), teams = load('teams'), fx = load('fixtures');
+  for(const f of fx.filter(f => f.stage === 'group')){
+    const k = [f.home, f.away].sort().join('-');
+    assert.ok(pairs[k], `missing h2h pair ${k}`);
+  }
+  for(const [k, p] of Object.entries(pairs)){
+    const [a, b] = k.split('-');
+    assert.ok(teams[a] && teams[b], k);
+    assert.equal(p.matches.length, p.wins[a] + p.wins[b] + p.draws, `${k}: W+D+L = played`);
+    const gf = { [a]: 0, [b]: 0 };
+    for(const m of p.matches){ const [h, g] = m.score.split('-').map(Number); gf[m.home] += h; gf[m.away] += g; }
+    assert.deepEqual(gf, p.goals, `${k}: goals`);
+  }
+});
+test('h2h shows only approved pairs, newest meeting first, oriented to the card', () => {
+  const pair = { 'KSA-PLE': { approved: false, draws: 1, wins: { KSA: 1, PLE: 0 }, goals: { KSA: 3, PLE: 1 },
+    matches: [{ date: '2019-10-15', home: 'PLE', away: 'KSA', score: '1-1' }, { date: '2021-03-30', home: 'KSA', away: 'PLE', score: '2-0' }] } };
+  assert.equal(h2hOf(pair, 'PLE', 'KSA'), null);
+  const r = h2hOf(pair, 'PLE', 'KSA', { review: true });
+  assert.deepEqual(r.wins, [0, 1]);
+  assert.deepEqual(r.goals, [1, 3]);
+  assert.equal(r.last[0].date, '2021-03-30');
+  assert.equal(h2hOf({ 'KSA-PLE': { ...pair['KSA-PLE'], approved: true } }, 'KSA', 'PLE').played, 2);
+});

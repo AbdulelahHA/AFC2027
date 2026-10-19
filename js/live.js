@@ -31,7 +31,8 @@ export async function loadTournament(id){
   const data = tournament.dataFrom ? `tournaments/${tournament.dataFrom}/` : base;
   const [teams, fixtures, history, aliases] = await Promise.all(
     ['teams', 'fixtures', 'history', 'aliases'].map(f => getJSON(data + f + '.json')));
-  return { tournament, teams, fixtures, history, aliases };
+  const h2h = await getJSON(data + 'h2h.json').catch(() => ({ pairs: {} }));   /* optional: no file, no head-to-head tab */
+  return { tournament, teams, fixtures, history, aliases, h2h: h2h.pairs };
 }
 
 function rebuild(){

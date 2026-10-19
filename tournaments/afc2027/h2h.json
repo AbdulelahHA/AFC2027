@@ -1,0 +1,2414 @@
+{
+ "note": "Competitive meetings only: Asian Cup, Arab Cup, Gulf Cup, World Cup, World Cup qualifiers. Source: eloratings.net match records (unofficial). A pair shows in the app only when approved is true.",
+ "pairs": {
+  "KSA-KUW": {
+   "group": "A",
+   "played": 37,
+   "wins": {
+    "KSA": 14,
+    "KUW": 13
+   },
+   "draws": 10,
+   "goals": {
+    "KSA": 40,
+    "KUW": 39
+   },
+   "matches": [
+    {
+     "date": "1970-03-28",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "3-1"
+    },
+    {
+     "date": "1972-03-16",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "2-2"
+    },
+    {
+     "date": "1974-03-29",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "4-0"
+    },
+    {
+     "date": "1976-04-11",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "3-1"
+    },
+    {
+     "date": "1979-04-05",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "1981-11-04",
+     "competition": "wc-qualifiers",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "0-1"
+    },
+    {
+     "date": "1981-12-07",
+     "competition": "wc-qualifiers",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "2-0"
+    },
+    {
+     "date": "1982-03-26",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "1-0"
+    },
+    {
+     "date": "1984-03-20",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "1-1"
+    },
+    {
+     "date": "1984-12-11",
+     "competition": "asian-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "1-0"
+    },
+    {
+     "date": "1986-03-23",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "3-1"
+    },
+    {
+     "date": "1988-03-18",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "0-0"
+    },
+    {
+     "date": "1988-12-05",
+     "competition": "asian-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "1992-09-14",
+     "competition": "arab-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "2-0"
+    },
+    {
+     "date": "1992-12-06",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "2-1"
+    },
+    {
+     "date": "1993-05-05",
+     "competition": "wc-qualifiers",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "1993-05-18",
+     "competition": "wc-qualifiers",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "2-0"
+    },
+    {
+     "date": "1994-11-16",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "2-0"
+    },
+    {
+     "date": "1996-10-24",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "1-0"
+    },
+    {
+     "date": "1997-09-14",
+     "competition": "wc-qualifiers",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "2-1"
+    },
+    {
+     "date": "1997-10-17",
+     "competition": "wc-qualifiers",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "2-1"
+    },
+    {
+     "date": "1998-09-29",
+     "competition": "arab-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "2-1"
+    },
+    {
+     "date": "1998-10-31",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "2-1"
+    },
+    {
+     "date": "2000-10-24",
+     "competition": "asian-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "3-2"
+    },
+    {
+     "date": "2002-01-16",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "1-1"
+    },
+    {
+     "date": "2004-01-04",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "1-1"
+    },
+    {
+     "date": "2004-12-11",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "2-1"
+    },
+    {
+     "date": "2005-03-30",
+     "competition": "wc-qualifiers",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "2005-06-03",
+     "competition": "wc-qualifiers",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "3-0"
+    },
+    {
+     "date": "2009-01-14",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "1-0"
+    },
+    {
+     "date": "2010-11-25",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "2010-12-05",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "1-0"
+    },
+    {
+     "date": "2012-06-22",
+     "competition": "arab-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "4-0"
+    },
+    {
+     "date": "2013-01-12",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "1-0"
+    },
+    {
+     "date": "2017-12-22",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "1-2"
+    },
+    {
+     "date": "2019-11-27",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "KSA",
+     "score": "3-1"
+    },
+    {
+     "date": "2026-09-23",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "KUW",
+     "score": "1-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Saudi_Arabia",
+   "official": false,
+   "approved": false
+  },
+  "KSA-OMA": {
+   "group": "A",
+   "played": 24,
+   "wins": {
+    "KSA": 18,
+    "OMA": 3
+   },
+   "draws": 3,
+   "goals": {
+    "KSA": 42,
+    "OMA": 14
+   },
+   "matches": [
+    {
+     "date": "1976-04-04",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "3-1"
+    },
+    {
+     "date": "1979-03-27",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "4-0"
+    },
+    {
+     "date": "1982-03-31",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "3-0"
+    },
+    {
+     "date": "1984-03-15",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KSA",
+     "score": "1-3"
+    },
+    {
+     "date": "1986-03-28",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "3-1"
+    },
+    {
+     "date": "1988-03-02",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "2-0"
+    },
+    {
+     "date": "1992-12-04",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "2-0"
+    },
+    {
+     "date": "1994-11-04",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "2-1"
+    },
+    {
+     "date": "1996-10-15",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KSA",
+     "score": "0-1"
+    },
+    {
+     "date": "1998-11-05",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "1-0"
+    },
+    {
+     "date": "2002-01-27",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "2-0"
+    },
+    {
+     "date": "2004-01-06",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "2-1"
+    },
+    {
+     "date": "2009-01-17",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "2011-09-02",
+     "competition": "wc-qualifiers",
+     "home": "OMA",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "2011-11-15",
+     "competition": "wc-qualifiers",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "0-0"
+    },
+    {
+     "date": "2017-12-28",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KSA",
+     "score": "2-0"
+    },
+    {
+     "date": "2019-12-02",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "3-1"
+    },
+    {
+     "date": "2021-09-07",
+     "competition": "wc-qualifiers",
+     "home": "OMA",
+     "away": "KSA",
+     "score": "0-1"
+    },
+    {
+     "date": "2022-01-27",
+     "competition": "wc-qualifiers",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "1-0"
+    },
+    {
+     "date": "2023-01-12",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KSA",
+     "score": "2-1"
+    },
+    {
+     "date": "2024-01-16",
+     "competition": "asian-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "2-1"
+    },
+    {
+     "date": "2024-12-31",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KSA",
+     "score": "2-1"
+    },
+    {
+     "date": "2025-12-02",
+     "competition": "arab-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "2-1"
+    },
+    {
+     "date": "2026-09-26",
+     "competition": "gulf-cup",
+     "home": "KSA",
+     "away": "OMA",
+     "score": "3-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Saudi_Arabia",
+   "official": false,
+   "approved": false
+  },
+  "KSA-PLE": {
+   "group": "A",
+   "played": 8,
+   "wins": {
+    "KSA": 4,
+    "PLE": 0
+   },
+   "draws": 4,
+   "goals": {
+    "KSA": 15,
+    "PLE": 7
+   },
+   "matches": [
+    {
+     "date": "1992-09-09",
+     "competition": "arab-cup",
+     "home": "KSA",
+     "away": "PLE",
+     "score": "2-1"
+    },
+    {
+     "date": "2012-06-28",
+     "competition": "arab-cup",
+     "home": "KSA",
+     "away": "PLE",
+     "score": "2-2"
+    },
+    {
+     "date": "2015-06-11",
+     "competition": "wc-qualifiers",
+     "home": "KSA",
+     "away": "PLE",
+     "score": "3-2"
+    },
+    {
+     "date": "2015-11-09",
+     "competition": "wc-qualifiers",
+     "home": "PLE",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "2019-10-15",
+     "competition": "wc-qualifiers",
+     "home": "PLE",
+     "away": "KSA",
+     "score": "0-0"
+    },
+    {
+     "date": "2021-03-30",
+     "competition": "wc-qualifiers",
+     "home": "KSA",
+     "away": "PLE",
+     "score": "5-0"
+    },
+    {
+     "date": "2021-12-04",
+     "competition": "arab-cup",
+     "home": "PLE",
+     "away": "KSA",
+     "score": "1-1"
+    },
+    {
+     "date": "2025-12-11",
+     "competition": "arab-cup",
+     "home": "KSA",
+     "away": "PLE",
+     "score": "2-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Saudi_Arabia",
+   "official": false,
+   "approved": false
+  },
+  "KUW-OMA": {
+   "group": "A",
+   "played": 24,
+   "wins": {
+    "KUW": 9,
+    "OMA": 9
+   },
+   "draws": 6,
+   "goals": {
+    "KUW": 36,
+    "OMA": 26
+   },
+   "matches": [
+    {
+     "date": "1974-03-19",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "5-0"
+    },
+    {
+     "date": "1976-03-31",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "8-0"
+    },
+    {
+     "date": "1979-04-02",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "2-0"
+    },
+    {
+     "date": "1982-03-29",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "2-0"
+    },
+    {
+     "date": "1984-03-25",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "0-0"
+    },
+    {
+     "date": "1986-03-25",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "2-0"
+    },
+    {
+     "date": "1988-03-14",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "2-0"
+    },
+    {
+     "date": "1990-02-24",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "1-1"
+    },
+    {
+     "date": "1992-11-30",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "2-1"
+    },
+    {
+     "date": "1994-11-13",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "0-0"
+    },
+    {
+     "date": "1996-10-18",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "1-2"
+    },
+    {
+     "date": "1998-11-09",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "5-0"
+    },
+    {
+     "date": "2002-01-19",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "3-1"
+    },
+    {
+     "date": "2003-12-26",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "0-0"
+    },
+    {
+     "date": "2007-01-20",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "2-1"
+    },
+    {
+     "date": "2009-01-04",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "0-0"
+    },
+    {
+     "date": "2014-11-20",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "5-0"
+    },
+    {
+     "date": "2015-01-17",
+     "competition": "asian-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "1-0"
+    },
+    {
+     "date": "2017-12-25",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "0-1"
+    },
+    {
+     "date": "2019-11-30",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "2-1"
+    },
+    {
+     "date": "2024-10-10",
+     "competition": "wc-qualifiers",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "4-0"
+    },
+    {
+     "date": "2024-12-21",
+     "competition": "gulf-cup",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "1-1"
+    },
+    {
+     "date": "2025-03-25",
+     "competition": "wc-qualifiers",
+     "home": "KUW",
+     "away": "OMA",
+     "score": "0-1"
+    },
+    {
+     "date": "2026-09-29",
+     "competition": "gulf-cup",
+     "home": "OMA",
+     "away": "KUW",
+     "score": "3-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Kuwait",
+   "official": false,
+   "approved": false
+  },
+  "KUW-PLE": {
+   "group": "A",
+   "played": 4,
+   "wins": {
+    "KUW": 1,
+    "PLE": 1
+   },
+   "draws": 2,
+   "goals": {
+    "KUW": 7,
+    "PLE": 7
+   },
+   "matches": [
+    {
+     "date": "2002-12-25",
+     "competition": "arab-cup",
+     "home": "KUW",
+     "away": "PLE",
+     "score": "3-3"
+    },
+    {
+     "date": "2012-06-25",
+     "competition": "arab-cup",
+     "home": "KUW",
+     "away": "PLE",
+     "score": "2-0"
+    },
+    {
+     "date": "2024-10-15",
+     "competition": "wc-qualifiers",
+     "home": "KUW",
+     "away": "PLE",
+     "score": "2-2"
+    },
+    {
+     "date": "2025-06-05",
+     "competition": "wc-qualifiers",
+     "home": "KUW",
+     "away": "PLE",
+     "score": "0-2"
+    }
+   ],
+   "source": "https://www.eloratings.net/Kuwait",
+   "official": false,
+   "approved": false
+  },
+  "OMA-PLE": {
+   "group": "A",
+   "played": 2,
+   "wins": {
+    "OMA": 1,
+    "PLE": 0
+   },
+   "draws": 1,
+   "goals": {
+    "OMA": 2,
+    "PLE": 1
+   },
+   "matches": [
+    {
+     "date": "2024-11-14",
+     "competition": "wc-qualifiers",
+     "home": "OMA",
+     "away": "PLE",
+     "score": "1-0"
+    },
+    {
+     "date": "2025-06-10",
+     "competition": "wc-qualifiers",
+     "home": "OMA",
+     "away": "PLE",
+     "score": "1-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Oman",
+   "official": false,
+   "approved": false
+  },
+  "BHR-JOR": {
+   "group": "B",
+   "played": 6,
+   "wins": {
+    "BHR": 3,
+    "JOR": 2
+   },
+   "draws": 1,
+   "goals": {
+    "BHR": 6,
+    "JOR": 10
+   },
+   "matches": [
+    {
+     "date": "1966-04-07",
+     "competition": "arab-cup",
+     "home": "JOR",
+     "away": "BHR",
+     "score": "5-1"
+    },
+    {
+     "date": "1988-07-08",
+     "competition": "arab-cup",
+     "home": "JOR",
+     "away": "BHR",
+     "score": "0-0"
+    },
+    {
+     "date": "1997-04-14",
+     "competition": "wc-qualifiers",
+     "home": "BHR",
+     "away": "JOR",
+     "score": "1-0"
+    },
+    {
+     "date": "1997-04-19",
+     "competition": "wc-qualifiers",
+     "home": "JOR",
+     "away": "BHR",
+     "score": "4-1"
+    },
+    {
+     "date": "2002-12-28",
+     "competition": "arab-cup",
+     "home": "BHR",
+     "away": "JOR",
+     "score": "2-1"
+    },
+    {
+     "date": "2024-01-25",
+     "competition": "asian-cup",
+     "home": "BHR",
+     "away": "JOR",
+     "score": "1-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Bahrain",
+   "official": false,
+   "approved": false
+  },
+  "BHR-PRK": {
+   "group": "B",
+   "played": 4,
+   "wins": {
+    "BHR": 1,
+    "PRK": 3
+   },
+   "draws": 0,
+   "goals": {
+    "BHR": 4,
+    "PRK": 7
+   },
+   "matches": [
+    {
+     "date": "2005-03-25",
+     "competition": "wc-qualifiers",
+     "home": "PRK",
+     "away": "BHR",
+     "score": "1-2"
+    },
+    {
+     "date": "2005-08-17",
+     "competition": "wc-qualifiers",
+     "home": "BHR",
+     "away": "PRK",
+     "score": "2-3"
+    },
+    {
+     "date": "2015-09-03",
+     "competition": "wc-qualifiers",
+     "home": "BHR",
+     "away": "PRK",
+     "score": "0-1"
+    },
+    {
+     "date": "2015-11-17",
+     "competition": "wc-qualifiers",
+     "home": "PRK",
+     "away": "BHR",
+     "score": "2-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Bahrain",
+   "official": false,
+   "approved": false
+  },
+  "BHR-UZB": {
+   "group": "B",
+   "played": 8,
+   "wins": {
+    "BHR": 2,
+    "UZB": 3
+   },
+   "draws": 3,
+   "goals": {
+    "BHR": 5,
+    "UZB": 9
+   },
+   "matches": [
+    {
+     "date": "2004-07-30",
+     "competition": "asian-cup",
+     "home": "BHR",
+     "away": "UZB",
+     "score": "2-2"
+    },
+    {
+     "date": "2005-09-03",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "BHR",
+     "score": "1-0"
+    },
+    {
+     "date": "2005-10-08",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "BHR",
+     "score": "1-1"
+    },
+    {
+     "date": "2005-10-12",
+     "competition": "wc-qualifiers",
+     "home": "BHR",
+     "away": "UZB",
+     "score": "0-0"
+    },
+    {
+     "date": "2009-02-11",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "BHR",
+     "score": "0-1"
+    },
+    {
+     "date": "2009-06-17",
+     "competition": "wc-qualifiers",
+     "home": "BHR",
+     "away": "UZB",
+     "score": "1-0"
+    },
+    {
+     "date": "2015-10-08",
+     "competition": "wc-qualifiers",
+     "home": "BHR",
+     "away": "UZB",
+     "score": "0-4"
+    },
+    {
+     "date": "2016-03-29",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "BHR",
+     "score": "1-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Bahrain",
+   "official": false,
+   "approved": false
+  },
+  "JOR-PRK": {
+   "group": "B",
+   "played": 2,
+   "wins": {
+    "JOR": 0,
+    "PRK": 2
+   },
+   "draws": 0,
+   "goals": {
+    "JOR": 0,
+    "PRK": 3
+   },
+   "matches": [
+    {
+     "date": "2008-02-06",
+     "competition": "wc-qualifiers",
+     "home": "JOR",
+     "away": "PRK",
+     "score": "0-1"
+    },
+    {
+     "date": "2008-06-14",
+     "competition": "wc-qualifiers",
+     "home": "PRK",
+     "away": "JOR",
+     "score": "2-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Jordan",
+   "official": false,
+   "approved": false
+  },
+  "JOR-UZB": {
+   "group": "B",
+   "played": 5,
+   "wins": {
+    "JOR": 0,
+    "UZB": 1
+   },
+   "draws": 4,
+   "goals": {
+    "JOR": 6,
+    "UZB": 7
+   },
+   "matches": [
+    {
+     "date": "2001-04-27",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "JOR",
+     "score": "2-2"
+    },
+    {
+     "date": "2001-05-07",
+     "competition": "wc-qualifiers",
+     "home": "JOR",
+     "away": "UZB",
+     "score": "1-1"
+    },
+    {
+     "date": "2011-01-21",
+     "competition": "asian-cup",
+     "home": "UZB",
+     "away": "JOR",
+     "score": "2-1"
+    },
+    {
+     "date": "2013-09-06",
+     "competition": "wc-qualifiers",
+     "home": "JOR",
+     "away": "UZB",
+     "score": "1-1"
+    },
+    {
+     "date": "2013-09-10",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "JOR",
+     "score": "1-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Jordan",
+   "official": false,
+   "approved": false
+  },
+  "PRK-UZB": {
+   "group": "B",
+   "played": 7,
+   "wins": {
+    "PRK": 1,
+    "UZB": 6
+   },
+   "draws": 0,
+   "goals": {
+    "PRK": 5,
+    "UZB": 10
+   },
+   "matches": [
+    {
+     "date": "2011-10-11",
+     "competition": "wc-qualifiers",
+     "home": "PRK",
+     "away": "UZB",
+     "score": "0-1"
+    },
+    {
+     "date": "2011-11-11",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "PRK",
+     "score": "1-0"
+    },
+    {
+     "date": "2015-01-10",
+     "competition": "asian-cup",
+     "home": "UZB",
+     "away": "PRK",
+     "score": "1-0"
+    },
+    {
+     "date": "2015-06-16",
+     "competition": "wc-qualifiers",
+     "home": "PRK",
+     "away": "UZB",
+     "score": "4-2"
+    },
+    {
+     "date": "2015-11-12",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "PRK",
+     "score": "3-1"
+    },
+    {
+     "date": "2024-09-05",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "PRK",
+     "score": "1-0"
+    },
+    {
+     "date": "2024-11-19",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "PRK",
+     "score": "1-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/North_Korea",
+   "official": false,
+   "approved": false
+  },
+  "CHN-IRN": {
+   "group": "C",
+   "played": 13,
+   "wins": {
+    "CHN": 1,
+    "IRN": 7
+   },
+   "draws": 5,
+   "goals": {
+    "CHN": 12,
+    "IRN": 24
+   },
+   "matches": [
+    {
+     "date": "1976-06-11",
+     "competition": "asian-cup",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "2-0"
+    },
+    {
+     "date": "1980-09-20",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "2-2"
+    },
+    {
+     "date": "1984-12-03",
+     "competition": "asian-cup",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "2-0"
+    },
+    {
+     "date": "1988-12-17",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "0-0"
+    },
+    {
+     "date": "1989-07-15",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "2-0"
+    },
+    {
+     "date": "1989-07-22",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "3-2"
+    },
+    {
+     "date": "1997-09-13",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "2-4"
+    },
+    {
+     "date": "1997-10-17",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "4-1"
+    },
+    {
+     "date": "2004-08-03",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "1-1"
+    },
+    {
+     "date": "2007-07-15",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "2-2"
+    },
+    {
+     "date": "2016-09-06",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "0-0"
+    },
+    {
+     "date": "2017-03-28",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "1-0"
+    },
+    {
+     "date": "2019-01-24",
+     "competition": "asian-cup",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "3-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/China",
+   "official": false,
+   "approved": false
+  },
+  "CHN-KGZ": {
+   "group": "C",
+   "played": 1,
+   "wins": {
+    "CHN": 1,
+    "KGZ": 0
+   },
+   "draws": 0,
+   "goals": {
+    "CHN": 2,
+    "KGZ": 1
+   },
+   "matches": [
+    {
+     "date": "2019-01-07",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "KGZ",
+     "score": "2-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/China",
+   "official": false,
+   "approved": false
+  },
+  "CHN-SYR": {
+   "group": "C",
+   "played": 7,
+   "wins": {
+    "CHN": 3,
+    "SYR": 3
+   },
+   "draws": 1,
+   "goals": {
+    "CHN": 12,
+    "SYR": 7
+   },
+   "matches": [
+    {
+     "date": "1980-09-23",
+     "competition": "asian-cup",
+     "home": "SYR",
+     "away": "CHN",
+     "score": "1-0"
+    },
+    {
+     "date": "1988-12-04",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "SYR",
+     "score": "3-0"
+    },
+    {
+     "date": "1996-12-09",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "SYR",
+     "score": "3-0"
+    },
+    {
+     "date": "2016-10-06",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "SYR",
+     "score": "0-1"
+    },
+    {
+     "date": "2017-06-13",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "CHN",
+     "score": "2-2"
+    },
+    {
+     "date": "2019-11-14",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "CHN",
+     "score": "2-1"
+    },
+    {
+     "date": "2021-06-15",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "SYR",
+     "score": "3-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/China",
+   "official": false,
+   "approved": false
+  },
+  "IRN-KGZ": {
+   "group": "C",
+   "played": 4,
+   "wins": {
+    "IRN": 4,
+    "KGZ": 0
+   },
+   "draws": 0,
+   "goals": {
+    "IRN": 14,
+    "KGZ": 3
+   },
+   "matches": [
+    {
+     "date": "1997-06-04",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "KGZ",
+     "score": "7-0"
+    },
+    {
+     "date": "1997-06-09",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "KGZ",
+     "score": "3-1"
+    },
+    {
+     "date": "2024-09-05",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "KGZ",
+     "score": "1-0"
+    },
+    {
+     "date": "2024-11-19",
+     "competition": "wc-qualifiers",
+     "home": "KGZ",
+     "away": "IRN",
+     "score": "2-3"
+    }
+   ],
+   "source": "https://www.eloratings.net/Iran",
+   "official": false,
+   "approved": false
+  },
+  "IRN-SYR": {
+   "group": "C",
+   "played": 15,
+   "wins": {
+    "IRN": 6,
+    "SYR": 1
+   },
+   "draws": 8,
+   "goals": {
+    "IRN": 16,
+    "SYR": 8
+   },
+   "matches": [
+    {
+     "date": "1973-05-08",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "1-0"
+    },
+    {
+     "date": "1973-05-15",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "0-1"
+    },
+    {
+     "date": "1977-01-28",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "IRN",
+     "score": "0-1"
+    },
+    {
+     "date": "1980-09-17",
+     "competition": "asian-cup",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "0-0"
+    },
+    {
+     "date": "1993-06-27",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "1-1"
+    },
+    {
+     "date": "1993-07-07",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "IRN",
+     "score": "1-1"
+    },
+    {
+     "date": "1997-06-06",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "IRN",
+     "score": "0-1"
+    },
+    {
+     "date": "1997-06-13",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "2-2"
+    },
+    {
+     "date": "2008-02-06",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "0-0"
+    },
+    {
+     "date": "2008-06-14",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "IRN",
+     "score": "0-2"
+    },
+    {
+     "date": "2016-11-15",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "IRN",
+     "score": "0-0"
+    },
+    {
+     "date": "2017-09-05",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "2-2"
+    },
+    {
+     "date": "2021-09-02",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "1-0"
+    },
+    {
+     "date": "2021-11-16",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "3-0"
+    },
+    {
+     "date": "2024-01-31",
+     "competition": "asian-cup",
+     "home": "IRN",
+     "away": "SYR",
+     "score": "1-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Iran",
+   "official": false,
+   "approved": false
+  },
+  "KGZ-SYR": {
+   "group": "C",
+   "played": 3,
+   "wins": {
+    "KGZ": 2,
+    "SYR": 0
+   },
+   "draws": 1,
+   "goals": {
+    "KGZ": 4,
+    "SYR": 2
+   },
+   "matches": [
+    {
+     "date": "1997-06-11",
+     "competition": "wc-qualifiers",
+     "home": "KGZ",
+     "away": "SYR",
+     "score": "2-1"
+    },
+    {
+     "date": "2004-03-31",
+     "competition": "wc-qualifiers",
+     "home": "KGZ",
+     "away": "SYR",
+     "score": "1-1"
+    },
+    {
+     "date": "2004-11-17",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "KGZ",
+     "score": "0-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Kyrgyzstan",
+   "official": false,
+   "approved": false
+  },
+  "AUS-IRQ": {
+   "group": "D",
+   "played": 10,
+   "wins": {
+    "AUS": 6,
+    "IRQ": 2
+   },
+   "draws": 2,
+   "goals": {
+    "AUS": 12,
+    "IRQ": 7
+   },
+   "matches": [
+    {
+     "date": "1973-03-11",
+     "competition": "wc-qualifiers",
+     "home": "AUS",
+     "away": "IRQ",
+     "score": "3-1"
+    },
+    {
+     "date": "1973-03-18",
+     "competition": "wc-qualifiers",
+     "home": "AUS",
+     "away": "IRQ",
+     "score": "0-0"
+    },
+    {
+     "date": "2007-07-13",
+     "competition": "asian-cup",
+     "home": "IRQ",
+     "away": "AUS",
+     "score": "3-1"
+    },
+    {
+     "date": "2008-06-01",
+     "competition": "wc-qualifiers",
+     "home": "AUS",
+     "away": "IRQ",
+     "score": "1-0"
+    },
+    {
+     "date": "2008-06-07",
+     "competition": "wc-qualifiers",
+     "home": "IRQ",
+     "away": "AUS",
+     "score": "1-0"
+    },
+    {
+     "date": "2011-01-22",
+     "competition": "asian-cup",
+     "home": "AUS",
+     "away": "IRQ",
+     "score": "1-0"
+    },
+    {
+     "date": "2012-10-16",
+     "competition": "wc-qualifiers",
+     "home": "AUS",
+     "away": "IRQ",
+     "score": "2-1"
+    },
+    {
+     "date": "2013-06-18",
+     "competition": "wc-qualifiers",
+     "home": "AUS",
+     "away": "IRQ",
+     "score": "1-0"
+    },
+    {
+     "date": "2016-09-01",
+     "competition": "wc-qualifiers",
+     "home": "AUS",
+     "away": "IRQ",
+     "score": "2-0"
+    },
+    {
+     "date": "2017-03-23",
+     "competition": "wc-qualifiers",
+     "home": "IRQ",
+     "away": "AUS",
+     "score": "1-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Australia",
+   "official": false,
+   "approved": false
+  },
+  "AUS-SGP": {
+   "group": "D",
+   "played": 0,
+   "wins": {
+    "AUS": 0,
+    "SGP": 0
+   },
+   "draws": 0,
+   "goals": {
+    "AUS": 0,
+    "SGP": 0
+   },
+   "matches": [],
+   "source": "https://www.eloratings.net/Australia",
+   "official": false,
+   "approved": false
+  },
+  "AUS-TJK": {
+   "group": "D",
+   "played": 2,
+   "wins": {
+    "AUS": 2,
+    "TJK": 0
+   },
+   "draws": 0,
+   "goals": {
+    "AUS": 10,
+    "TJK": 0
+   },
+   "matches": [
+    {
+     "date": "2015-09-08",
+     "competition": "wc-qualifiers",
+     "home": "TJK",
+     "away": "AUS",
+     "score": "0-3"
+    },
+    {
+     "date": "2016-03-24",
+     "competition": "wc-qualifiers",
+     "home": "AUS",
+     "away": "TJK",
+     "score": "7-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Australia",
+   "official": false,
+   "approved": false
+  },
+  "IRQ-SGP": {
+   "group": "D",
+   "played": 2,
+   "wins": {
+    "IRQ": 2,
+    "SGP": 0
+   },
+   "draws": 0,
+   "goals": {
+    "IRQ": 9,
+    "SGP": 1
+   },
+   "matches": [
+    {
+     "date": "2011-09-06",
+     "competition": "wc-qualifiers",
+     "home": "SGP",
+     "away": "IRQ",
+     "score": "0-2"
+    },
+    {
+     "date": "2012-02-29",
+     "competition": "wc-qualifiers",
+     "home": "IRQ",
+     "away": "SGP",
+     "score": "7-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Iraq",
+   "official": false,
+   "approved": false
+  },
+  "IRQ-TJK": {
+   "group": "D",
+   "played": 0,
+   "wins": {
+    "IRQ": 0,
+    "TJK": 0
+   },
+   "draws": 0,
+   "goals": {
+    "IRQ": 0,
+    "TJK": 0
+   },
+   "matches": [],
+   "source": "https://www.eloratings.net/Iraq",
+   "official": false,
+   "approved": false
+  },
+  "SGP-TJK": {
+   "group": "D",
+   "played": 2,
+   "wins": {
+    "SGP": 1,
+    "TJK": 0
+   },
+   "draws": 1,
+   "goals": {
+    "SGP": 3,
+    "TJK": 1
+   },
+   "matches": [
+    {
+     "date": "2007-11-09",
+     "competition": "wc-qualifiers",
+     "home": "SGP",
+     "away": "TJK",
+     "score": "2-0"
+    },
+    {
+     "date": "2007-11-18",
+     "competition": "wc-qualifiers",
+     "home": "TJK",
+     "away": "SGP",
+     "score": "1-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Singapore",
+   "official": false,
+   "approved": false
+  },
+  "KOR-UAE": {
+   "group": "E",
+   "played": 13,
+   "wins": {
+    "KOR": 10,
+    "UAE": 1
+   },
+   "draws": 2,
+   "goals": {
+    "KOR": 26,
+    "UAE": 7
+   },
+   "matches": [
+    {
+     "date": "1980-09-24",
+     "competition": "asian-cup",
+     "home": "KOR",
+     "away": "UAE",
+     "score": "4-1"
+    },
+    {
+     "date": "1988-12-03",
+     "competition": "asian-cup",
+     "home": "KOR",
+     "away": "UAE",
+     "score": "1-0"
+    },
+    {
+     "date": "1989-10-28",
+     "competition": "wc-qualifiers",
+     "home": "KOR",
+     "away": "UAE",
+     "score": "1-1"
+    },
+    {
+     "date": "1996-12-04",
+     "competition": "asian-cup",
+     "home": "UAE",
+     "away": "KOR",
+     "score": "1-1"
+    },
+    {
+     "date": "1997-10-04",
+     "competition": "wc-qualifiers",
+     "home": "KOR",
+     "away": "UAE",
+     "score": "3-0"
+    },
+    {
+     "date": "1997-11-09",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "KOR",
+     "score": "1-3"
+    },
+    {
+     "date": "2004-07-23",
+     "competition": "asian-cup",
+     "home": "KOR",
+     "away": "UAE",
+     "score": "2-0"
+    },
+    {
+     "date": "2008-10-15",
+     "competition": "wc-qualifiers",
+     "home": "KOR",
+     "away": "UAE",
+     "score": "4-1"
+    },
+    {
+     "date": "2009-06-06",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "KOR",
+     "score": "0-2"
+    },
+    {
+     "date": "2011-10-11",
+     "competition": "wc-qualifiers",
+     "home": "KOR",
+     "away": "UAE",
+     "score": "2-1"
+    },
+    {
+     "date": "2011-11-11",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "KOR",
+     "score": "0-2"
+    },
+    {
+     "date": "2021-11-11",
+     "competition": "wc-qualifiers",
+     "home": "KOR",
+     "away": "UAE",
+     "score": "1-0"
+    },
+    {
+     "date": "2022-03-29",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "KOR",
+     "score": "1-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/South_Korea",
+   "official": false,
+   "approved": false
+  },
+  "KOR-VIE": {
+   "group": "E",
+   "played": 2,
+   "wins": {
+    "KOR": 2,
+    "VIE": 0
+   },
+   "draws": 0,
+   "goals": {
+    "KOR": 4,
+    "VIE": 1
+   },
+   "matches": [
+    {
+     "date": "2004-06-09",
+     "competition": "wc-qualifiers",
+     "home": "KOR",
+     "away": "VIE",
+     "score": "2-0"
+    },
+    {
+     "date": "2004-09-08",
+     "competition": "wc-qualifiers",
+     "home": "VIE",
+     "away": "KOR",
+     "score": "1-2"
+    }
+   ],
+   "source": "https://www.eloratings.net/South_Korea",
+   "official": false,
+   "approved": false
+  },
+  "KOR-YEM": {
+   "group": "E",
+   "played": 0,
+   "wins": {
+    "KOR": 0,
+    "YEM": 0
+   },
+   "draws": 0,
+   "goals": {
+    "KOR": 0,
+    "YEM": 0
+   },
+   "matches": [],
+   "source": "https://www.eloratings.net/South_Korea",
+   "official": false,
+   "approved": false
+  },
+  "UAE-VIE": {
+   "group": "E",
+   "played": 5,
+   "wins": {
+    "UAE": 3,
+    "VIE": 2
+   },
+   "draws": 0,
+   "goals": {
+    "UAE": 9,
+    "VIE": 5
+   },
+   "matches": [
+    {
+     "date": "2007-07-08",
+     "competition": "asian-cup",
+     "home": "VIE",
+     "away": "UAE",
+     "score": "2-0"
+    },
+    {
+     "date": "2007-10-08",
+     "competition": "wc-qualifiers",
+     "home": "VIE",
+     "away": "UAE",
+     "score": "0-1"
+    },
+    {
+     "date": "2007-10-28",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "VIE",
+     "score": "5-0"
+    },
+    {
+     "date": "2019-11-14",
+     "competition": "wc-qualifiers",
+     "home": "VIE",
+     "away": "UAE",
+     "score": "1-0"
+    },
+    {
+     "date": "2021-06-15",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "VIE",
+     "score": "3-2"
+    }
+   ],
+   "source": "https://www.eloratings.net/United_Arab_Emirates",
+   "official": false,
+   "approved": false
+  },
+  "UAE-YEM": {
+   "group": "E",
+   "played": 11,
+   "wins": {
+    "UAE": 9,
+    "YEM": 2
+   },
+   "draws": 0,
+   "goals": {
+    "UAE": 28,
+    "YEM": 10
+   },
+   "matches": [
+    {
+     "date": "2001-05-11",
+     "competition": "wc-qualifiers",
+     "home": "YEM",
+     "away": "UAE",
+     "score": "2-1"
+    },
+    {
+     "date": "2001-05-18",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "3-2"
+    },
+    {
+     "date": "2004-01-11",
+     "competition": "gulf-cup",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "3-0"
+    },
+    {
+     "date": "2004-06-09",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "3-0"
+    },
+    {
+     "date": "2004-09-08",
+     "competition": "wc-qualifiers",
+     "home": "YEM",
+     "away": "UAE",
+     "score": "3-1"
+    },
+    {
+     "date": "2007-01-20",
+     "competition": "gulf-cup",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "2-1"
+    },
+    {
+     "date": "2009-01-05",
+     "competition": "gulf-cup",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "3-1"
+    },
+    {
+     "date": "2019-11-26",
+     "competition": "gulf-cup",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "3-0"
+    },
+    {
+     "date": "2024-03-21",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "2-1"
+    },
+    {
+     "date": "2024-03-26",
+     "competition": "wc-qualifiers",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "3-0"
+    },
+    {
+     "date": "2026-09-24",
+     "competition": "gulf-cup",
+     "home": "UAE",
+     "away": "YEM",
+     "score": "4-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/United_Arab_Emirates",
+   "official": false,
+   "approved": false
+  },
+  "VIE-YEM": {
+   "group": "E",
+   "played": 1,
+   "wins": {
+    "VIE": 1,
+    "YEM": 0
+   },
+   "draws": 0,
+   "goals": {
+    "VIE": 2,
+    "YEM": 0
+   },
+   "matches": [
+    {
+     "date": "2019-01-16",
+     "competition": "asian-cup",
+     "home": "VIE",
+     "away": "YEM",
+     "score": "2-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Vietnam",
+   "official": false,
+   "approved": false
+  },
+  "IDN-JPN": {
+   "group": "F",
+   "played": 5,
+   "wins": {
+    "IDN": 0,
+    "JPN": 4
+   },
+   "draws": 1,
+   "goals": {
+    "IDN": 1,
+    "JPN": 18
+   },
+   "matches": [
+    {
+     "date": "1989-05-28",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "JPN",
+     "score": "0-0"
+    },
+    {
+     "date": "1989-06-11",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "IDN",
+     "score": "5-0"
+    },
+    {
+     "date": "2024-01-24",
+     "competition": "asian-cup",
+     "home": "JPN",
+     "away": "IDN",
+     "score": "3-1"
+    },
+    {
+     "date": "2024-11-15",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "JPN",
+     "score": "0-4"
+    },
+    {
+     "date": "2025-06-10",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "IDN",
+     "score": "6-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Indonesia",
+   "official": false,
+   "approved": false
+  },
+  "IDN-QAT": {
+   "group": "F",
+   "played": 5,
+   "wins": {
+    "IDN": 1,
+    "QAT": 4
+   },
+   "draws": 0,
+   "goals": {
+    "IDN": 6,
+    "QAT": 15
+   },
+   "matches": [
+    {
+     "date": "1993-04-09",
+     "competition": "wc-qualifiers",
+     "home": "QAT",
+     "away": "IDN",
+     "score": "3-1"
+    },
+    {
+     "date": "1993-04-24",
+     "competition": "wc-qualifiers",
+     "home": "QAT",
+     "away": "IDN",
+     "score": "4-1"
+    },
+    {
+     "date": "2004-07-18",
+     "competition": "asian-cup",
+     "home": "IDN",
+     "away": "QAT",
+     "score": "2-1"
+    },
+    {
+     "date": "2011-10-11",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "QAT",
+     "score": "2-3"
+    },
+    {
+     "date": "2011-11-11",
+     "competition": "wc-qualifiers",
+     "home": "QAT",
+     "away": "IDN",
+     "score": "4-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Indonesia",
+   "official": false,
+   "approved": false
+  },
+  "IDN-THA": {
+   "group": "F",
+   "played": 5,
+   "wins": {
+    "IDN": 2,
+    "THA": 2
+   },
+   "draws": 1,
+   "goals": {
+    "IDN": 6,
+    "THA": 8
+   },
+   "matches": [
+    {
+     "date": "1977-03-07",
+     "competition": "wc-qualifiers",
+     "home": "THA",
+     "away": "IDN",
+     "score": "3-2"
+    },
+    {
+     "date": "1985-03-15",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "THA",
+     "score": "1-0"
+    },
+    {
+     "date": "1985-03-29",
+     "competition": "wc-qualifiers",
+     "home": "THA",
+     "away": "IDN",
+     "score": "0-1"
+    },
+    {
+     "date": "2019-09-10",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "THA",
+     "score": "0-3"
+    },
+    {
+     "date": "2021-06-03",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "THA",
+     "score": "2-2"
+    }
+   ],
+   "source": "https://www.eloratings.net/Indonesia",
+   "official": false,
+   "approved": false
+  },
+  "JPN-QAT": {
+   "group": "F",
+   "played": 7,
+   "wins": {
+    "JPN": 2,
+    "QAT": 2
+   },
+   "draws": 3,
+   "goals": {
+    "JPN": 10,
+    "QAT": 11
+   },
+   "matches": [
+    {
+     "date": "1988-12-12",
+     "competition": "asian-cup",
+     "home": "QAT",
+     "away": "JPN",
+     "score": "3-0"
+    },
+    {
+     "date": "2000-10-20",
+     "competition": "asian-cup",
+     "home": "JPN",
+     "away": "QAT",
+     "score": "1-1"
+    },
+    {
+     "date": "2007-07-09",
+     "competition": "asian-cup",
+     "home": "JPN",
+     "away": "QAT",
+     "score": "1-1"
+    },
+    {
+     "date": "2008-11-19",
+     "competition": "wc-qualifiers",
+     "home": "QAT",
+     "away": "JPN",
+     "score": "0-3"
+    },
+    {
+     "date": "2009-06-10",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "QAT",
+     "score": "1-1"
+    },
+    {
+     "date": "2011-01-21",
+     "competition": "asian-cup",
+     "home": "QAT",
+     "away": "JPN",
+     "score": "2-3"
+    },
+    {
+     "date": "2019-02-01",
+     "competition": "asian-cup",
+     "home": "QAT",
+     "away": "JPN",
+     "score": "3-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Japan",
+   "official": false,
+   "approved": false
+  },
+  "JPN-THA": {
+   "group": "F",
+   "played": 7,
+   "wins": {
+    "JPN": 7,
+    "THA": 0
+   },
+   "draws": 0,
+   "goals": {
+    "JPN": 19,
+    "THA": 2
+   },
+   "matches": [
+    {
+     "date": "1993-04-08",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "THA",
+     "score": "1-0"
+    },
+    {
+     "date": "1993-04-28",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "THA",
+     "score": "1-0"
+    },
+    {
+     "date": "2004-07-24",
+     "competition": "asian-cup",
+     "home": "JPN",
+     "away": "THA",
+     "score": "4-1"
+    },
+    {
+     "date": "2008-02-06",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "THA",
+     "score": "4-1"
+    },
+    {
+     "date": "2008-06-14",
+     "competition": "wc-qualifiers",
+     "home": "THA",
+     "away": "JPN",
+     "score": "0-3"
+    },
+    {
+     "date": "2016-09-06",
+     "competition": "wc-qualifiers",
+     "home": "THA",
+     "away": "JPN",
+     "score": "0-2"
+    },
+    {
+     "date": "2017-03-28",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "THA",
+     "score": "4-0"
+    }
+   ],
+   "source": "https://www.eloratings.net/Japan",
+   "official": false,
+   "approved": false
+  },
+  "QAT-THA": {
+   "group": "F",
+   "played": 1,
+   "wins": {
+    "QAT": 0,
+    "THA": 0
+   },
+   "draws": 1,
+   "goals": {
+    "QAT": 1,
+    "THA": 1
+   },
+   "matches": [
+    {
+     "date": "1992-10-29",
+     "competition": "asian-cup",
+     "home": "QAT",
+     "away": "THA",
+     "score": "1-1"
+    }
+   ],
+   "source": "https://www.eloratings.net/Qatar",
+   "official": false,
+   "approved": false
+  }
+ }
+}
