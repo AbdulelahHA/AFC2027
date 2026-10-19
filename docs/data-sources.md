@@ -86,7 +86,7 @@ Conflicts with WIKI:
 | **The 2027 rights holder for Saudi Arabia is UNKNOWN.** I found no official AFC, beIN or SSC announcement. | — |
 
 ## 8. History (`history` object)
-- **Winners.** JPN 4 (1992, 2000, 2004, 2011), KSA 3 (1984, 1988, 1996), IRN 3 (1968, 1972, 1976), KOR 2 (1956, 1960), QAT 2 (2019, 2023), ISR 1 (1964), KUW 1 (1980), IRQ 1 (2007), AUS 1 (2015).
+- **Winners.** JPN 4 (1992, 2000, 2004, 2011), KSA 3 (1984, 1988, 1996), IRN 3 (1968, 1972, 1976), KOR 2 (1956, 1960), QAT 2 (2019, 2023), KUW 1 (1980), IRQ 1 (2007), AUS 1 (2015).
   - Source: https://en.wikipedia.org/wiki/AFC_Asian_Cup ("Teams reaching the top four").
   - The "previous best" column in the WIKI qualified-teams table agrees.
   - I did not check against an official AFC page.
