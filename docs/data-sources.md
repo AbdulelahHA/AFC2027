@@ -113,3 +113,11 @@ Conflicts with WIKI:
 - **Venue naming:** "Al Khobar" and "Ibn Saud" in the Feb PDF become "Aramco Stadium" and "Bin Saud" in the Jun PDF.
 - **Singapore code:** WIKI pages use SIN in places. FIFA's current code is SGP, and AFC also uses SGP.
 - **Pre-draw numbering:** in PDF-FEB the group-match slots were not yet assigned to venues. It footnoted a draw on 11 April 2026, which later moved to 9 May.
+
+## Head-to-head (`h2h.json`)
+- **What counts:** competitive men's senior meetings between the two teams: Asian Cup, Arab Cup, Gulf Cup, World Cup and World Cup qualifiers. No friendlies, no Asian Cup qualifiers.
+- **Sources:** every match is in two independent datasets: [eloratings.net](https://www.eloratings.net) match records and [martj42/international_results](https://github.com/martj42/international_results) (same score, date within a day). Neither is an official source; FIFA's and AFC's sites can't be read in bulk.
+- **Disagreements** are settled against a reference page and recorded in `h2h-overrides.json` with the link. Checked on 2026-10-20: 251 matches, 2 disagreements. BHR-UZB 2005-09-03 is excluded: FIFA annulled it and ordered a replay ([Wikipedia](https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_qualification_%E2%80%93_AFC_fourth_round)). KSA-PLE 1992 Arab Cup is kept on its RSSSF date of 9 Sep ([RSSSF](https://rsssf.org/tablesa/arabcup92-details.html)), noted there as not rated internationally because Palestine had not joined FIFA.
+- **Known limits:** Yemen and Vietnam matches from before unification are not counted (the sources list North/South separately). Pairs with no meeting (AUS-SGP, IRQ-TJK, KOR-YEM) show no tab.
+- **Refreshing:** `npm run h2h` rebuilds the file from both sources, keeps each pair's `approved` flag, and stops on any new disagreement.
+

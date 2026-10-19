@@ -129,6 +129,7 @@ test('h2h records add up and are keyed by group pair', () => {
   for(const [k, p] of Object.entries(pairs)){
     const [a, b] = k.split('-');
     assert.ok(teams[a] && teams[b], k);
+    assert.ok(p.crossChecked, `${k}: cross-checked against a second dataset`);
     assert.equal(p.matches.length, p.wins[a] + p.wins[b] + p.draws, `${k}: W+D+L = played`);
     const gf = { [a]: 0, [b]: 0 };
     for(const m of p.matches){ const [h, g] = m.score.split('-').map(Number); gf[m.home] += h; gf[m.away] += g; }
