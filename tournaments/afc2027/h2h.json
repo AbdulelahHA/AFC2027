@@ -1,5 +1,5 @@
 {
- "note": "Competitive meetings only: Asian Cup, Arab Cup, Gulf Cup, World Cup, World Cup qualifiers. Source: eloratings.net match records (unofficial). All 36 group pairs approved by the owner on 2026-10-20; a pair shows only when approved is true and it has at least one meeting.",
+ "note": "Competitive meetings only: Asian Cup, Arab Cup, Gulf Cup, World Cup, World Cup qualifiers. Every match is in two independent datasets (eloratings.net, martj42/international_results); decisions on disputed matches are in h2h-overrides.json. A pair shows in the app only when approved is true and it has at least one meeting. Rebuild: node scripts/build-h2h.mjs",
  "pairs": {
   "KSA-KUW": {
    "group": "A",
@@ -274,8 +274,12 @@
      "score": "1-0"
     }
    ],
-   "source": "https://www.eloratings.net/Saudi_Arabia",
+   "sources": [
+    "https://www.eloratings.net/Saudi_Arabia",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "KSA-OMA": {
@@ -460,8 +464,12 @@
      "score": "3-0"
     }
    ],
-   "source": "https://www.eloratings.net/Saudi_Arabia",
+   "sources": [
+    "https://www.eloratings.net/Saudi_Arabia",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "KSA-PLE": {
@@ -534,8 +542,12 @@
      "score": "2-1"
     }
    ],
-   "source": "https://www.eloratings.net/Saudi_Arabia",
+   "sources": [
+    "https://www.eloratings.net/Saudi_Arabia",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "KUW-OMA": {
@@ -720,8 +732,12 @@
      "score": "3-1"
     }
    ],
-   "source": "https://www.eloratings.net/Kuwait",
+   "sources": [
+    "https://www.eloratings.net/Kuwait",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "KUW-PLE": {
@@ -766,8 +782,12 @@
      "score": "0-2"
     }
    ],
-   "source": "https://www.eloratings.net/Kuwait",
+   "sources": [
+    "https://www.eloratings.net/Kuwait",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "OMA-PLE": {
@@ -798,127 +818,25 @@
      "score": "1-1"
     }
    ],
-   "source": "https://www.eloratings.net/Oman",
-   "official": false,
-   "approved": true
-  },
-  "BHR-JOR": {
-   "group": "B",
-   "played": 6,
-   "wins": {
-    "BHR": 3,
-    "JOR": 2
-   },
-   "draws": 1,
-   "goals": {
-    "BHR": 6,
-    "JOR": 10
-   },
-   "matches": [
-    {
-     "date": "1966-04-07",
-     "competition": "arab-cup",
-     "home": "JOR",
-     "away": "BHR",
-     "score": "5-1"
-    },
-    {
-     "date": "1988-07-08",
-     "competition": "arab-cup",
-     "home": "JOR",
-     "away": "BHR",
-     "score": "0-0"
-    },
-    {
-     "date": "1997-04-14",
-     "competition": "wc-qualifiers",
-     "home": "BHR",
-     "away": "JOR",
-     "score": "1-0"
-    },
-    {
-     "date": "1997-04-19",
-     "competition": "wc-qualifiers",
-     "home": "JOR",
-     "away": "BHR",
-     "score": "4-1"
-    },
-    {
-     "date": "2002-12-28",
-     "competition": "arab-cup",
-     "home": "BHR",
-     "away": "JOR",
-     "score": "2-1"
-    },
-    {
-     "date": "2024-01-25",
-     "competition": "asian-cup",
-     "home": "BHR",
-     "away": "JOR",
-     "score": "1-0"
-    }
+   "sources": [
+    "https://www.eloratings.net/Oman",
+    "https://github.com/martj42/international_results"
    ],
-   "source": "https://www.eloratings.net/Bahrain",
    "official": false,
-   "approved": true
-  },
-  "BHR-PRK": {
-   "group": "B",
-   "played": 4,
-   "wins": {
-    "BHR": 1,
-    "PRK": 3
-   },
-   "draws": 0,
-   "goals": {
-    "BHR": 4,
-    "PRK": 7
-   },
-   "matches": [
-    {
-     "date": "2005-03-25",
-     "competition": "wc-qualifiers",
-     "home": "PRK",
-     "away": "BHR",
-     "score": "1-2"
-    },
-    {
-     "date": "2005-08-17",
-     "competition": "wc-qualifiers",
-     "home": "BHR",
-     "away": "PRK",
-     "score": "2-3"
-    },
-    {
-     "date": "2015-09-03",
-     "competition": "wc-qualifiers",
-     "home": "BHR",
-     "away": "PRK",
-     "score": "0-1"
-    },
-    {
-     "date": "2015-11-17",
-     "competition": "wc-qualifiers",
-     "home": "PRK",
-     "away": "BHR",
-     "score": "2-0"
-    }
-   ],
-   "source": "https://www.eloratings.net/Bahrain",
-   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "BHR-UZB": {
    "group": "B",
-   "played": 8,
+   "played": 7,
    "wins": {
     "BHR": 2,
-    "UZB": 3
+    "UZB": 2
    },
    "draws": 3,
    "goals": {
     "BHR": 5,
-    "UZB": 9
+    "UZB": 8
    },
    "matches": [
     {
@@ -927,13 +845,6 @@
      "home": "BHR",
      "away": "UZB",
      "score": "2-2"
-    },
-    {
-     "date": "2005-09-03",
-     "competition": "wc-qualifiers",
-     "home": "UZB",
-     "away": "BHR",
-     "score": "1-0"
     },
     {
      "date": "2005-10-08",
@@ -978,93 +889,12 @@
      "score": "1-0"
     }
    ],
-   "source": "https://www.eloratings.net/Bahrain",
-   "official": false,
-   "approved": true
-  },
-  "JOR-PRK": {
-   "group": "B",
-   "played": 2,
-   "wins": {
-    "JOR": 0,
-    "PRK": 2
-   },
-   "draws": 0,
-   "goals": {
-    "JOR": 0,
-    "PRK": 3
-   },
-   "matches": [
-    {
-     "date": "2008-02-06",
-     "competition": "wc-qualifiers",
-     "home": "JOR",
-     "away": "PRK",
-     "score": "0-1"
-    },
-    {
-     "date": "2008-06-14",
-     "competition": "wc-qualifiers",
-     "home": "PRK",
-     "away": "JOR",
-     "score": "2-0"
-    }
+   "sources": [
+    "https://www.eloratings.net/Bahrain",
+    "https://github.com/martj42/international_results"
    ],
-   "source": "https://www.eloratings.net/Jordan",
    "official": false,
-   "approved": true
-  },
-  "JOR-UZB": {
-   "group": "B",
-   "played": 5,
-   "wins": {
-    "JOR": 0,
-    "UZB": 1
-   },
-   "draws": 4,
-   "goals": {
-    "JOR": 6,
-    "UZB": 7
-   },
-   "matches": [
-    {
-     "date": "2001-04-27",
-     "competition": "wc-qualifiers",
-     "home": "UZB",
-     "away": "JOR",
-     "score": "2-2"
-    },
-    {
-     "date": "2001-05-07",
-     "competition": "wc-qualifiers",
-     "home": "JOR",
-     "away": "UZB",
-     "score": "1-1"
-    },
-    {
-     "date": "2011-01-21",
-     "competition": "asian-cup",
-     "home": "UZB",
-     "away": "JOR",
-     "score": "2-1"
-    },
-    {
-     "date": "2013-09-06",
-     "competition": "wc-qualifiers",
-     "home": "JOR",
-     "away": "UZB",
-     "score": "1-1"
-    },
-    {
-     "date": "2013-09-10",
-     "competition": "wc-qualifiers",
-     "home": "UZB",
-     "away": "JOR",
-     "score": "1-1"
-    }
-   ],
-   "source": "https://www.eloratings.net/Jordan",
-   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "PRK-UZB": {
@@ -1130,255 +960,219 @@
      "score": "1-0"
     }
    ],
-   "source": "https://www.eloratings.net/North_Korea",
+   "sources": [
+    "https://www.eloratings.net/North_Korea",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
-  "CHN-IRN": {
-   "group": "C",
-   "played": 13,
+  "JOR-UZB": {
+   "group": "B",
+   "played": 5,
    "wins": {
-    "CHN": 1,
-    "IRN": 7
+    "JOR": 0,
+    "UZB": 1
    },
-   "draws": 5,
+   "draws": 4,
    "goals": {
-    "CHN": 12,
-    "IRN": 24
+    "JOR": 6,
+    "UZB": 7
    },
    "matches": [
     {
-     "date": "1976-06-11",
-     "competition": "asian-cup",
-     "home": "IRN",
-     "away": "CHN",
-     "score": "2-0"
-    },
-    {
-     "date": "1980-09-20",
-     "competition": "asian-cup",
-     "home": "CHN",
-     "away": "IRN",
+     "date": "2001-04-27",
+     "competition": "wc-qualifiers",
+     "home": "UZB",
+     "away": "JOR",
      "score": "2-2"
     },
     {
-     "date": "1984-12-03",
-     "competition": "asian-cup",
-     "home": "IRN",
-     "away": "CHN",
-     "score": "2-0"
-    },
-    {
-     "date": "1988-12-17",
-     "competition": "asian-cup",
-     "home": "CHN",
-     "away": "IRN",
-     "score": "0-0"
-    },
-    {
-     "date": "1989-07-15",
+     "date": "2001-05-07",
      "competition": "wc-qualifiers",
-     "home": "CHN",
-     "away": "IRN",
-     "score": "2-0"
-    },
-    {
-     "date": "1989-07-22",
-     "competition": "wc-qualifiers",
-     "home": "IRN",
-     "away": "CHN",
-     "score": "3-2"
-    },
-    {
-     "date": "1997-09-13",
-     "competition": "wc-qualifiers",
-     "home": "CHN",
-     "away": "IRN",
-     "score": "2-4"
-    },
-    {
-     "date": "1997-10-17",
-     "competition": "wc-qualifiers",
-     "home": "IRN",
-     "away": "CHN",
-     "score": "4-1"
-    },
-    {
-     "date": "2004-08-03",
-     "competition": "asian-cup",
-     "home": "CHN",
-     "away": "IRN",
+     "home": "JOR",
+     "away": "UZB",
      "score": "1-1"
     },
     {
-     "date": "2007-07-15",
+     "date": "2011-01-21",
      "competition": "asian-cup",
-     "home": "CHN",
-     "away": "IRN",
-     "score": "2-2"
+     "home": "UZB",
+     "away": "JOR",
+     "score": "2-1"
     },
     {
-     "date": "2016-09-06",
+     "date": "2013-09-06",
      "competition": "wc-qualifiers",
-     "home": "CHN",
-     "away": "IRN",
-     "score": "0-0"
+     "home": "JOR",
+     "away": "UZB",
+     "score": "1-1"
     },
     {
-     "date": "2017-03-28",
+     "date": "2013-09-10",
      "competition": "wc-qualifiers",
-     "home": "IRN",
-     "away": "CHN",
-     "score": "1-0"
-    },
-    {
-     "date": "2019-01-24",
-     "competition": "asian-cup",
-     "home": "IRN",
-     "away": "CHN",
-     "score": "3-0"
+     "home": "UZB",
+     "away": "JOR",
+     "score": "1-1"
     }
    ],
-   "source": "https://www.eloratings.net/China",
+   "sources": [
+    "https://www.eloratings.net/Jordan",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
-  "CHN-KGZ": {
-   "group": "C",
-   "played": 1,
+  "BHR-PRK": {
+   "group": "B",
+   "played": 4,
    "wins": {
-    "CHN": 1,
-    "KGZ": 0
+    "BHR": 1,
+    "PRK": 3
    },
    "draws": 0,
    "goals": {
-    "CHN": 2,
-    "KGZ": 1
+    "BHR": 4,
+    "PRK": 7
    },
    "matches": [
     {
-     "date": "2019-01-07",
-     "competition": "asian-cup",
-     "home": "CHN",
-     "away": "KGZ",
-     "score": "2-1"
-    }
-   ],
-   "source": "https://www.eloratings.net/China",
-   "official": false,
-   "approved": true
-  },
-  "CHN-SYR": {
-   "group": "C",
-   "played": 7,
-   "wins": {
-    "CHN": 3,
-    "SYR": 3
-   },
-   "draws": 1,
-   "goals": {
-    "CHN": 12,
-    "SYR": 7
-   },
-   "matches": [
-    {
-     "date": "1980-09-23",
-     "competition": "asian-cup",
-     "home": "SYR",
-     "away": "CHN",
-     "score": "1-0"
-    },
-    {
-     "date": "1988-12-04",
-     "competition": "asian-cup",
-     "home": "CHN",
-     "away": "SYR",
-     "score": "3-0"
-    },
-    {
-     "date": "1996-12-09",
-     "competition": "asian-cup",
-     "home": "CHN",
-     "away": "SYR",
-     "score": "3-0"
-    },
-    {
-     "date": "2016-10-06",
+     "date": "2005-03-25",
      "competition": "wc-qualifiers",
-     "home": "CHN",
-     "away": "SYR",
+     "home": "PRK",
+     "away": "BHR",
+     "score": "1-2"
+    },
+    {
+     "date": "2005-08-17",
+     "competition": "wc-qualifiers",
+     "home": "BHR",
+     "away": "PRK",
+     "score": "2-3"
+    },
+    {
+     "date": "2015-09-03",
+     "competition": "wc-qualifiers",
+     "home": "BHR",
+     "away": "PRK",
      "score": "0-1"
     },
     {
-     "date": "2017-06-13",
+     "date": "2015-11-17",
      "competition": "wc-qualifiers",
-     "home": "SYR",
-     "away": "CHN",
-     "score": "2-2"
-    },
-    {
-     "date": "2019-11-14",
-     "competition": "wc-qualifiers",
-     "home": "SYR",
-     "away": "CHN",
-     "score": "2-1"
-    },
-    {
-     "date": "2021-06-15",
-     "competition": "wc-qualifiers",
-     "home": "CHN",
-     "away": "SYR",
-     "score": "3-1"
+     "home": "PRK",
+     "away": "BHR",
+     "score": "2-0"
     }
    ],
-   "source": "https://www.eloratings.net/China",
+   "sources": [
+    "https://www.eloratings.net/Bahrain",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
-  "IRN-KGZ": {
-   "group": "C",
-   "played": 4,
+  "BHR-JOR": {
+   "group": "B",
+   "played": 6,
    "wins": {
-    "IRN": 4,
-    "KGZ": 0
+    "BHR": 3,
+    "JOR": 2
    },
-   "draws": 0,
+   "draws": 1,
    "goals": {
-    "IRN": 14,
-    "KGZ": 3
+    "BHR": 6,
+    "JOR": 10
    },
    "matches": [
     {
-     "date": "1997-06-04",
-     "competition": "wc-qualifiers",
-     "home": "IRN",
-     "away": "KGZ",
-     "score": "7-0"
+     "date": "1966-04-07",
+     "competition": "arab-cup",
+     "home": "JOR",
+     "away": "BHR",
+     "score": "5-1"
     },
     {
-     "date": "1997-06-09",
-     "competition": "wc-qualifiers",
-     "home": "IRN",
-     "away": "KGZ",
-     "score": "3-1"
+     "date": "1988-07-08",
+     "competition": "arab-cup",
+     "home": "JOR",
+     "away": "BHR",
+     "score": "0-0"
     },
     {
-     "date": "2024-09-05",
+     "date": "1997-04-14",
      "competition": "wc-qualifiers",
-     "home": "IRN",
-     "away": "KGZ",
+     "home": "BHR",
+     "away": "JOR",
      "score": "1-0"
     },
     {
-     "date": "2024-11-19",
+     "date": "1997-04-19",
      "competition": "wc-qualifiers",
-     "home": "KGZ",
-     "away": "IRN",
-     "score": "2-3"
+     "home": "JOR",
+     "away": "BHR",
+     "score": "4-1"
+    },
+    {
+     "date": "2002-12-28",
+     "competition": "arab-cup",
+     "home": "BHR",
+     "away": "JOR",
+     "score": "2-1"
+    },
+    {
+     "date": "2024-01-25",
+     "competition": "asian-cup",
+     "home": "BHR",
+     "away": "JOR",
+     "score": "1-0"
     }
    ],
-   "source": "https://www.eloratings.net/Iran",
+   "sources": [
+    "https://www.eloratings.net/Bahrain",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "JOR-PRK": {
+   "group": "B",
+   "played": 2,
+   "wins": {
+    "JOR": 0,
+    "PRK": 2
+   },
+   "draws": 0,
+   "goals": {
+    "JOR": 0,
+    "PRK": 3
+   },
+   "matches": [
+    {
+     "date": "2008-02-06",
+     "competition": "wc-qualifiers",
+     "home": "JOR",
+     "away": "PRK",
+     "score": "0-1"
+    },
+    {
+     "date": "2008-06-14",
+     "competition": "wc-qualifiers",
+     "home": "PRK",
+     "away": "JOR",
+     "score": "2-0"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/Jordan",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "IRN-SYR": {
@@ -1500,8 +1294,175 @@
      "score": "1-1"
     }
    ],
-   "source": "https://www.eloratings.net/Iran",
+   "sources": [
+    "https://www.eloratings.net/Iran",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "IRN-KGZ": {
+   "group": "C",
+   "played": 4,
+   "wins": {
+    "IRN": 4,
+    "KGZ": 0
+   },
+   "draws": 0,
+   "goals": {
+    "IRN": 14,
+    "KGZ": 3
+   },
+   "matches": [
+    {
+     "date": "1997-06-04",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "KGZ",
+     "score": "7-0"
+    },
+    {
+     "date": "1997-06-09",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "KGZ",
+     "score": "3-1"
+    },
+    {
+     "date": "2024-09-05",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "KGZ",
+     "score": "1-0"
+    },
+    {
+     "date": "2024-11-19",
+     "competition": "wc-qualifiers",
+     "home": "KGZ",
+     "away": "IRN",
+     "score": "2-3"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/Iran",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "CHN-IRN": {
+   "group": "C",
+   "played": 13,
+   "wins": {
+    "CHN": 1,
+    "IRN": 7
+   },
+   "draws": 5,
+   "goals": {
+    "CHN": 12,
+    "IRN": 24
+   },
+   "matches": [
+    {
+     "date": "1976-06-11",
+     "competition": "asian-cup",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "2-0"
+    },
+    {
+     "date": "1980-09-20",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "2-2"
+    },
+    {
+     "date": "1984-12-03",
+     "competition": "asian-cup",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "2-0"
+    },
+    {
+     "date": "1988-12-17",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "0-0"
+    },
+    {
+     "date": "1989-07-15",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "2-0"
+    },
+    {
+     "date": "1989-07-22",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "3-2"
+    },
+    {
+     "date": "1997-09-13",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "2-4"
+    },
+    {
+     "date": "1997-10-17",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "4-1"
+    },
+    {
+     "date": "2004-08-03",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "1-1"
+    },
+    {
+     "date": "2007-07-15",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "2-2"
+    },
+    {
+     "date": "2016-09-06",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "IRN",
+     "score": "0-0"
+    },
+    {
+     "date": "2017-03-28",
+     "competition": "wc-qualifiers",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "1-0"
+    },
+    {
+     "date": "2019-01-24",
+     "competition": "asian-cup",
+     "home": "IRN",
+     "away": "CHN",
+     "score": "3-0"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/China",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "KGZ-SYR": {
@@ -1539,8 +1500,148 @@
      "score": "0-1"
     }
    ],
-   "source": "https://www.eloratings.net/Kyrgyzstan",
+   "sources": [
+    "https://www.eloratings.net/Kyrgyzstan",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "CHN-SYR": {
+   "group": "C",
+   "played": 7,
+   "wins": {
+    "CHN": 3,
+    "SYR": 3
+   },
+   "draws": 1,
+   "goals": {
+    "CHN": 12,
+    "SYR": 7
+   },
+   "matches": [
+    {
+     "date": "1980-09-23",
+     "competition": "asian-cup",
+     "home": "SYR",
+     "away": "CHN",
+     "score": "1-0"
+    },
+    {
+     "date": "1988-12-04",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "SYR",
+     "score": "3-0"
+    },
+    {
+     "date": "1996-12-09",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "SYR",
+     "score": "3-0"
+    },
+    {
+     "date": "2016-10-06",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "SYR",
+     "score": "0-1"
+    },
+    {
+     "date": "2017-06-13",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "CHN",
+     "score": "2-2"
+    },
+    {
+     "date": "2019-11-14",
+     "competition": "wc-qualifiers",
+     "home": "SYR",
+     "away": "CHN",
+     "score": "2-1"
+    },
+    {
+     "date": "2021-06-15",
+     "competition": "wc-qualifiers",
+     "home": "CHN",
+     "away": "SYR",
+     "score": "3-1"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/China",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "CHN-KGZ": {
+   "group": "C",
+   "played": 1,
+   "wins": {
+    "CHN": 1,
+    "KGZ": 0
+   },
+   "draws": 0,
+   "goals": {
+    "CHN": 2,
+    "KGZ": 1
+   },
+   "matches": [
+    {
+     "date": "2019-01-07",
+     "competition": "asian-cup",
+     "home": "CHN",
+     "away": "KGZ",
+     "score": "2-1"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/China",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "AUS-TJK": {
+   "group": "D",
+   "played": 2,
+   "wins": {
+    "AUS": 2,
+    "TJK": 0
+   },
+   "draws": 0,
+   "goals": {
+    "AUS": 10,
+    "TJK": 0
+   },
+   "matches": [
+    {
+     "date": "2015-09-08",
+     "competition": "wc-qualifiers",
+     "home": "TJK",
+     "away": "AUS",
+     "score": "0-3"
+    },
+    {
+     "date": "2016-03-24",
+     "competition": "wc-qualifiers",
+     "home": "AUS",
+     "away": "TJK",
+     "score": "7-0"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/Australia",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "AUS-IRQ": {
@@ -1627,8 +1728,12 @@
      "score": "1-1"
     }
    ],
-   "source": "https://www.eloratings.net/Australia",
+   "sources": [
+    "https://www.eloratings.net/Australia",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "AUS-SGP": {
@@ -1644,72 +1749,12 @@
     "SGP": 0
    },
    "matches": [],
-   "source": "https://www.eloratings.net/Australia",
-   "official": false,
-   "approved": true
-  },
-  "AUS-TJK": {
-   "group": "D",
-   "played": 2,
-   "wins": {
-    "AUS": 2,
-    "TJK": 0
-   },
-   "draws": 0,
-   "goals": {
-    "AUS": 10,
-    "TJK": 0
-   },
-   "matches": [
-    {
-     "date": "2015-09-08",
-     "competition": "wc-qualifiers",
-     "home": "TJK",
-     "away": "AUS",
-     "score": "0-3"
-    },
-    {
-     "date": "2016-03-24",
-     "competition": "wc-qualifiers",
-     "home": "AUS",
-     "away": "TJK",
-     "score": "7-0"
-    }
+   "sources": [
+    "https://www.eloratings.net/Australia",
+    "https://github.com/martj42/international_results"
    ],
-   "source": "https://www.eloratings.net/Australia",
    "official": false,
-   "approved": true
-  },
-  "IRQ-SGP": {
-   "group": "D",
-   "played": 2,
-   "wins": {
-    "IRQ": 2,
-    "SGP": 0
-   },
-   "draws": 0,
-   "goals": {
-    "IRQ": 9,
-    "SGP": 1
-   },
-   "matches": [
-    {
-     "date": "2011-09-06",
-     "competition": "wc-qualifiers",
-     "home": "SGP",
-     "away": "IRQ",
-     "score": "0-2"
-    },
-    {
-     "date": "2012-02-29",
-     "competition": "wc-qualifiers",
-     "home": "IRQ",
-     "away": "SGP",
-     "score": "7-1"
-    }
-   ],
-   "source": "https://www.eloratings.net/Iraq",
-   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "IRQ-TJK": {
@@ -1725,8 +1770,12 @@
     "TJK": 0
    },
    "matches": [],
-   "source": "https://www.eloratings.net/Iraq",
+   "sources": [
+    "https://www.eloratings.net/Iraq",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "SGP-TJK": {
@@ -1757,8 +1806,48 @@
      "score": "1-1"
     }
    ],
-   "source": "https://www.eloratings.net/Singapore",
+   "sources": [
+    "https://www.eloratings.net/Singapore",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "IRQ-SGP": {
+   "group": "D",
+   "played": 2,
+   "wins": {
+    "IRQ": 2,
+    "SGP": 0
+   },
+   "draws": 0,
+   "goals": {
+    "IRQ": 9,
+    "SGP": 1
+   },
+   "matches": [
+    {
+     "date": "2011-09-06",
+     "competition": "wc-qualifiers",
+     "home": "SGP",
+     "away": "IRQ",
+     "score": "0-2"
+    },
+    {
+     "date": "2012-02-29",
+     "competition": "wc-qualifiers",
+     "home": "IRQ",
+     "away": "SGP",
+     "score": "7-1"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/Iraq",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "KOR-UAE": {
@@ -1866,8 +1955,12 @@
      "score": "1-0"
     }
    ],
-   "source": "https://www.eloratings.net/South_Korea",
+   "sources": [
+    "https://www.eloratings.net/South_Korea",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "KOR-VIE": {
@@ -1898,8 +1991,12 @@
      "score": "1-2"
     }
    ],
-   "source": "https://www.eloratings.net/South_Korea",
+   "sources": [
+    "https://www.eloratings.net/South_Korea",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "KOR-YEM": {
@@ -1915,8 +2012,12 @@
     "YEM": 0
    },
    "matches": [],
-   "source": "https://www.eloratings.net/South_Korea",
+   "sources": [
+    "https://www.eloratings.net/South_Korea",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "UAE-VIE": {
@@ -1968,8 +2069,12 @@
      "score": "3-2"
     }
    ],
-   "source": "https://www.eloratings.net/United_Arab_Emirates",
+   "sources": [
+    "https://www.eloratings.net/United_Arab_Emirates",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "UAE-YEM": {
@@ -2063,8 +2168,12 @@
      "score": "4-0"
     }
    ],
-   "source": "https://www.eloratings.net/United_Arab_Emirates",
+   "sources": [
+    "https://www.eloratings.net/United_Arab_Emirates",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "VIE-YEM": {
@@ -2088,167 +2197,12 @@
      "score": "2-0"
     }
    ],
-   "source": "https://www.eloratings.net/Vietnam",
-   "official": false,
-   "approved": true
-  },
-  "IDN-JPN": {
-   "group": "F",
-   "played": 5,
-   "wins": {
-    "IDN": 0,
-    "JPN": 4
-   },
-   "draws": 1,
-   "goals": {
-    "IDN": 1,
-    "JPN": 18
-   },
-   "matches": [
-    {
-     "date": "1989-05-28",
-     "competition": "wc-qualifiers",
-     "home": "IDN",
-     "away": "JPN",
-     "score": "0-0"
-    },
-    {
-     "date": "1989-06-11",
-     "competition": "wc-qualifiers",
-     "home": "JPN",
-     "away": "IDN",
-     "score": "5-0"
-    },
-    {
-     "date": "2024-01-24",
-     "competition": "asian-cup",
-     "home": "JPN",
-     "away": "IDN",
-     "score": "3-1"
-    },
-    {
-     "date": "2024-11-15",
-     "competition": "wc-qualifiers",
-     "home": "IDN",
-     "away": "JPN",
-     "score": "0-4"
-    },
-    {
-     "date": "2025-06-10",
-     "competition": "wc-qualifiers",
-     "home": "JPN",
-     "away": "IDN",
-     "score": "6-0"
-    }
+   "sources": [
+    "https://www.eloratings.net/Vietnam",
+    "https://github.com/martj42/international_results"
    ],
-   "source": "https://www.eloratings.net/Indonesia",
    "official": false,
-   "approved": true
-  },
-  "IDN-QAT": {
-   "group": "F",
-   "played": 5,
-   "wins": {
-    "IDN": 1,
-    "QAT": 4
-   },
-   "draws": 0,
-   "goals": {
-    "IDN": 6,
-    "QAT": 15
-   },
-   "matches": [
-    {
-     "date": "1993-04-09",
-     "competition": "wc-qualifiers",
-     "home": "QAT",
-     "away": "IDN",
-     "score": "3-1"
-    },
-    {
-     "date": "1993-04-24",
-     "competition": "wc-qualifiers",
-     "home": "QAT",
-     "away": "IDN",
-     "score": "4-1"
-    },
-    {
-     "date": "2004-07-18",
-     "competition": "asian-cup",
-     "home": "IDN",
-     "away": "QAT",
-     "score": "2-1"
-    },
-    {
-     "date": "2011-10-11",
-     "competition": "wc-qualifiers",
-     "home": "IDN",
-     "away": "QAT",
-     "score": "2-3"
-    },
-    {
-     "date": "2011-11-11",
-     "competition": "wc-qualifiers",
-     "home": "QAT",
-     "away": "IDN",
-     "score": "4-0"
-    }
-   ],
-   "source": "https://www.eloratings.net/Indonesia",
-   "official": false,
-   "approved": true
-  },
-  "IDN-THA": {
-   "group": "F",
-   "played": 5,
-   "wins": {
-    "IDN": 2,
-    "THA": 2
-   },
-   "draws": 1,
-   "goals": {
-    "IDN": 6,
-    "THA": 8
-   },
-   "matches": [
-    {
-     "date": "1977-03-07",
-     "competition": "wc-qualifiers",
-     "home": "THA",
-     "away": "IDN",
-     "score": "3-2"
-    },
-    {
-     "date": "1985-03-15",
-     "competition": "wc-qualifiers",
-     "home": "IDN",
-     "away": "THA",
-     "score": "1-0"
-    },
-    {
-     "date": "1985-03-29",
-     "competition": "wc-qualifiers",
-     "home": "THA",
-     "away": "IDN",
-     "score": "0-1"
-    },
-    {
-     "date": "2019-09-10",
-     "competition": "wc-qualifiers",
-     "home": "IDN",
-     "away": "THA",
-     "score": "0-3"
-    },
-    {
-     "date": "2021-06-03",
-     "competition": "wc-qualifiers",
-     "home": "IDN",
-     "away": "THA",
-     "score": "2-2"
-    }
-   ],
-   "source": "https://www.eloratings.net/Indonesia",
-   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "JPN-QAT": {
@@ -2314,8 +2268,12 @@
      "score": "3-1"
     }
    ],
-   "source": "https://www.eloratings.net/Japan",
+   "sources": [
+    "https://www.eloratings.net/Japan",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "JPN-THA": {
@@ -2381,8 +2339,69 @@
      "score": "4-0"
     }
    ],
-   "source": "https://www.eloratings.net/Japan",
+   "sources": [
+    "https://www.eloratings.net/Japan",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "IDN-JPN": {
+   "group": "F",
+   "played": 5,
+   "wins": {
+    "IDN": 0,
+    "JPN": 4
+   },
+   "draws": 1,
+   "goals": {
+    "IDN": 1,
+    "JPN": 18
+   },
+   "matches": [
+    {
+     "date": "1989-05-28",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "JPN",
+     "score": "0-0"
+    },
+    {
+     "date": "1989-06-11",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "IDN",
+     "score": "5-0"
+    },
+    {
+     "date": "2024-01-24",
+     "competition": "asian-cup",
+     "home": "JPN",
+     "away": "IDN",
+     "score": "3-1"
+    },
+    {
+     "date": "2024-11-15",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "JPN",
+     "score": "0-4"
+    },
+    {
+     "date": "2025-06-10",
+     "competition": "wc-qualifiers",
+     "home": "JPN",
+     "away": "IDN",
+     "score": "6-0"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/Indonesia",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
    "approved": true
   },
   "QAT-THA": {
@@ -2406,8 +2425,126 @@
      "score": "1-1"
     }
    ],
-   "source": "https://www.eloratings.net/Qatar",
+   "sources": [
+    "https://www.eloratings.net/Qatar",
+    "https://github.com/martj42/international_results"
+   ],
    "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "IDN-QAT": {
+   "group": "F",
+   "played": 5,
+   "wins": {
+    "IDN": 1,
+    "QAT": 4
+   },
+   "draws": 0,
+   "goals": {
+    "IDN": 6,
+    "QAT": 15
+   },
+   "matches": [
+    {
+     "date": "1993-04-09",
+     "competition": "wc-qualifiers",
+     "home": "QAT",
+     "away": "IDN",
+     "score": "3-1"
+    },
+    {
+     "date": "1993-04-24",
+     "competition": "wc-qualifiers",
+     "home": "QAT",
+     "away": "IDN",
+     "score": "4-1"
+    },
+    {
+     "date": "2004-07-18",
+     "competition": "asian-cup",
+     "home": "IDN",
+     "away": "QAT",
+     "score": "2-1"
+    },
+    {
+     "date": "2011-10-11",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "QAT",
+     "score": "2-3"
+    },
+    {
+     "date": "2011-11-11",
+     "competition": "wc-qualifiers",
+     "home": "QAT",
+     "away": "IDN",
+     "score": "4-0"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/Indonesia",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
+   "approved": true
+  },
+  "IDN-THA": {
+   "group": "F",
+   "played": 5,
+   "wins": {
+    "IDN": 2,
+    "THA": 2
+   },
+   "draws": 1,
+   "goals": {
+    "IDN": 6,
+    "THA": 8
+   },
+   "matches": [
+    {
+     "date": "1977-03-07",
+     "competition": "wc-qualifiers",
+     "home": "THA",
+     "away": "IDN",
+     "score": "3-2"
+    },
+    {
+     "date": "1985-03-15",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "THA",
+     "score": "1-0"
+    },
+    {
+     "date": "1985-03-29",
+     "competition": "wc-qualifiers",
+     "home": "THA",
+     "away": "IDN",
+     "score": "0-1"
+    },
+    {
+     "date": "2019-09-10",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "THA",
+     "score": "0-3"
+    },
+    {
+     "date": "2021-06-03",
+     "competition": "wc-qualifiers",
+     "home": "IDN",
+     "away": "THA",
+     "score": "2-2"
+    }
+   ],
+   "sources": [
+    "https://www.eloratings.net/Indonesia",
+    "https://github.com/martj42/international_results"
+   ],
+   "official": false,
+   "crossChecked": true,
    "approved": true
   }
  }

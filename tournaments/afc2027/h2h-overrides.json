@@ -1,0 +1,9 @@
+{
+ "note": "Decisions made after checking disagreements between the two datasets against reference pages. scripts/build-h2h.mjs applies these and fails on any other disagreement.",
+ "exclude": [
+  { "pair": "BHR-UZB", "date": "2005-09-03", "reason": "Annulled by FIFA after a refereeing error (penalty retake); replayed 8 Oct 2005 (1-1), second leg 12 Oct 2005 (0-0). https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_qualification_%E2%80%93_AFC_fourth_round" }
+ ],
+ "accept": [
+  { "pair": "KSA-PLE", "date": "1992-09-09", "reason": "The datasets differ on the date (9 vs 13 Sep); the result 2-1 agrees. RSSSF: 09.09.92, Aleppo, 1992 Arab Cup group stage, noted as not rated internationally because Palestine had not joined FIFA. https://rsssf.org/tablesa/arabcup92-details.html" }
+ ]
+}
