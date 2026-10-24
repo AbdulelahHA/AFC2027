@@ -1,7 +1,7 @@
 {
  "id": "demo",
  "dataFrom": "afc2027",
- "demoNow": "2027-01-08T12:40:00+03:00",
+ "demoNow": "2027-01-08T14:10:00+03:00",
  "note": "TEST ONLY. Fake scores and players for trying the design; open the site with ?t=demo. The real site ignores this folder.",
  "timezone": "Asia/Riyadh",
  "dates": {

@@ -4,7 +4,7 @@
   "stage": "group",
   "group": "A",
   "date": "2027-01-07",
-  "kickoff": null,
+  "kickoff": "2027-01-07T20:00:00+03:00",
   "venue": "KFS",
   "home": "KSA",
   "away": "PLE"
@@ -14,7 +14,7 @@
   "stage": "group",
   "group": "A",
   "date": "2027-01-08",
-  "kickoff": null,
+  "kickoff": "2027-01-08T16:30:00+03:00",
   "venue": "KSU",
   "home": "KUW",
   "away": "OMA"
@@ -24,7 +24,7 @@
   "stage": "group",
   "group": "B",
   "date": "2027-01-08",
-  "kickoff": null,
+  "kickoff": "2027-01-08T13:30:00+03:00",
   "venue": "IMU",
   "home": "BHR",
   "away": "PRK"
@@ -34,7 +34,7 @@
   "stage": "group",
   "group": "B",
   "date": "2027-01-08",
-  "kickoff": null,
+  "kickoff": "2027-01-08T19:30:00+03:00",
   "venue": "KAS",
   "home": "UZB",
   "away": "JOR"
@@ -44,7 +44,7 @@
   "stage": "group",
   "group": "C",
   "date": "2027-01-09",
-  "kickoff": null,
+  "kickoff": "2027-01-09T19:30:00+03:00",
   "venue": "KFS",
   "home": "SYR",
   "away": "KGZ"
@@ -54,7 +54,7 @@
   "stage": "group",
   "group": "C",
   "date": "2027-01-09",
-  "kickoff": null,
+  "kickoff": "2027-01-09T16:30:00+03:00",
   "venue": "KAR",
   "home": "IRN",
   "away": "CHN"
@@ -64,7 +64,7 @@
   "stage": "group",
   "group": "D",
   "date": "2027-01-09",
-  "kickoff": null,
+  "kickoff": "2027-01-09T13:30:00+03:00",
   "venue": "ARM",
   "home": "AUS",
   "away": "SGP"
@@ -74,7 +74,7 @@
   "stage": "group",
   "group": "D",
   "date": "2027-01-10",
-  "kickoff": null,
+  "kickoff": "2027-01-10T16:30:00+03:00",
   "venue": "SHB",
   "home": "TJK",
   "away": "IRQ"
@@ -84,7 +84,7 @@
   "stage": "group",
   "group": "E",
   "date": "2027-01-10",
-  "kickoff": null,
+  "kickoff": "2027-01-10T13:30:00+03:00",
   "venue": "KAS",
   "home": "KOR",
   "away": "YEM"
@@ -94,7 +94,7 @@
   "stage": "group",
   "group": "E",
   "date": "2027-01-11",
-  "kickoff": null,
+  "kickoff": "2027-01-11T16:30:00+03:00",
   "venue": "KSU",
   "home": "UAE",
   "away": "VIE"
@@ -104,7 +104,7 @@
   "stage": "group",
   "group": "F",
   "date": "2027-01-11",
-  "kickoff": null,
+  "kickoff": "2027-01-11T19:30:00+03:00",
   "venue": "IMU",
   "home": "QAT",
   "away": "THA"
@@ -114,7 +114,7 @@
   "stage": "group",
   "group": "F",
   "date": "2027-01-11",
-  "kickoff": null,
+  "kickoff": "2027-01-11T13:30:00+03:00",
   "venue": "PAF",
   "home": "JPN",
   "away": "IDN"
@@ -124,7 +124,7 @@
   "stage": "group",
   "group": "A",
   "date": "2027-01-12",
-  "kickoff": null,
+  "kickoff": "2027-01-12T19:30:00+03:00",
   "venue": "KFS",
   "home": "OMA",
   "away": "KSA"
@@ -134,7 +134,7 @@
   "stage": "group",
   "group": "B",
   "date": "2027-01-12",
-  "kickoff": null,
+  "kickoff": "2027-01-12T16:30:00+03:00",
   "venue": "KAR",
   "home": "PRK",
   "away": "UZB"
@@ -144,7 +144,7 @@
   "stage": "group",
   "group": "A",
   "date": "2027-01-12",
-  "kickoff": null,
+  "kickoff": "2027-01-12T13:30:00+03:00",
   "venue": "ARM",
   "home": "PLE",
   "away": "KUW"
@@ -154,7 +154,7 @@
   "stage": "group",
   "group": "C",
   "date": "2027-01-13",
-  "kickoff": null,
+  "kickoff": "2027-01-13T19:30:00+03:00",
   "venue": "SHB",
   "home": "KGZ",
   "away": "IRN"
@@ -164,7 +164,7 @@
   "stage": "group",
   "group": "B",
   "date": "2027-01-13",
-  "kickoff": null,
+  "kickoff": "2027-01-13T16:30:00+03:00",
   "venue": "KAS",
   "home": "JOR",
   "away": "BHR"
@@ -174,7 +174,7 @@
   "stage": "group",
   "group": "D",
   "date": "2027-01-14",
-  "kickoff": null,
+  "kickoff": "2027-01-14T13:30:00+03:00",
   "venue": "KSU",
   "home": "IRQ",
   "away": "AUS"
@@ -184,7 +184,7 @@
   "stage": "group",
   "group": "D",
   "date": "2027-01-14",
-  "kickoff": null,
+  "kickoff": "2027-01-14T19:30:00+03:00",
   "venue": "IMU",
   "home": "SGP",
   "away": "TJK"
@@ -194,7 +194,7 @@
   "stage": "group",
   "group": "C",
   "date": "2027-01-14",
-  "kickoff": null,
+  "kickoff": "2027-01-14T16:30:00+03:00",
   "venue": "PAF",
   "home": "CHN",
   "away": "SYR"
@@ -204,7 +204,7 @@
   "stage": "group",
   "group": "E",
   "date": "2027-01-15",
-  "kickoff": null,
+  "kickoff": "2027-01-15T19:30:00+03:00",
   "venue": "KFS",
   "home": "YEM",
   "away": "UAE"
@@ -214,7 +214,7 @@
   "stage": "group",
   "group": "E",
   "date": "2027-01-15",
-  "kickoff": null,
+  "kickoff": "2027-01-15T13:30:00+03:00",
   "venue": "KAR",
   "home": "VIE",
   "away": "KOR"
@@ -224,7 +224,7 @@
   "stage": "group",
   "group": "F",
   "date": "2027-01-16",
-  "kickoff": null,
+  "kickoff": "2027-01-16T13:30:00+03:00",
   "venue": "SHB",
   "home": "THA",
   "away": "JPN"
@@ -234,7 +234,7 @@
   "stage": "group",
   "group": "F",
   "date": "2027-01-16",
-  "kickoff": null,
+  "kickoff": "2027-01-16T19:30:00+03:00",
   "venue": "ARM",
   "home": "IDN",
   "away": "QAT"
@@ -244,7 +244,7 @@
   "stage": "group",
   "group": "A",
   "date": "2027-01-17",
-  "kickoff": null,
+  "kickoff": "2027-01-17T20:00:00+03:00",
   "venue": "KSU",
   "home": "OMA",
   "away": "PLE"
@@ -254,7 +254,7 @@
   "stage": "group",
   "group": "B",
   "date": "2027-01-17",
-  "kickoff": null,
+  "kickoff": "2027-01-17T16:30:00+03:00",
   "venue": "IMU",
   "home": "PRK",
   "away": "JOR"
@@ -264,7 +264,7 @@
   "stage": "group",
   "group": "A",
   "date": "2027-01-17",
-  "kickoff": null,
+  "kickoff": "2027-01-17T20:00:00+03:00",
   "venue": "KAS",
   "home": "KSA",
   "away": "KUW"
@@ -274,7 +274,7 @@
   "stage": "group",
   "group": "B",
   "date": "2027-01-17",
-  "kickoff": null,
+  "kickoff": "2027-01-17T16:30:00+03:00",
   "venue": "PAF",
   "home": "UZB",
   "away": "BHR"
@@ -284,7 +284,7 @@
   "stage": "group",
   "group": "C",
   "date": "2027-01-18",
-  "kickoff": null,
+  "kickoff": "2027-01-18T16:30:00+03:00",
   "venue": "KFS",
   "home": "IRN",
   "away": "SYR"
@@ -294,7 +294,7 @@
   "stage": "group",
   "group": "C",
   "date": "2027-01-18",
-  "kickoff": null,
+  "kickoff": "2027-01-18T16:30:00+03:00",
   "venue": "KAR",
   "home": "KGZ",
   "away": "CHN"
@@ -304,7 +304,7 @@
   "stage": "group",
   "group": "D",
   "date": "2027-01-19",
-  "kickoff": null,
+  "kickoff": "2027-01-19T13:30:00+03:00",
   "venue": "SHB",
   "home": "AUS",
   "away": "TJK"
@@ -314,7 +314,7 @@
   "stage": "group",
   "group": "D",
   "date": "2027-01-19",
-  "kickoff": null,
+  "kickoff": "2027-01-19T13:30:00+03:00",
   "venue": "ARM",
   "home": "IRQ",
   "away": "SGP"
@@ -324,7 +324,7 @@
   "stage": "group",
   "group": "E",
   "date": "2027-01-20",
-  "kickoff": null,
+  "kickoff": "2027-01-20T16:30:00+03:00",
   "venue": "KSU",
   "home": "KOR",
   "away": "UAE"
@@ -334,7 +334,7 @@
   "stage": "group",
   "group": "F",
   "date": "2027-01-20",
-  "kickoff": null,
+  "kickoff": "2027-01-20T13:30:00+03:00",
   "venue": "IMU",
   "home": "JPN",
   "away": "QAT"
@@ -344,7 +344,7 @@
   "stage": "group",
   "group": "F",
   "date": "2027-01-20",
-  "kickoff": null,
+  "kickoff": "2027-01-20T13:30:00+03:00",
   "venue": "KAS",
   "home": "THA",
   "away": "IDN"
@@ -354,7 +354,7 @@
   "stage": "group",
   "group": "E",
   "date": "2027-01-20",
-  "kickoff": null,
+  "kickoff": "2027-01-20T16:30:00+03:00",
   "venue": "PAF",
   "home": "VIE",
   "away": "YEM"
@@ -363,7 +363,7 @@
   "id": 37,
   "stage": "r16",
   "date": "2027-01-22",
-  "kickoff": null,
+  "kickoff": "2027-01-22T15:30:00+03:00",
   "venue": "KAR",
   "home": "2A",
   "away": "2C"
@@ -372,7 +372,7 @@
   "id": 38,
   "stage": "r16",
   "date": "2027-01-22",
-  "kickoff": null,
+  "kickoff": "2027-01-22T19:30:00+03:00",
   "venue": "SHB",
   "home": "1B",
   "away": "3:ACD"
@@ -381,7 +381,7 @@
   "id": 39,
   "stage": "r16",
   "date": "2027-01-23",
-  "kickoff": null,
+  "kickoff": "2027-01-23T15:30:00+03:00",
   "venue": "IMU",
   "home": "1D",
   "away": "3:BEF"
@@ -390,7 +390,7 @@
   "id": 40,
   "stage": "r16",
   "date": "2027-01-23",
-  "kickoff": null,
+  "kickoff": "2027-01-23T19:30:00+03:00",
   "venue": "ARM",
   "home": "1A",
   "away": "3:CDE"
@@ -399,7 +399,7 @@
   "id": 41,
   "stage": "r16",
   "date": "2027-01-24",
-  "kickoff": null,
+  "kickoff": "2027-01-24T15:30:00+03:00",
   "venue": "KFS",
   "home": "1F",
   "away": "2E"
@@ -408,7 +408,7 @@
   "id": 42,
   "stage": "r16",
   "date": "2027-01-24",
-  "kickoff": null,
+  "kickoff": "2027-01-24T19:30:00+03:00",
   "venue": "PAF",
   "home": "2B",
   "away": "2F"
@@ -417,7 +417,7 @@
   "id": 43,
   "stage": "r16",
   "date": "2027-01-25",
-  "kickoff": null,
+  "kickoff": "2027-01-25T15:30:00+03:00",
   "venue": "KSU",
   "home": "1E",
   "away": "2D"
@@ -426,7 +426,7 @@
   "id": 44,
   "stage": "r16",
   "date": "2027-01-25",
-  "kickoff": null,
+  "kickoff": "2027-01-25T19:30:00+03:00",
   "venue": "KAS",
   "home": "1C",
   "away": "3:ABF"
@@ -435,7 +435,7 @@
   "id": 45,
   "stage": "qf",
   "date": "2027-01-28",
-  "kickoff": null,
+  "kickoff": "2027-01-28T19:30:00+03:00",
   "venue": "KAR",
   "home": "W37",
   "away": "W39"
@@ -444,7 +444,7 @@
   "id": 46,
   "stage": "qf",
   "date": "2027-01-28",
-  "kickoff": null,
+  "kickoff": "2027-01-28T15:30:00+03:00",
   "venue": "KAS",
   "home": "W38",
   "away": "W41"
@@ -453,7 +453,7 @@
   "id": 47,
   "stage": "qf",
   "date": "2027-01-29",
-  "kickoff": null,
+  "kickoff": "2027-01-29T15:30:00+03:00",
   "venue": "KFS",
   "home": "W44",
   "away": "W43"
@@ -462,7 +462,7 @@
   "id": 48,
   "stage": "qf",
   "date": "2027-01-29",
-  "kickoff": null,
+  "kickoff": "2027-01-29T19:30:00+03:00",
   "venue": "ARM",
   "home": "W40",
   "away": "W42"
@@ -471,7 +471,7 @@
   "id": 49,
   "stage": "sf",
   "date": "2027-02-01",
-  "kickoff": null,
+  "kickoff": "2027-02-01T18:00:00+03:00",
   "venue": "ARM",
   "home": "W45",
   "away": "W46"
@@ -480,7 +480,7 @@
   "id": 50,
   "stage": "sf",
   "date": "2027-02-02",
-  "kickoff": null,
+  "kickoff": "2027-02-02T20:00:00+03:00",
   "venue": "KAS",
   "home": "W47",
   "away": "W48"
@@ -489,7 +489,7 @@
   "id": 51,
   "stage": "final",
   "date": "2027-02-05",
-  "kickoff": null,
+  "kickoff": "2027-02-05T20:00:00+03:00",
   "venue": "KFS",
   "home": "W49",
   "away": "W50"
