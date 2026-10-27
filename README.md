@@ -1,6 +1,6 @@
 # AFC Asian Cup 2027 — live scores
 
-**Live:** https://abdulelahha.github.io/AFC2027/ · **Demo with fake match data:** https://abdulelahha.github.io/AFC2027/?t=demo
+**Live:** https://abdulelahha.github.io/AFC2027/
 
 A fan-made live-score site for the **AFC Asian Cup Saudi Arabia 2027**
 (7 Jan – 5 Feb 2027 · 24 teams · 51 matches · Riyadh, Jeddah, Al Khobar).
@@ -10,13 +10,9 @@ Unofficial personal project; not affiliated with the AFC.
 
 ## Context
 
-This is the sister site of [WC26](https://github.com/AbdulelahHA/WC26), the World Cup 2026
-score site. WC26 was rebuilt in October 2026 into a tournament-agnostic engine: all
-tournament facts live in a data folder, and the logic in `js/logic/` is pure and tested.
-AFC2027 is that engine pointed at a new tournament, in its own repo so each site can
-deploy and evolve on its own.
-
-What makes this one different:
+The Asian Cup comes to Saudi Arabia in January 2027, and this site is built for the fans
+following it here: Arabic first-class, Mecca time, and a look rooted in Saudi regions
+rather than a generic sports template.
 
 - **A Saudi look.** Four regional styles — **Najdi, Hejazi, Asiri, Hasawi** — one picked
   at random per visit (never the same twice in a row). Ornament sits on the frame
@@ -28,7 +24,7 @@ What makes this one different:
   starting lineups on a pitch.
 - **Honest data.** Nothing is guessed: "Qualified" appears only once it's certain, a
   missing broadcaster is hidden, and with no score feed the site says so instead of
-  showing fake scores.
+  making up scores.
 
 ## How it works
 
@@ -60,8 +56,8 @@ score feed (Worker, optional)┘
    [docs/data-sources.md](docs/data-sources.md). Where AFC and Wikipedia disagree, AFC wins.
    2027 regulations aren't public, so the best-third table and tie-breakers follow the
    2023 edition (same format).
-2. **Engine reused, not rewritten.** `js/logic/` copied from WC26, where it was tested on all
-   104 real World Cup results and its bracket matched FIFA's official draw.
+2. **Match logic** in `js/logic/` — standings, bracket resolution, stats — is pure and
+   tested; parts of it were adapted from an earlier project of mine.
 3. **Plain build, then design.** The site first shipped as unstyled semantic HTML with
    stable hooks; the design was done separately in mockups (Saudi design research, an
    Apple Sports study), approved piece by piece, then ported into the app.
@@ -83,11 +79,9 @@ npx serve .     # ES modules don't load from file://
 npm test
 ```
 
-**Try the design with fake match data:** open the site with `?t=demo`. It runs on the real
-teams and fixtures plus the fake feeds in `tournaments/demo/`, with the clock set to
-8 Jan 2027 (yesterday's result, today's finished + live matches, lineups, stats).
-Any page also takes `?now=2027-01-22T19:00:00+03:00` to try another moment.
-The plain address always shows the real tournament.
+For development, `?t=demo` previews a match day during the tournament (sample scores in
+`tournaments/demo/`, clock set to 8 Jan 2027), and `?now=2027-01-22T19:00:00+03:00` sets
+any moment. The plain address always shows the real tournament.
 
 ## Layout
 
@@ -103,7 +97,7 @@ js/logic/               pure, tested: feed adapter, names, status, standings, mo
 js/views/               shell (menu, routing), splash, scores, card (match card + lineup), groups, knockout, stats, alerts
 sw.js                   service worker for goal-alert push notifications
 tournaments/afc2027/    all tournament data (JSON)
-tournaments/demo/       fake feeds for ?t=demo
+tournaments/demo/       sample match-day data for ?t=demo (development only)
 workers/goal-alerts/    Cloudflare Worker that sends goal alerts
 scripts/build-h2h.mjs   rebuilds head-to-head data from two datasets
 tests/                  data validator, full simulated tournament, goal detection, push, worker
@@ -124,5 +118,3 @@ Still open — update `tournaments/afc2027/` when ready:
 - **Where to watch**: Saudi/MENA rights holder unconfirmed. Set `broadcast.default` to
   `{"en": "...", "ar": "..."}` once known.
 - **Knockout head-to-head**: added round by round once the group stage settles the pairs.
-
-Engine fixes in `js/logic/` should also go to WC26.
